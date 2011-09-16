@@ -1,0 +1,139 @@
+﻿<!--template-->
+<script id="tmpl-case-list-items" type="text/jquery-template">
+    {{if Status == 0}}
+    <tr class="status-0">
+    {{else Status == 1}}
+    <tr class="status-1">
+    {{else Status == 2}}
+    <tr class="status-2">
+    {{else Status == 3}}
+    <tr class="status-3">
+    {{/if}}
+    <td class="status-ind"></td>
+    <td><a class="view-case" href="javascript:void(0);">${Title}</a></td>
+    <td>${InternalCaseType.Name}</td>
+    <td>${Department.Name}</td>
+    <td>${formatJsonDate(DateTime)}</td>
+    <td></td>
+    <td><a class="button add-inst" href="javascript:void(0);">添加</a><a class="button view-inst" href="javascript:void(0);">查看</a></td>
+    <td><a class="button modi-case" href="javascript:void(0);">修改</a><a class="button dele-case" href="javascript:void(0);">删除</a><a class="button prnt-case" href="javascript:void(0);">打印</a></td>
+    </tr>
+</script>
+<!--content-->
+<div class="module-body">
+    <div id="case-list-view" style="border: 0; padding: 0">
+        <div class="search-bar-title">
+            查询条件</div>
+        <div class="search-bar">
+            <form id="cm-search-form">
+            <div class="ctrl-group" style="width: 260px;">
+                <div>
+                    选择部门：
+                    <input id="cm-Department" name="cm-Department" type="text" class="{validate:{required:true,messages: {required: '必须指定部门'}}}"
+                        style="height: 16px; width: 150px; padding-right: 20px;" /><a class="dep-pick-trig"
+                            href="javascript:void(0);"></a>
+                </div>
+                <div style="margin-top: 2px;">
+                    统计类别：
+                    <select id="cm-InternalCaseType" style="width: 174px; height: 21px">
+                    </select>
+                </div>
+            </div>
+            <div class="ctrl-group" style="width: 170px;">
+                <input id="cm-casestatus-0" name="CaseStatus" type="checkbox" checked="checked" /><span
+                    class="status-0">排查机制</span>
+                <input id="cm-casestatus-1" name="CaseStatus" type="checkbox" checked="checked" /><span
+                    class="status-1">预警机制</span>
+                <input id="cm-casestatus-2" name="CaseStatus" type="checkbox" checked="checked" /><span
+                    class="status-2">调处机制</span>
+                <input id="cm-casestatus-3" name="CaseStatus" type="checkbox" checked="checked" /><span
+                    class="status-3">处置机制</span>
+            </div>
+            <div class="ctrl-group">
+                <div>
+                    开始日期：<input id="cm-DateFrom" name="cm-DateFrom" type="text" class="{validate:{required:true,messages: {required: '必须指定开始日期'}}}"
+                        style="width: 80px;" />
+                </div>
+                <div style="margin-top: 2px;">
+                    结束日期：<input id="cm-DateTo" name="cm-DateTo" type="text" class="{validate:{required:true,messages: {required: '必须指定结束日期'}}}"
+                        style="width: 80px;" />
+                </div>
+            </div>
+            </form>
+            <div class="command-pane">
+                <button id="cm-DoSearch">
+                    查询</button>
+                <button id="cm-Export">
+                    导出</button>
+                <button id="cm-AddCase">
+                    填报</button>
+            </div>
+            <div class="validation-tips">
+                <p>
+                    数据验证失败：</p>
+                <ol>
+                </ol>
+            </div>
+        </div>
+        <div class="dep-picker">
+            <ul id="cm-dep-picker" class="filetree treeview">
+            </ul>
+        </div>
+        <table id="cm-searchresults" class="grid mode-2">
+            <thead>
+                <tr>
+                    <th>
+                    </th>
+                    <th style="width: 320px;">
+                        信息标题
+                    </th>
+                    <th style="width: 100px;">
+                        类别
+                    </th>
+                    <th style="width: 180px;">
+                        部门
+                    </th>
+                    <th style="width: 120px;">
+                        添加时间
+                    </th>
+                    <th style="width: 40px;">
+                        状态
+                    </th>
+                    <th style="width: 100px;">
+                        批示
+                    </th>
+                    <th style="width: 100px;">
+                        操作
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div class="pager-bar">
+            <table>
+                <tr>
+                    <td>
+                        共&nbsp;<span class="total-records"></span>&nbsp;条数据
+                    </td>
+                    <td>
+                        第&nbsp;<span class="current-page"></span>&nbsp;页
+                    </td>
+                    <td>
+                        共&nbsp;<span class="total-pages"></span>&nbsp;页
+                    </td>
+                    <td>
+                        转到第&nbsp;<select class="page-selector" style="width: 50px;">
+                        </select>&nbsp;页
+                    </td>
+                    <td>
+                        <a class="prev" href="#">上一页</a>
+                    </td>
+                    <td>
+                        <a class="next" href="#">下一页</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

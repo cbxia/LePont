@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping
+	xmlns="urn:nhibernate-mapping-2.2"
+    namespace="LePont.Business"
+    assembly="LePont.Business"
+    default-cascade="none"
+    default-lazy="true" >
+
+    <class name="Role" >
+        <id name="ID" unsaved-value="-1">
+            <generator class="native" />
+        </id>
+        <property name="Name" />
+        <property name="Description" />
+        <property name="Deactivated" />
+    </class>
+</hibernate-mapping>

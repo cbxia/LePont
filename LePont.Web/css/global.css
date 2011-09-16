@@ -1,0 +1,314 @@
+﻿/*https://home.americanexpress.com/home/axpi/ */
+
+body
+{
+    color: #333;
+    font-family: Arial, Verdana, sans-serif, 宋体;
+    font-size: 14px;
+    margin: 0 0 2px 0;
+    padding: 0;
+}
+a
+{
+    text-decoration: none;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+.jqtmpl
+{
+    display: none;
+}
+#page
+{
+    width: 1000px;
+    margin: 0 auto; /*Centering is implemented by JavaScript code, to cope with v. scrollbar nuance, however, this margn style is used for initial centering, to prevent screen shivering.*/
+    background: url("images/bk.png") no-repeat #F3F7FB;
+}
+#header
+{
+    min-height: 90px;
+    position: relative;
+}
+#header .roller
+{
+    position: absolute;
+    top: 72px;
+    left: 140px;
+    color: #ff9900;
+}
+#header .session-summary
+{
+    position: absolute;
+    top: 72px;
+    left: 500px;
+    color: #666;
+}
+#header .top-links
+{
+    padding-top: 10px;
+    text-align: right;
+    font-weight: bold;
+    color: green;
+}
+#header .top-links span
+{
+    cursor: pointer;
+}
+#header .top-links a
+{
+    text-decoration: none;
+    color: green;
+}
+#main
+{
+    padding: 0 4px;
+    margin-top: 4px;
+    overflow: hidden;
+    position: relative;
+}
+#nav-area
+{
+    float: left;
+    width: 150px;
+    padding-left:10px;
+}
+#nav-area.hidden
+{
+    display:none;
+}
+#menu-tree .bright
+{
+    color: #eee;
+}
+
+#menu-tree .home
+{
+    background: url("images/homepage_icon.gif") no-repeat scroll 0 0 transparent;
+}
+
+#menu-tree.filetree span.selected
+{
+    background-color: transparent !important;
+}
+
+#work-area
+{
+    float: left;
+    width: 828px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #0D5385;
+    padding-bottom: 4px;
+}
+#work-area.max
+{
+    border-left-width:0;
+    width: 100%;
+}
+#footer
+{
+    height: 25px;
+    text-align: center;
+    padding-top: 10px;
+    background: url("/css/Images/bg_footer.jpg") repeat-x #6CA1F9;
+    color: #FFF;
+    font-size:13px;
+}
+.module-title
+{
+    background: url("/css/images/module_title.jpg") no-repeat;
+    height: 18px;
+    padding: 4px 0 0 5px;
+}
+.module-body
+{
+    min-height: 500px;
+    overflow: auto;
+    padding: 5px 1px;
+    background: url("/css/images/mod_body_bk.jpg") repeat-x scroll 0 0 transparent;
+}
+.section-title
+{
+    position: relative;
+    left: 10px;
+    top: 11px;
+    padding: 4px 17px;
+    color: #FFF;
+}
+.section-title.mode1
+{
+    background: /*#4A7EB7*/ url("/css/images/section_title_1_2.jpg") no-repeat;
+}
+.section-body
+{
+    min-height: 20px;
+    padding: 14px;
+    border-style: solid;
+    border-width: 1px;
+}
+.section-body.mode1
+{
+    border-color: #4A7EB7;
+}
+
+/*----override dynatree---*/
+
+span.dynatree-folder a
+{
+    font-weight: normal;
+}
+ul.dynatree-container
+{
+    font: 14px "Arial, Times New Roman, 宋体";
+    background-color: inherit;
+    border-width: 0;
+}
+p.validation-tips
+{
+    border: 1px dotted #DD4033;
+    color: #DD4033;
+}
+.grid.mode-1
+{
+    border-collapse: collapse;
+    background-color: #FFF;
+    margin 1px;
+}
+.grid.mode-1 th
+{
+    border: 1px solid #ddd;
+    padding: 2px;
+    font-weight: normal;
+    background-color: #999;
+    color: #FFF;
+    white-space: nowrap;
+    padding: 3px;
+}
+.grid.mode-1 td
+{
+    border: 1px solid #99a;
+    padding: 2px;
+    white-space: nowrap;
+}
+.grid.mode-2
+{
+    border-collapse: collapse;
+    background-color: #FFF;
+    margin: 2px 1px;
+}
+.grid.mode-2 th
+{
+    border: 1px solid #ddf;
+    padding: 2px;
+    font-weight: normal;
+    background-color: #f6f6ff;
+    color: #333;
+    white-space: nowrap;
+    padding: 3px;
+}
+.grid.mode-2 td
+{
+    border: 1px solid #bbd;
+    padding: 3px 6px;
+    white-space: nowrap;
+    color: #333;
+    font-size: 13px;
+}
+.grid.mode-2 td .button
+{
+    color: #fff !important;
+    background-color: #1E54bE;
+    padding: 1px 4px;
+    margin: 0 2px;
+    font-size:12px;
+}
+.grid.mode-2 td .button:hover
+{
+    color: #666 !important;
+    background-color: #ff6;
+    border: 1px solid #66f;
+    padding: 0 3px;
+    margin: 0 2px;
+    text-decoration:none;
+}
+.grid tr.inactive td
+{
+    color: #999;
+    text-decoration: line-through;
+}
+.validation-tips
+{
+    border: 1px solid #FF3300;
+    color: #FF3300;
+    display: none;
+    font-size: 90%;
+    margin: 4px 0;
+}
+.validation-tips p
+{
+    margin: 0;
+    padding: 2px 10px;
+    background-color: #FF3300;
+    color: #fff;
+}
+.validation-tips ol
+{
+    margin: 0;
+    padding: 2px 18px;
+}
+
+.error
+{
+    border: 1px dotted #FF3300;
+}
+.file-uploading-anim
+{
+    display: none;
+}
+#ajaxLoading
+{
+    display: none;
+    position: absolute;
+    left: 500px;
+    top: 100px;
+}
+.command-bar
+{
+    padding: 10px;
+}
+#menu-grip
+{
+    position:absolute;
+    left:158px;
+    top:99px;
+    height:18px;
+    width:50px;
+    padding: 1px 20px;
+    font-size:12px;
+    cursor:pointer;
+}
+#menu-grip.hover
+{
+    color: #991123;
+    text-decoration: underline;
+}
+#menu-grip.opened
+{
+    left: 158px;
+    background: url("/css/images/arrow-left.png") no-repeat;
+}
+#menu-grip.opened.hover
+{
+    background: url("/css/images/arrow-left-hi.png") no-repeat;
+}
+#menu-grip.closed
+{
+    left: -6px;
+    background: url("/css/images/arrow-right.png") no-repeat;
+}
+#menu-grip.closed.hover
+{
+    background: url("/css/images/arrow-right-hi.png") no-repeat;
+    color: #991123;
+}

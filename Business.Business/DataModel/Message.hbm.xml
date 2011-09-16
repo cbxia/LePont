@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping
+	xmlns="urn:nhibernate-mapping-2.2"
+    namespace="LePont.Business"
+    assembly="LePont.Business"
+    default-cascade="none"
+    default-lazy="true" >
+
+    <class name="Message" >
+        <id name="ID" unsaved-value="-1">
+            <generator class="native" />
+        </id>
+        <many-to-one name="Sender" column="sender_id" />
+        <many-to-one name="Receiver" column="receiver_id" />
+        <property name="Subject" />
+        <property name="Content" />
+        <property name="AttachmentFileName" />
+        <property name="AttachmentFileData" />
+        <property name="SendDateTime" />
+        <property name="ReceiveDateTime" />
+        <property name="Deactivated" />
+    </class>
+</hibernate-mapping>

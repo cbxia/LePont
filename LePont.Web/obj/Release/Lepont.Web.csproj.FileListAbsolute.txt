@@ -1,0 +1,16 @@
+D:\Devs\Lepont\Lepont.Web\bin\Lepont.Web.dll
+D:\Devs\Lepont\Lepont.Web\bin\Lepont.Web.pdb
+D:\Devs\Lepont\Lepont.Web\bin\JasminSoft.NHibernateUtils.dll
+D:\Devs\Lepont\Lepont.Web\bin\Lepont.Business.dll
+D:\Devs\Lepont\Lepont.Web\bin\log4net.dll
+D:\Devs\Lepont\Lepont.Web\bin\NHibernate.dll
+D:\Devs\Lepont\Lepont.Web\bin\Iesi.Collections.dll
+D:\Devs\Lepont\Lepont.Web\bin\Lepont.Business.pdb
+D:\Devs\Lepont\Lepont.Web\bin\JasminSoft.NHibernateUtils.pdb
+D:\Devs\Lepont\Lepont.Web\bin\NHibernate.pdb
+D:\Devs\Lepont\Lepont.Web\bin\NHibernate.xml
+D:\Devs\Lepont\Lepont.Web\bin\Iesi.Collections.pdb
+D:\Devs\Lepont\Lepont.Web\bin\Iesi.Collections.xml
+D:\Devs\Lepont\Lepont.Web\obj\Release\ResolveAssemblyReference.cache
+D:\Devs\Lepont\Lepont.Web\obj\Release\Lepont.Web.dll
+D:\Devs\Lepont\Lepont.Web\obj\Release\Lepont.Web.pdb

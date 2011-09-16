@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping
+	xmlns="urn:nhibernate-mapping-2.2"
+    namespace="LePont.Business"
+    assembly="LePont.Business"
+    default-cascade="none"
+    default-lazy="false" >
+
+    <class name="PublicationType" >
+        <id name="ID" unsaved-value="-1">
+            <generator class="native" />
+        </id>
+        <property name="Name" />
+        <property name="Deactivated" />
+    </class>
+    
+    <class name="Publication" >
+        <id name="ID" unsaved-value="-1">
+            <generator class="native" />
+        </id>
+        <property name="Title" />
+        <property name="Content" />
+        <many-to-one name="Type" column="type_id" />
+        <property name="AttachmentFileName" />
+        <property name="AttachmentFileData" />
+        <many-to-one name="Department" column="department_id" />
+        <many-to-one name="Publisher" column="publisher_id" />
+        <property name="DateTime" />
+        <property name="ListOrder" />
+        <property name="Deactivated" />
+    </class>
+
+    <class name="PublicationLite" table="publication">
+        <id name="ID" unsaved-value="-1">
+            <generator class="native" />
+        </id>
+        <property name="Title" />
+        <many-to-one name="Type" column="type_id" />
+        <property name="AttachmentFileName" />
+        <many-to-one name="Department" column="department_id" />
+        <many-to-one name="Publisher" column="publisher_id" />
+        <property name="DateTime" />
+        <property name="ListOrder" />
+        <property name="Deactivated" />
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,61 @@
+﻿.module-body
+{
+    padding: 0;
+    overflow-x: auto;
+}
+#blocks
+{
+    width: 990px;
+}
+#blocks .main-blocks
+{
+    float: left;
+    min-height: 500px;
+    width: 826px;
+}
+#blocks .main-blocks .heading
+{
+    background: #04b url("/css/images/module_title_2.jpg");
+    height: 16px;
+    padding: 10px 20px 2px;
+    font-weight: bold;
+}
+#blocks .main-blocks table
+{
+    width: 100%;
+}
+#blocks .main-blocks .heading
+{
+    position: relative;
+}
+#blocks .main-blocks .heading .more
+{
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+    text-decoration: underline;
+    color: green;
+}
+#blocks .side-blocks
+{
+    float: right;
+    min-height: 400px;
+    width: 160px;
+    font-size: 12px;
+}
+#blocks .side-blocks .block
+{
+    margin: 5px 1px 0px 1px;
+}
+#blocks .side-blocks .hd
+{
+    background: #04b url("/css/images/blk_head.gif");
+    height: 16px;
+    padding: 2px;
+    text-align: center;
+}
+#blocks .side-blocks .bd
+{
+    min-height: 100px;
+    border: 1px solid #bbd;
+}

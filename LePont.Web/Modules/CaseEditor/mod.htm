@@ -1,0 +1,245 @@
+﻿<script id="tmpl-case-list-items" type="text/jquery-template">
+    <tr>
+    <td><a href="javascript:void(0);">${Title}</a></td>
+    <td>${InternalCaseType.Name}</td>
+    <td>${Department.Name}</td>
+    <td>${formatJsonDate(DateTime)}</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+</script>
+<!--content-->
+<div class="module-body">
+    <div id="case-editor-view" style="border: 0; padding: 2px 0">
+        <form id="case-editor-form">
+        <div class="section-title mode1">
+            基本信息
+        </div>
+        <div class="section-body mode1">
+            <table>
+                <tr>
+                    <td class="item-label">
+                        信息标题：
+                    </td>
+                    <td class="item-value">
+                        <input id="di-Title" name="di-Title" class="{validate:{required:true,messages: {required: '必须输入信息标题'}}}"
+                            style="width: 400px" type="text" />&nbsp;（必填）
+                    </td>
+                </tr>
+                <tr>
+                    <td class="item-label">
+                        原发单位：
+                    </td>
+                    <td class="item-value">
+                        <input id="di-Locality" name="di-Locality" class="{validate:{required:true,messages: {required: '必须输入原发单位'}}}"
+                            style="width: 400px" type="text" />&nbsp;（必填）
+                    </td>
+                </tr>
+                <tr>
+                    <td class="item-label">
+                        调解类别：
+                    </td>
+                    <td class="item-value">
+                        <select id="di-InternalCaseType" name="di-InternalCaseType" style="width: 200px;">
+                        </select>&nbsp;（必填）
+                    </td>
+                </tr>
+                <tr>
+                    <td class="item-label">
+                        综治委类别：
+                    </td>
+                    <td class="item-value">
+                        <select id="di-ExternalCaseType" name="di-ExternalCaseType" style="width: 200px;">
+                        </select>&nbsp;（必填）
+                    </td>
+                </tr>
+                <tr>
+                    <td class="item-label">
+                        纠纷简要情况：
+                    </td>
+                    <td class="item-value">
+                        <textarea id="di-Content" name="di-Content" class="{validate:{required:true,messages: {required: '必须输入纠纷简要情况'}}}"
+                            rows="5" cols="100" style="width: 560px; height: 100px" />&nbsp;（必填）
+                    </td>
+                </tr>
+                <tr>
+                    <td class="item-label">
+                        涉及金额：
+                    </td>
+                    <td class="item-value">
+                        <input id="di-MoneyInvolved" style="width: 100px" type="text" />
+                        （元）
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="item-label">
+                        涉及人数：
+                    </td>
+                    <td class="item-value">
+                        <input id="di-PeopleInvolved" style="width: 100px" type="text" />
+                        （人）
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="item-label">
+                        防激化情况：
+                    </td>
+                    <td class="item-value">
+                        防止民间纠纷引起自杀<input id="di-Flag1" type="checkbox" />&nbsp; 防止民转刑案件<input id="di-Flag2"
+                            type="checkbox" />&nbsp; 防止群体性事件<input id="di-Flag3" type="checkbox" />&nbsp;
+                        防止群体性上访<input id="di-Flag4" type="checkbox" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="item-label">
+                        纠纷诉讼情况：
+                    </td>
+                    <td class="item-value">
+                        判决变更撤销或确认无效<input id="di-Flag5" type="checkbox" />&nbsp;申请支付令<input id="di-Flag6"
+                            type="checkbox" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="item-label">
+                        重大纠纷处置：
+                    </td>
+                    <td class="item-value">
+                        形成群体性事件<input id="di-Flag7" type="checkbox" />&nbsp;形成群体性上访<input id="di-Flag8" type="checkbox" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="item-label">
+                        纠纷双方关系：
+                    </td>
+                    <td class="item-value">
+                        <select id="di-PartiesRelationType" style="width: 200px;">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="item-label">
+                        案件状态：
+                    </td>
+                    <td class="item-value">
+                        <input id="di-Status1" name="Status" type="radio" value="0"  checked="checked"/>排查
+                        <input id="di-Status2" name="Status" type="radio" value="1" />预警
+                        <input id="di-Status3" name="Status" type="radio" value="2" />调处
+                        <input id="di-Status4" name="Status" type="radio" value="3" />处置
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="section-title mode1">
+            处理情况
+        </div>
+        <div class="section-body mode1">
+            <table>
+                <tr>
+                    <td class="item-label">
+                        调解组织意见：
+                    </td>
+                    <td class="item-value">
+                        <textarea id="di-MediatorAdvice" rows="5" cols="100" style="width: 560px; height: 50px" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="item-label">
+                        领导批示：
+                    </td>
+                    <td class="item-value">
+                        <textarea id="di-Instructions" rows="5" cols="100" style="width: 560px; height: 50px" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="item-label">
+                        处理进程：
+                    </td>
+                    <td class="item-value">
+                        <textarea id="di-Progress" rows="5" cols="100" style="width: 560px; height: 50px" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="item-label">
+                        处理结果：
+                    </td>
+                    <td class="item-value">
+                        <textarea id="di-Disposal" rows="5" cols="100" style="width: 560px; height: 50px" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="section-title mode1">
+            其他信息
+        </div>
+        <div class="section-body mode1">
+            <table>
+                <tr>
+                    <td class="item-label">
+                        责任人：
+                    </td>
+                    <td class="item-value">
+                        <input id="di-Responsable" style="width: 100px" type="text" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="item-label">
+                        责任人电话：
+                    </td>
+                    <td class="item-value">
+                        <input id="di-ResponsablePhone" style="width: 100px" type="text" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="item-label">
+                        填报人：
+                    </td>
+                    <td class="item-value">
+                        <span id="di-Registrar"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="item-label">
+                        填报时间：
+                    </td>
+                    <td class="item-value">
+                        <span id="di-DateTime"></span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="section-title mode1">
+            结案情况
+        </div>
+        <div class="section-body mode1">
+            <table>
+                <tr>
+                    <td class="item-label">
+                        是否结案：
+                    </td>
+                    <td class="item-value">
+                        <input id="di-IsConcluded-N" name="IsConcluded" type="radio" />未结案
+                        <input id="di-IsConcluded-Y" name="IsConcluded" type="radio" checked="checked" />已结案
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="validation-tips">
+            <p>
+                数据验证失败：</p>
+            <ol>
+            </ol>
+        </div>
+        </form>
+        <div class="buttons">
+            <button id="submit-entry">
+                确认</button>
+            <button id="return-to-list">
+                退出</button>
+        </div>
+    </div>
+</div>

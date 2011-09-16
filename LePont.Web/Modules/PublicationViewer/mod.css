@@ -1,0 +1,53 @@
+﻿#publication-detail div
+{
+    padding: 5px 0;
+}
+#publication-detail .title
+{
+    text-align: center;
+    font-size: 140%;
+    font-weight: bold;
+    border-bottom: dotted 1px;
+    padding: 20px 0;
+}
+#publication-detail .content
+{
+}
+#publication-detail .footer
+{
+    text-align: right;
+    overflow: hidden;
+}
+#publication-detail .footer div
+{
+    float: right;
+}
+
+#publication-detail .footer span
+{
+    margin-right: 15px;
+    font-size: 85%;
+}
+#publication-detail .attachment
+{
+    border-top: 1px dotted #666;
+    overflow: hidden;
+}
+#publication-detail .attachment a
+{
+    display: block;
+    text-decoration: underline;
+    color: #0044ee;
+    float: left;
+}
+#publication-detail .attachment a img
+{
+    display: block;
+    border: 0;
+    height: 32px;
+}
+#publication-detail .attachment a span
+{
+    padding: 10px 0 0 2px;
+    display: block;
+}

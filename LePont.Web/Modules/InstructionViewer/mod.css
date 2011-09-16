@@ -1,0 +1,53 @@
+﻿#instruction-detail div
+{
+    padding: 5px 0;
+}
+#instruction-detail .title
+{
+    text-align: center;
+    font-size: 140%;
+    font-weight: bold;
+    border-bottom: dotted 1px;
+    padding: 20px 0;
+}
+#instruction-detail .content
+{
+}
+#instruction-detail .footer
+{
+    text-align: right;
+    overflow: hidden;
+}
+#instruction-detail .footer div
+{
+    float: right;
+}
+
+#instruction-detail .footer span
+{
+    margin-right: 15px;
+    font-size: 85%;
+}
+#instruction-detail .attachment
+{
+    border-top: 1px dotted #666;
+    overflow: hidden;
+}
+#instruction-detail .attachment a
+{
+    display: block;
+    text-decoration: underline;
+    color: #0044ee;
+    float: left;
+}
+#instruction-detail .attachment a img
+{
+    display: block;
+    border: 0;
+    height: 32px;
+}
+#instruction-detail .attachment a span
+{
+    padding: 10px 0 0 2px;
+    display: block;
+}

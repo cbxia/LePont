@@ -1,0 +1,41 @@
+﻿.module-body .nav
+{
+    width: 220px;
+    min-height: 422px;
+    float: left;
+    border: 1px solid #B6B6B6;
+    background-color: #f5f5f6;
+}
+.module-body .edit-area
+{
+    width: 590px;
+    margin-left: 4px;
+    min-height: 422px;
+    float: left;
+    background-color: #f5f5f6;
+    position: relative;
+}
+.user-list-container
+{
+    overflow: scroll;
+    height: 360px;
+}
+.command-container
+{
+    padding: 10px 30px;
+}
+#user-editor-form
+{
+    display: none;
+}
+#user-editor-form .item-label
+{
+    text-align: right;
+    width: 100px;
+    vertical-align: top;
+}
+.permission-selector
+{
+    border: 1px solid #6677AA;
+    width: 324px;
+}

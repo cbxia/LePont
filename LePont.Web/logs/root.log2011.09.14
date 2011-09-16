@@ -1,0 +1,789 @@
+2011-09-14 18:49:59,906 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 18:50:00,046 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 18:50:00,046 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 18:50:01,390 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 18:50:01,390 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 18:50:01,390 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 18:50:02,062 [11] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 18:50:02,062 [11] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 18:50:02,062 [11] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 18:50:02,109 [11] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 18:50:02,109 [11] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 18:50:02,109 [11] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 18:50:02,109 [11] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 18:50:02,140 [11] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 18:50:02,140 [11] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 18:50:02,156 [11] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 18:50:02,218 [11] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 18:50:02,218 [11] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 18:50:02,218 [11] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 18:50:02,218 [11] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 18:50:02,218 [11] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 18:50:02,234 [11] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 18:50:02,234 [11] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 18:50:02,234 [11] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 18:50:05,125 [11] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 18:50:05,125 [11] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 18:50:05,140 [11] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 18:50:05,140 [11] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 18:50:05,156 [11] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 18:50:05,156 [11] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 18:50:05,218 [11] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 18:50:05,218 [11] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 18:50:05,218 [11] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 18:50:12,171 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 18:50:12,171 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 18:50:12,171 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 18:50:12,171 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 18:50:12,187 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 18:50:12,187 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 18:50:12,187 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 18:50:12,203 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 18:50:12,203 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 18:55:32,859 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 18:55:32,875 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 18:55:32,875 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 18:55:32,875 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 18:55:32,890 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 18:55:32,890 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 18:55:32,890 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 18:55:32,906 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 18:55:32,906 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 18:55:35,171 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 18:55:35,187 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 18:55:35,187 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 18:55:35,187 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 18:55:35,187 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 18:55:35,203 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 18:55:35,265 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 18:55:35,265 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 18:55:35,281 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 18:55:43,531 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 18:55:43,531 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 18:55:43,531 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 18:55:43,546 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 18:55:43,546 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 18:55:43,546 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 18:55:43,546 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 18:55:43,546 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 18:55:43,546 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 18:55:47,281 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 18:55:47,281 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 18:55:47,281 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 18:55:47,296 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 18:55:47,296 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 18:55:47,296 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 18:55:47,375 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 18:55:47,375 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 18:55:47,375 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:01:31,531 [15] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:01:31,609 [15] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:01:31,609 [15] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:01:31,937 [14] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:01:31,937 [14] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:01:31,937 [14] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:01:32,000 [13] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:01:32,000 [13] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:01:32,000 [13] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:01:32,000 [13] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:01:32,046 [13] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:01:32,046 [13] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:01:32,531 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:01:32,531 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:01:32,531 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:01:33,031 [14] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:01:33,031 [14] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:01:33,031 [14] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:01:33,531 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:01:33,531 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:01:33,531 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:01:35,890 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:01:35,890 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:01:35,890 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:01:35,906 [14] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:01:35,906 [14] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:01:35,906 [14] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:01:35,968 [15] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:01:35,968 [15] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:01:35,968 [15] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:02:42,531 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:02:42,531 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:02:42,531 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:02:42,968 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:02:42,968 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:02:42,968 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:02:43,000 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:02:43,000 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:02:43,000 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:02:43,000 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:02:43,046 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:02:43,046 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:02:43,046 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:02:43,062 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:02:43,062 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:02:43,562 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:02:43,562 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:02:43,562 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:02:44,062 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:02:44,062 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:02:44,062 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:02:46,765 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:02:46,765 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:02:46,765 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:02:46,781 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:02:46,781 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:02:46,781 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:02:46,843 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:02:46,843 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:02:46,843 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:02:51,734 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:02:51,734 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:02:51,734 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:02:51,734 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:02:51,750 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:02:51,750 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:02:51,750 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:02:51,765 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:02:51,765 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:02:53,906 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:02:53,906 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:02:53,906 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:02:53,906 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:02:53,921 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:02:53,937 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:02:53,937 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:02:54,156 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:02:54,156 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:02:57,203 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:02:57,218 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:02:57,218 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:02:57,218 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:02:57,234 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:02:57,234 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:02:57,234 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:02:57,296 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:02:57,296 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:02:59,531 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:02:59,531 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:02:59,531 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:02:59,531 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:02:59,531 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:02:59,546 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:02:59,546 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:02:59,578 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:02:59,578 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:03:00,812 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:03:00,812 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:03:00,812 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:03:00,812 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:03:00,812 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:03:00,812 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:03:00,828 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:03:00,843 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:03:00,843 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:03:04,000 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:03:04,000 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:03:04,000 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:03:04,015 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:03:04,015 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:03:04,015 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:03:04,015 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:03:04,046 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:03:04,046 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:03:06,140 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:03:06,140 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:03:06,140 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:03:06,140 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:03:06,140 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:03:06,156 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:03:06,156 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:03:06,171 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:03:06,171 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:03:07,453 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:03:07,453 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:03:07,453 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:03:07,453 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:03:07,515 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:03:07,515 [12] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:06:16,609 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:06:16,625 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:06:16,625 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:06:16,625 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:06:16,671 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:06:16,671 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:06:56,437 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:06:56,437 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:06:56,437 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:06:56,437 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:06:56,453 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:06:56,453 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:06:56,453 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:06:56,453 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:06:56,453 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:06:58,890 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:06:58,906 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:06:58,906 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:06:58,921 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:06:58,921 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:06:58,921 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:06:58,984 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:06:58,984 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:06:58,984 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:07:27,734 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:07:27,734 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:07:27,734 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:07:27,734 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:07:27,796 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:07:27,796 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:07:28,296 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:07:28,296 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:07:28,296 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:07:28,328 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:07:28,328 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:07:28,328 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:07:28,843 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:07:28,843 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:07:28,843 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:07:29,687 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:07:29,703 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:07:29,703 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:07:29,703 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:07:29,718 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:07:29,718 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:07:41,234 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:07:41,234 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:07:41,234 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:07:41,250 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:07:41,250 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:07:41,250 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:07:41,296 [17] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:07:41,312 [17] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:07:41,312 [17] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:07:42,140 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:07:42,140 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:07:42,140 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:07:42,156 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:07:42,156 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:07:42,156 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:07:42,171 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:07:42,171 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:07:42,171 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:08:38,781 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:08:38,781 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:08:38,781 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:08:38,796 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:08:38,796 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:08:38,796 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:08:38,859 [17] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:08:38,859 [17] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:08:38,859 [17] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:15:20,359 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:15:20,375 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:15:20,375 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:15:20,375 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:15:20,375 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:15:20,375 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:15:20,453 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:15:20,468 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:15:20,468 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:15:22,484 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:15:22,484 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:15:22,484 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:15:22,500 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:15:22,500 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:15:22,500 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:15:22,593 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:15:22,593 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:15:22,593 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:15:23,156 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:15:23,156 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:15:23,156 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:15:23,171 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:15:23,171 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:15:23,171 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:15:23,234 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:15:23,234 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:15:23,234 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:15:24,968 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:15:24,968 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:15:24,968 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:15:24,984 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:15:25,000 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:15:25,000 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:15:25,062 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:15:25,078 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:15:25,078 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:16:01,578 [18] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:16:01,578 [18] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:16:01,578 [18] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:16:02,265 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:16:02,265 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:16:02,265 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:16:02,328 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:16:02,328 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:16:02,328 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:16:02,328 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:16:02,375 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:16:02,375 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:16:02,859 [20] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:16:02,859 [20] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:16:02,859 [20] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:16:03,359 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:16:03,375 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:16:03,375 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:16:03,859 [19] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:16:03,875 [19] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:16:03,875 [19] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:16:05,390 [18] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:16:05,390 [18] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:16:05,390 [18] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:16:05,406 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:16:05,406 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:16:05,406 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:16:05,531 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:16:05,531 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:16:05,531 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:16:11,593 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:16:11,593 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:16:11,593 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:16:11,609 [18] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:16:11,609 [18] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:16:11,609 [18] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:16:11,687 [20] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:16:11,703 [20] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:16:11,703 [20] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:16:13,390 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:16:13,390 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:16:13,390 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:16:13,406 [19] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:16:13,406 [19] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:16:13,406 [19] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:16:13,484 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:16:13,484 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:16:13,484 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:16:13,984 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:16:14,000 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:16:14,000 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:16:14,015 [18] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:16:14,015 [18] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:16:14,015 [18] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:16:14,062 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:16:14,062 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:16:14,062 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:17:58,718 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:17:58,718 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:17:58,718 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:17:59,343 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:17:59,343 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:17:59,343 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:18:38,968 [22] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:18:38,968 [22] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:18:38,968 [22] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:18:39,500 [21] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:18:39,500 [21] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:18:39,500 [21] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:18:39,546 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:18:39,546 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:18:39,546 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:18:39,546 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:18:39,593 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:18:39,593 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:18:40,078 [22] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:18:40,078 [22] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:18:40,078 [22] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:18:40,578 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:18:40,578 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:18:40,578 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:18:41,078 [20] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:18:41,078 [20] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:18:41,078 [20] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:18:43,859 [20] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:18:43,859 [20] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:18:43,859 [20] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:18:43,875 [22] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:18:43,875 [22] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:18:43,875 [22] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:18:43,953 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:18:43,968 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:18:43,968 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:18:47,281 [25] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:18:47,281 [25] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:18:47,281 [25] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:18:47,296 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:18:47,296 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:18:47,296 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:18:47,359 [20] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:18:47,359 [20] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:18:47,359 [20] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:18:48,765 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:18:48,781 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:18:48,781 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:18:48,796 [25] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:18:48,796 [25] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:18:48,796 [25] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:18:48,859 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:18:48,875 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:18:48,875 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:18:49,234 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:18:49,250 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:18:49,250 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:18:49,250 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:18:49,250 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:18:49,265 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:18:49,328 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:18:49,328 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:18:49,328 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:23:01,031 [27] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:23:01,031 [27] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:23:01,031 [27] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:23:12,765 [28] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:23:12,765 [28] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:23:12,765 [28] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:23:13,328 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:23:13,328 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:23:13,328 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:23:13,359 [28] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:23:13,375 [28] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:23:13,375 [28] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:23:13,375 [28] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:23:13,421 [28] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:23:13,421 [28] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:23:13,921 [28] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:23:13,937 [28] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:23:13,937 [28] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:23:14,421 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:23:14,437 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:23:14,437 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:23:14,921 [28] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:23:14,937 [28] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:23:14,937 [28] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:23:17,156 [28] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:23:17,156 [28] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:23:17,156 [28] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:23:17,171 [27] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:23:17,171 [27] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:23:17,171 [27] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:23:17,234 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:23:17,234 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:23:17,234 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:26:19,359 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:26:19,359 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:26:19,359 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:26:19,359 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:26:19,375 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:26:19,390 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:26:19,390 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:26:19,421 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:26:19,421 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:26:26,812 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:26:26,812 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:26:26,812 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:26:26,812 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:26:26,812 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:26:26,812 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:26:26,828 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:26:26,843 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:26:26,843 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:26:31,890 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:26:31,890 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:26:31,890 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:26:31,890 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:26:31,906 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:26:31,906 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:26:31,906 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:26:31,921 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:26:31,921 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:26:33,859 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:26:33,859 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:26:33,859 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:26:33,875 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:26:33,875 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:26:33,875 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:26:33,875 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:26:33,921 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:26:33,921 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:26:41,156 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:26:41,156 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:26:41,156 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:26:41,156 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:26:41,156 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:26:41,171 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:26:41,171 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:26:41,187 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:26:41,187 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:26:41,765 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:26:41,765 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:26:41,765 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:26:41,765 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:26:41,781 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:26:41,781 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:26:41,781 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:26:41,812 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:26:41,812 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:27:20,828 [25] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:27:20,843 [25] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:27:20,843 [25] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:27:20,843 [25] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:27:20,859 [25] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:27:20,859 [25] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:27:20,859 [25] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:27:20,921 [25] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:27:20,921 [25] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:27:23,250 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:27:23,250 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:27:23,250 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 19:27:23,250 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 19:27:23,281 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 19:27:23,281 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:07:49,234 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:07:49,234 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:07:49,234 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:07:49,937 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:07:49,937 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:07:49,937 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:07:49,968 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:07:49,968 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:07:49,968 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:07:49,968 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:07:50,015 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:07:50,015 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:07:50,500 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:07:50,515 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:07:50,515 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:07:51,000 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:07:51,015 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:07:51,015 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:07:51,500 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:07:51,515 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:07:51,515 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:07:52,828 [25] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:07:52,828 [25] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:07:52,828 [25] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:07:52,859 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:07:52,859 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:07:52,875 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:07:53,015 [25] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:07:53,015 [25] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:07:53,015 [25] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:07:55,656 [25] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:07:55,656 [25] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:07:55,671 [25] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:07:55,671 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:07:55,671 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:07:55,671 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:07:55,687 [25] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:07:55,687 [25] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:07:55,687 [25] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:08:21,328 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:08:21,343 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:08:21,343 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:08:21,343 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:08:21,359 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:08:21,359 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:08:21,359 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:08:21,375 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:08:21,375 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:08:26,390 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:08:26,390 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:08:26,390 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:08:26,390 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:08:26,390 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:08:26,390 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:08:26,390 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:08:26,421 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:08:26,421 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:14:36,453 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:14:36,453 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:14:36,453 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:14:36,468 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:14:36,515 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:14:36,515 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:14:37,000 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:14:37,000 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:14:37,000 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:14:37,015 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:14:37,015 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:14:37,015 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:14:37,500 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:14:37,500 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:14:37,500 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:14:39,750 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:14:39,765 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:14:39,765 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:16:10,281 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:16:10,281 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:16:10,281 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:16:10,906 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:16:10,906 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:16:10,906 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:16:10,968 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:16:10,968 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:16:10,968 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:16:10,968 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:16:11,015 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:16:11,015 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:16:11,031 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:16:11,046 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:16:11,046 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:16:11,531 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:16:11,546 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:16:11,546 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:16:12,031 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:16:12,046 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:16:12,046 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:16:18,453 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:16:18,468 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:16:18,468 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:17:42,843 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:17:42,843 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:17:42,843 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:17:42,843 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:17:42,890 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:17:42,890 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:17:42,906 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:17:42,921 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:17:42,921 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:17:43,406 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:17:43,406 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:17:43,406 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:17:43,421 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:17:43,421 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:17:43,437 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:17:59,578 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:17:59,609 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:17:59,609 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:19:33,000 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:19:33,000 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:19:33,000 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:19:33,000 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:19:33,046 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:19:33,046 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:19:33,562 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:19:33,562 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:19:33,562 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:19:34,062 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:19:34,062 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:19:34,062 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:19:34,562 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:19:34,562 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:19:34,562 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:19:36,625 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:19:36,640 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:19:36,640 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:19:45,703 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:19:45,703 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:19:45,703 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:19:45,703 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:19:45,718 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:19:45,718 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:19:45,734 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:19:45,734 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:19:45,734 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:19:46,234 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:19:46,234 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:19:46,234 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:19:46,734 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:19:46,734 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:19:46,734 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:19:47,828 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:19:47,843 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:19:47,843 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:19:57,515 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:19:57,515 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:19:57,515 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:19:57,531 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:19:57,546 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:19:57,546 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:19:57,546 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:19:57,562 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:19:57,562 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:19:58,062 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:19:58,062 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:19:58,062 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:19:58,562 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:19:58,562 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:19:58,578 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:19:59,812 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:19:59,828 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:19:59,828 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:20:10,281 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:20:10,281 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:20:10,281 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:20:10,281 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:20:10,328 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:20:10,328 [24] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:20:10,828 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:20:10,843 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:20:10,843 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:20:10,843 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:20:10,859 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:20:10,859 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:20:11,328 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:20:11,343 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:20:11,343 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:20:25,234 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:20:25,234 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:20:25,234 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:21:49,625 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:21:49,625 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:21:49,625 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:21:49,625 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:21:49,687 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:21:49,687 [4] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:21:50,171 [21] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:21:50,187 [21] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:21:50,187 [21] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:21:50,671 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:21:50,687 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:21:50,687 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:21:51,171 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:21:51,171 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:21:51,171 [23] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:21:51,750 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:21:51,750 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:21:51,750 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:24:16,953 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:24:16,953 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:24:16,953 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:24:17,625 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:24:17,625 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:24:17,625 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:24:17,671 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:24:17,671 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:24:17,671 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:24:17,671 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:24:17,703 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:24:17,718 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:24:17,718 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:24:17,734 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:24:17,734 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:24:17,734 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:24:17,750 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:24:17,750 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:24:17,750 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:24:17,765 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:24:17,765 [9] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:24:30,703 [21] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:24:30,734 [21] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:24:30,734 [21] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:25:50,125 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:25:50,125 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:25:50,125 [8] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:25:50,781 [22] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:25:50,781 [22] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:25:50,781 [22] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:25:50,828 [22] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:25:50,828 [22] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:25:50,828 [22] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:25:50,828 [22] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:25:50,875 [22] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:25:50,875 [22] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:25:50,875 [22] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:25:50,890 [22] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:25:50,890 [22] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:25:50,890 [22] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:25:50,906 [22] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:25:50,906 [22] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.
+2011-09-14 20:25:50,906 [22] DEBUG JasminSoft.NHibernateUtils.SessionContext - NHibernate session opened.
+2011-09-14 20:25:50,921 [22] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session flushed.
+2011-09-14 20:25:50,921 [22] DEBUG JasminSoft.NHibernateUtils.SessionContext - Session closed.

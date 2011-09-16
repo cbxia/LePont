@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Web Developer Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JasminSoft.NHibernateUtils", "JasminSoft.NHibernateUtils\JasminSoft.NHibernateUtils.csproj", "{17B606D5-F961-4436-857D-17FAB955E7C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LePont.Web", "LePont.Web\LePont.Web.csproj", "{DBE464E2-DAC0-4714-92FF-1761D21A86DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LePont.Business", "Business.Business\LePont.Business.csproj", "{4D57DDA7-3413-4065-82AA-8CD0B7AB41ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17B606D5-F961-4436-857D-17FAB955E7C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17B606D5-F961-4436-857D-17FAB955E7C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17B606D5-F961-4436-857D-17FAB955E7C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17B606D5-F961-4436-857D-17FAB955E7C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBE464E2-DAC0-4714-92FF-1761D21A86DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBE464E2-DAC0-4714-92FF-1761D21A86DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBE464E2-DAC0-4714-92FF-1761D21A86DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBE464E2-DAC0-4714-92FF-1761D21A86DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D57DDA7-3413-4065-82AA-8CD0B7AB41ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D57DDA7-3413-4065-82AA-8CD0B7AB41ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D57DDA7-3413-4065-82AA-8CD0B7AB41ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D57DDA7-3413-4065-82AA-8CD0B7AB41ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

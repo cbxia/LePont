@@ -1,0 +1,41 @@
+﻿/*https://home.americanexpress.com/home/axpi/ */
+
+body
+{
+    color: #333333;
+    font: 13px/1.5em "Arial, Times New Roman, 宋体";
+    margin: 0;
+    padding: 0;
+}
+#dialog
+{
+    width: 600px;
+    height: 340px;
+    background: url("images/login_bg.jpg") no-repeat transparent;
+    position: relative;
+    margin: 100px auto;
+
+}
+#TextBox_UserID
+{
+    position: absolute;
+    top:182px;
+    left:193px;
+    width:160px;
+    border: 0;
+ }
+#TextBox_Password
+{
+    position: absolute;
+    top:222px;
+    left:193px;
+    width:160px;
+    border: 0;
+}
+#Button_Login
+{
+    position: absolute;
+    top:260px;
+    left:280px;
+    width:80px;
+}

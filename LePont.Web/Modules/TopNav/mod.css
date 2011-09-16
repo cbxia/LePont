@@ -1,0 +1,20 @@
+﻿.top-nav
+{
+    padding: 2px 4px;
+    background: #f6f6f6 /*url("/css/images/searchbar.jpg")*/;
+    height: 22px;
+    color: #333;
+    text-align: right; /*font-weight: bold;*/
+}
+
+#quick-links
+{
+    margin-left: 30px;
+}
+#quick-links .quick-link
+{
+    padding: 0 4px;
+    border-left: 2px solid #000;
+    color: #000;
+    cursor: pointer;
+}

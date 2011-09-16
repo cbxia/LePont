@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping
+	xmlns="urn:nhibernate-mapping-2.2"
+    namespace="LePont.Business"
+    assembly="LePont.Business"
+    default-cascade="none"
+    default-lazy="false" >
+    
+    <class name="PasswordQuestion" >
+        <id name="ID" unsaved-value="-1">
+            <generator class="native" />
+        </id>
+        <property name="Content" />
+        <property name="Deactivated" />
+    </class>
+    
+    <class name="User" >
+        <id name="ID" unsaved-value="-1">
+            <generator class="native" />
+        </id>
+        <property name="LoginId" />
+        <property name="Name" />
+        <property name="Password" />
+        <many-to-one name="PasswordQuestion" column="password_question_id" />
+        <property name="PasswordAnswer" />
+        <property name="Phone" />
+        <property name="Email" />
+        <property name="CreateTime"/>
+        <property name="ListOrder" />
+        <property name="Deactivated" />
+        <many-to-one name="Department" column="department_id" />
+        <bag name="Roles" table="user_x_role" lazy="false">
+            <key column="user_id" />
+            <many-to-many class="Role" column="role_id" />
+        </bag>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping
+	xmlns="urn:nhibernate-mapping-2.2"
+    namespace="LePont.Business"
+    assembly="LePont.Business"
+    default-cascade="none"
+    default-lazy="false" >
+
+    <class name="CaseType" >
+        <id name="ID" unsaved-value="-1">
+            <generator class="native" />
+        </id>
+        <property name="Name" />
+        <property name="Domain" />
+        <property name="Description" />
+        <property name="ListOrder" />
+        <property name="Deactivated" />
+    </class>
+
+    <class name="RelationType" >
+        <id name="ID" unsaved-value="-1">
+            <generator class="native" />
+        </id>
+        <property name="Name" />
+        <property name="ListOrder" />
+        <property name="Deactivated" />
+    </class>
+
+    <class name="DisputeCase" table="[case]" >
+        <id name="ID" unsaved-value="-1">
+            <generator class="native" />
+        </id>
+        <property name="Title" />
+        <property name="Locality" />
+        <many-to-one name="Department" column="department_id" />
+        <many-to-one name="InternalCaseType" column="internal_case_type_id" />
+        <many-to-one name="ExternalCaseType" column="external_case_type_id" />
+        <property name="Content" />
+        <property name="MoneyInvolved" />
+        <property name="PeopleInvolved" />
+        <property name="Flag1" column="flag_1" />
+        <property name="Flag2" column="flag_2" />
+        <property name="Flag3" column="flag_3" />
+        <property name="Flag4" column="flag_4" />
+        <property name="Flag5" column="flag_5" />
+        <property name="Flag6" column="flag_6" />
+        <property name="Flag7" column="flag_7" />
+        <property name="Flag8" column="flag_8" />
+        <property name="Flag9" column="flag_9" />
+        <property name="Flag10" column="flag_10" />
+        <property name="Status" />
+        <many-to-one name="PartiesRelationType" column="parties_relation_type_id" />
+        <property name="MediatorAdvice" />
+        <property name="Instructions" />
+        <property name="Progress" />
+        <property name="Disposal" />
+        <property name="Responsable" />
+        <property name="ResponsablePhone" />
+        <property name="IsConcluded" />
+        <property name="ConcludeDate" />
+        <many-to-one name="Registrar" column="registrar_id" />
+        <property name="DateTime" />
+        <property name="LastModifyTime" />
+        <property name="Deactivated" />
+    </class>
+</hibernate-mapping>

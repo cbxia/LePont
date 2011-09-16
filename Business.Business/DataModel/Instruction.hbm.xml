@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping
+	xmlns="urn:nhibernate-mapping-2.2"
+    namespace="LePont.Business"
+    assembly="LePont.Business"
+    default-cascade="none"
+    default-lazy="false" >
+
+    <class name="Instruction" >
+        <id name="ID" unsaved-value="-1">
+            <generator class="native" />
+        </id>
+        <many-to-one name="TargetCase" column="case_id" />
+        <property name="Title" />
+        <property name="Content" />
+        <property name="AttachmentFileName" />
+        <property name="AttachmentFileData" />        
+        <many-to-one name="Department" column="department_id" />
+        <many-to-one name="Issuer" column="issuer_id" />
+        <property name="DateTime" />
+        <property name="ListOrder" />
+        <property name="Deactivated" />
+    </class>
+
+    <class name="InstructionLite" table="instruction">
+        <id name="ID" unsaved-value="-1">
+            <generator class="native" />
+        </id>
+        <many-to-one name="TargetCase" column="case_id" />
+        <property name="Title" />
+        <property name="AttachmentFileName" />
+        <many-to-one name="Department" column="department_id" />
+        <many-to-one name="Issuer" column="issuer_id" />
+        <property name="DateTime" />
+        <property name="ListOrder" />
+        <property name="Deactivated" />
+    </class>    
+</hibernate-mapping>

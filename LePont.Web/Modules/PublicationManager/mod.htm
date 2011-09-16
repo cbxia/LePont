@@ -1,0 +1,79 @@
+﻿<!--template-->
+<script id="tmpl-pub-list-items" type="text/jquery-template">
+    <tr>
+    <td><a href="javascript:void(0);">${Title}</a></td>
+    <td>${Publisher.Name}</td>
+    <td>${formatJsonDate(DateTime)}</td>
+    <td></td>
+    </tr>
+</script>
+<!--content-->
+<div id="pub-manager" class="module-body">
+    <table id="pub-list" class="grid mode-2">
+        <thead>
+            <tr>
+                <th style="width: 450px;">
+                    标题
+                </th>
+                <th style="width: 140px;">
+                    发布人
+                </th>
+                <th style="width: 100px;">
+                    发布时间
+                </th>
+                <th style="width: 100px;">
+                    备注
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div class="command-bar">
+        <button id="add-publication">
+            添加信息</button>
+    </div>
+    <div id="publication-editor-dlg">
+        <form id="publication-editor-form">
+        <table>
+            <tr>
+                <td class="item-label">
+                    主题：
+                </td>
+                <td class="item-value">
+                    <input id="di-Title" class="{validate:{required:true,messages: {required: '必须输入信息标题'}}}"
+                        style="width: 500px" type="text" />&nbsp;（必填）
+                </td>
+            </tr>
+            <tr>
+                <td class="item-label">
+                    内容：
+                </td>
+                <td class="item-value">
+                    <textarea id="di-Content" style="width: 700px; height: 400px" />&nbsp;（必填）
+                </td>
+            </tr>
+        </table>
+        </form>
+        <form id="publication-attach-form">
+        <table>
+            <tr>
+                <td class="item-label">
+                    附件：
+                </td>
+                <td class="item-value">
+                    <input type="file" name="di-Attachment-Pub" id="di-Attachment-Pub" />
+                    <span class="file-uploading-anim">正在上传附件
+                        <img src="../css/images/ajax-anim.gif" /></span>
+                </td>
+            </tr>
+        </table>
+        </form>
+        <div class="validation-tips">
+            <p>
+                数据验证失败：</p>
+            <ol>
+            </ol>
+        </div>
+    </div>
+</div>

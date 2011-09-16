@@ -1,0 +1,129 @@
+﻿<!--local templates-->
+<script id="tmpl-dep-editor-tabview" type="text/jquery-template">
+    <div id="dep-editor-tabview">
+        <ul>
+            <li><a href="#dep-editor-tabview-inspect">查看</a></li>
+            <li><a href="#dep-editor-tabview-modify">修改</a></li>
+            <li><a href="#dep-editor-tabview-add">添加下级部门</a></li>
+        </ul>
+        <div id="dep-editor-tabview-inspect">
+            <table>
+                <tr>
+                    <td class="title">
+                        部门级别：
+                    </td>
+                    <td class="value-item">
+                        ${Level}级部门
+                    </td>
+                </tr>
+                <tr>
+                    <td class="title">
+                        部门代码：
+                    </td>
+                    <td class="value-item">
+                        ${Code}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="title">
+                        部门名称：
+                    </td>
+                    <td class="value-item">
+                        ${Name}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="title">
+                        列表顺序：
+                    </td>
+                    <td class="value-item">
+                        ${ListOrder}
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="dep-editor-tabview-modify">
+            <table>
+                <tr>
+                    <td class="title">
+                        部门级别：
+                    </td>
+                    <td class="value-item">
+                        ${Level}级部门
+                    </td>
+                </tr>
+                <tr>
+                    <td class="title">
+                        部门代码：
+                    </td>
+                    <td class="value-item">
+                        <input id="textbox-depcode-mod" type="text" value="${Code}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="title">
+                        部门名称：
+                    </td>
+                    <td class="value-item">
+                        <input id="textbox-depname-mod" type="text" value="${Name}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="title">
+                        列表顺序：
+                    </td>
+                    <td class="value-item">
+                        <input id="textbox-listorder-mod" type="text" value="${ListOrder}" />
+                    </td>
+                </tr>
+            </table>
+            <input id="submit-modif" type="button" value="确认修改" />
+        </div>
+        <div id="dep-editor-tabview-add">
+            <table>
+                <tr>
+                    <td class="title">
+                        部门级别：
+                    </td>
+                    <td class="value-item">
+                        ${Level + 1}级部门
+                    </td>
+                </tr>
+                <tr>
+                    <td class="title">
+                        部门代码：
+                    </td>
+                    <td class="value-item">
+                        <input id="textbox-depcode-add" type="text" value="" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="title">
+                        部门名称：
+                    </td>
+                    <td class="value-item">
+                        <input id="textbox-depname-add" type="text" value="" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="title">
+                        列表顺序：
+                    </td>
+                    <td class="value-item">
+                        <input id="textbox-listorder-add" type="text" value="" />
+                    </td>
+                </tr>
+            </table>
+            <input id="submit-add" type="button" value="确认添加" />
+        </div>
+    </div>
+</script>
+<!--content-->
+<div class="module-body">
+    <div class="nav">
+        <ul id="deptree" class="filetree treeview">
+        </ul>
+    </div>
+    <div id="edit-area" class="edit-area">
+    </div>
+</div>

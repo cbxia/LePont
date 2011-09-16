@@ -1,0 +1,18 @@
+﻿.module-body .edit-area
+{
+    margin-left: 5px;
+    background-color: #f5f5f6;
+}
+.section-body td
+{
+    border-bottom: 1px dotted #666;
+}
+.section-body td.item-label
+{
+    text-align: right;
+    width: 106px;
+}
+.module-body .buttons
+{
+    padding: 10px 0 10px 400px;
+}

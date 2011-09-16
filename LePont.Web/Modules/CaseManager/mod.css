@@ -1,0 +1,131 @@
+﻿#case-list-view
+{
+    width: 990px;
+    position: relative;
+}
+#case-list-view .search-bar-title
+{
+    position: absolute;
+    z-index: 9;
+    background-color: #4A7EB7;
+    top: -10px;
+    left: 10px;
+    padding: 2px 4px;
+    color: #fff;
+    font: 13px;
+}
+#case-list-view .search-bar
+{
+    overflow: hidden;
+    padding: 10px;
+    margin: 11px 0 6px 0;
+    background: #F6F6FF;
+    border-top: 1px solid #4A7EB7;
+    border-bottom: 1px solid #4A7EB7;
+    position: relative;
+}
+#case-list-view .search-bar form
+{
+    overflow: hidden;
+}
+#case-list-view .search-bar .command-pane
+{
+    position: absolute;
+    top: 20px;
+    left: 620px;
+    width: 200px;
+}
+#case-list-view .search-bar .ctrl-group
+{
+    position: relative;
+    float: left;
+    padding: 2px 4px;
+}
+#case-list-view .search-bar .ctrl-group .ctrl-subgroup
+{
+    position: relative;
+    float: left;
+}
+#case-list-view .search-bar a.dep-pick-trig
+{
+    background: url("/css/images/arrow-down.png");
+    display: block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 232px;
+    top: 4px;
+}
+#case-list-view .search-bar a.dep-pick-trig:hover
+{
+    background: url("/css/images/arrow-down-hi.png");
+}
+#case-list-view .dep-picker
+{
+    position: absolute;
+    right: 728px;
+    top: 35px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    width: 180px;
+}
+#case-list-view .pager-bar
+{
+    background: none repeat scroll 0 0 #f6f6ff;
+    border: 1px solid #ddddff;
+    margin: 1px;
+    padding: 1px 10px;
+    height: 22px;
+}
+#case-list-view .pager-bar td
+{
+    padding-right: 20px;
+}
+span.status-0
+{
+    background-color: #9999ff;
+}
+span.status-1
+{
+    background-color: #ee6666;
+}
+span.status-2
+{
+    background-color: #ffffaa;
+}
+span.status-3
+{
+    background-color: #66ff66;
+}
+tr.status-0 td, .status-0 td a
+{
+    color: #9999ff !important;
+}
+tr.status-1 td, .status-1 td a
+{
+    color: #ee6666 !important;
+}
+tr.status-2 td, .status-2 td a
+{
+    color: #ffffaa !important;
+}
+tr.status-3 td, .status-3 td a
+{
+    color: #66ff66 !important;
+}
+tr.status-0 td.status-ind
+{
+    background-color: #9999ff !important;
+}
+tr.status-1 td.status-ind
+{
+    background-color: #ee6666 !important;
+}
+tr.status-2 td.status-ind
+{
+    background-color: #ffffaa !important;
+}
+tr.status-3 td.status-ind
+{
+    background-color: #66ff66 !important;
+}

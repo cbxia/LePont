@@ -1,0 +1,12 @@
+﻿http://www.tek-tips.com/viewthread.cfm?qid=1222133&page=1 blocks aesthetics
+http://www.microsoft.com/en-us/default.aspx collapsible
+http://ashishware.com/CollapsiblePanel.shtml horizontal exp/coll icons
+http://i3.msdn.microsoft.com/Hash/1fcb39def60c02db8c304225220aa123.png icons
+
+http://www.switchonthecode.com/tutorials/javascript-and-css-tutorial-how-to-make-sliding-panels good!
+
+http://www.grails.org/plugin/grails-ui 
+
+
+******* Dev Notes****
+[1] For jquery-validation to work properly, the name property of target input element must be set.

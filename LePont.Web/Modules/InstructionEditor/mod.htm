@@ -1,0 +1,76 @@
+﻿<div id="instruction-editor-dlg" style="display: none">
+    <form id="instruction-editor-form">
+    <table>
+        <tr>
+            <td class="item-label">
+                案件标题：
+            </td>
+            <td class="item-value">
+                <span class="case-title"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="item-label">
+                简要情况：
+            </td>
+            <td class="item-value">
+                <span class="case-content"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="item-label">
+                批示标题：
+            </td>
+            <td class="item-value">
+                <input class="di-Title {validate:{required:true,messages: {required: '必须输入标题'}}}"
+                    style="width: 580px" type="text" />&nbsp;（必填）
+            </td>
+        </tr>
+        <tr>
+            <td class="item-label">
+                批示内容：
+            </td>
+            <td class="item-value">
+                <textarea id="di-Content-InstrEd" class="{validate:{required:true,messages: {required: '必须输入批示内容'}}}"
+                    rows="3" cols="100" style="width: 560px; height: 100px" />&nbsp;（必填）
+            </td>
+        </tr>
+        <tr>
+            <td class="item-label">
+                批示人：
+            </td>
+            <td class="item-value">
+                <span class="di-Issuer"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="item-label">
+                日期：
+            </td>
+            <td class="item-value">
+                <span class="di-DateTime"></span>
+            </td>
+        </tr>
+    </table>
+    </form>
+    <form id="instruction-attach-form">
+    <table>
+        <tr>
+            <td class="item-label">
+                附件：
+            </td>
+            <td class="item-value">
+                <input type="file" name="di-Attachment-Instr" id="di-Attachment-Instr" />
+                <span class="file-uploading-anim">正在上传附件
+                    <img src="../css/images/ajax-anim.gif" /></span>
+            </td>
+        </tr>
+    </table>
+    </form>
+    <div class="validation-tips">
+        <p>
+            数据验证失败：</p>
+        <ol>
+        </ol>
+    </div>
+</div>

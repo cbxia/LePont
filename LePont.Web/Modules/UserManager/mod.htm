@@ -1,0 +1,201 @@
+﻿<!--local templates-->
+<script id="tmpl-user-list-row" type="text/jquery-template">
+{{if Deactivated}} 
+<tr class="inactive">
+{{else}}  
+<tr>
+{{/if}}
+    <td style="text-align: center;">
+        <input type="checkbox" class="row-select" /> 
+    </td>
+    <td>
+        ${ID}
+    </td>
+    <td>
+        ${LoginId}
+    </td>
+    <td>
+        ${Name}
+    </td>
+    <td>
+        ${Phone}
+    </td>
+    <td>
+        ${Email}
+    </td>
+    <td>
+        ${formatJsonDate(CreateTime)}
+    </td>
+    <td style="text-align: center;">
+        {{if Deactivated}} 禁用 {{else}} 有效 {{/if}}
+    </td>
+    <td>
+        {{each(i, role) Application.GetAllRoles()}} 
+        {{if Application.IsUserInRole($data, role.Name)}}
+            ${role.Name}<input type="checkbox" checked="checked" disabled="disabled" />
+        {{else}} 
+            ${role.Name}<input type="checkbox" disabled="disabled" />
+        {{/if}} {{/each}}
+    </td>
+</tr>
+</script>
+<!--content-->
+<div id="user-manager" class="module-body">
+    <div class="nav">
+        <ul id="deptree" class="filetree treeview">
+        </ul>
+    </div>
+    <div id="edit-area" class="edit-area">
+        <div class="user-list-container">
+            <table id="user-list" class="grid mode-1">
+                <thead>
+                    <tr>
+                        <th>
+                            选择
+                        </th>
+                        <th>
+                            编号
+                        </th>
+                        <th>
+                            登录名
+                        </th>
+                        <th>
+                            姓名
+                        </th>
+                        <th>
+                            电话
+                        </th>
+                        <th>
+                            邮件地址
+                        </th>
+                        <th>
+                            开通时间
+                        </th>
+                        <th>
+                            状态
+                        </th>
+                        <th>
+                            权限
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="command-container">
+            <input id="add-user" type="button" value="添加用户" />&nbsp;
+            <input id="modify-user" type="button" value="编辑用户" />&nbsp;
+            <input id="deactivate-user" type="button" value="禁用用户" />
+            <input id="activate-user" type="button" value="激活用户" />
+        </div>
+        <form id="user-editor-form" class="clearable-dlg">
+        <table>
+            <tr>
+                <td class="item-label">
+                    所属部门：
+                </td>
+                <td class="item-value department-name">
+                </td>
+            </tr>
+            <tr>
+                <td class="item-label">
+                    用户名：
+                </td>
+                <td class="item-value">
+                    <input name="di-login-id" class="{validate:{required:true,minlength:3,messages:{required:'请输入用户名',minlength:'用户名必须至少是3个字符'}}}"
+                        style="width: 200px" type="text" />&nbsp;（必填）
+                </td>
+            </tr>
+            <tr>
+                <td class="item-label">
+                    真实姓名：
+                </td>
+                <td class="item-value">
+                    <input name="di-user-name" class="{validate:{required:true,minlength:2,messages:{required:'请输入真实姓名',minlength:'姓名必须至少是2个汉字'}}}"
+                        style="width: 200px" type="text" />&nbsp;（必填）
+                </td>
+            </tr>
+            <tr>
+                <td class="item-label">
+                    登录密码：
+                </td>
+                <td class="item-value">
+                    <input name="di-password" class="{validate:{required:true,minlength:4,messages:{required:'请输入密码',minlength:'密码必须至少是4个字符'}}}"
+                        style="width: 200px" type="password" />&nbsp;（必填）
+                </td>
+            </tr>
+            <tr>
+                <td class="item-label">
+                    密码提问：
+                </td>
+                <td class="item-value">
+                    <select name="di-password-question" style="width: 324px;">
+                    </select>&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td class="item-label">
+                    密码答案：
+                </td>
+                <td class="item-value">
+                    <input name="di-password-answer" style="width: 200px" type="text" />&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td class="item-label">
+                    联系电话：
+                </td>
+                <td class="item-value">
+                    <input name="di-phone" style="width: 200px" type="text" />&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td class="item-label">
+                    电子邮箱：
+                </td>
+                <td class="item-value">
+                    <input name="di-email" class="{validate:{email:true}}" style="width: 320px" type="text" />&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td class="item-label">
+                    操作权限：
+                </td>
+                <td class="item-value">
+                    <table class="permission-selector">
+                        <tr>
+                            <td>
+                                系统管理<input name="di-permission-1" type="checkbox" />
+                            </td>
+                            <td>
+                                数据管理<input name="di-permission-2" type="checkbox" />
+                            </td>
+                            <td>
+                                案例发布<input name="di-permission-3" type="checkbox" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                案例批示<input name="di-permission-4" type="checkbox" />
+                            </td>
+                            <td>
+                                预警操作<input name="di-permission-5" type="checkbox" />
+                            </td>
+                            <td>
+                                处置操作<input name="di-permission-6" type="checkbox" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <div class="validation-tips">
+            <p>
+                数据验证失败：</p>
+            <ol>
+            </ol>
+        </div>
+        </form>
+    </div>
+</div>

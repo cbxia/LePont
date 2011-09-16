@@ -1,0 +1,21 @@
+﻿#instruction-editor-dlg div
+{
+    padding: 5px 0;
+}
+#instruction-editor-dlg .case-title
+{
+    text-align: center;
+    font-size: 120%;
+    font-weight: bold;
+    padding: 20px 0;
+}
+#instruction-editor-form td.item-label, #instruction-attach-form td.item-label
+{
+    text-align: right;
+    width: 100px;
+    border-bottom: 1px dotted #666;
+}
+#di-Attachment-Instr
+{
+    width: 600px;
+}

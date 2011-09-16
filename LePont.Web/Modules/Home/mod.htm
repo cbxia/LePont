@@ -1,0 +1,159 @@
+﻿<!--templates-->
+<script id="tmpl-pub-list-items" type="text/jquery-template">
+    <tr>
+    <td><a class="open" href="javascript:void(0);">${Title}</a></td>
+    <td>${Publisher.Name}</td>
+    <td>${formatJsonDate(DateTime)}</td>
+    <td></td>
+    </tr>
+</script>
+<script id="tmpl-case-list-items" type="text/jquery-template">
+    <tr>
+    <td><a class="open" href="javascript:void(0);">${Title}</a></td>
+    <td>${InternalCaseType.Name}</td>
+    <td>${Department.Name}</td>
+    <td>${formatJsonDate(DateTime)}</td>
+    {{if IsConcluded}}
+    <td>已结案</td>
+    {{else}}
+    <td>未结案</td>
+    {{/if}}
+    <td><a class="open" title="查看案件详情" href="javascript:void(0);">详情</a>&nbsp;&nbsp;<a class="instruct" title="查看批示" href="javascript:void(0);">批示</a></td>
+    </tr>
+</script>
+<!--content-->
+<div class="module-body">
+    <div id="blocks">
+        <div class="main-blocks">
+            <div id="mb-1" class="case-block">
+                <div class="heading">
+                    <span class="title">最新动态 &gt;&gt;&gt;</span><span class="more">更多</span>
+                </div>
+                <table class="grid mode-2">
+                    <thead>
+                        <tr>
+                            <th style="width: 280px;">
+                                信息标题
+                            </th>
+                            <th style="width: 90px;">
+                                类别
+                            </th>
+                            <th style="width: 80px;">
+                                部门
+                            </th>
+                            <th style="width: 80px;">
+                                添加时间
+                            </th>
+                            <th style="width: 60px;">
+                                状态
+                            </th>
+                            <th style="width: 90px;">
+                                操作
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div id="mb-2" class="pub-block">
+                <div class="heading">
+                    <span class="title">法律法规 &gt;&gt;&gt;</span><span class="more">更多</span>
+                </div>
+                <table class="grid mode-2">
+                    <thead>
+                        <tr>
+                            <th style="width: 340px;">
+                                标题
+                            </th>
+                            <th style="width: 120px;">
+                                发布人
+                            </th>
+                            <th style="width: 100px;">
+                                发布时间
+                            </th>
+                            <th style="width: 100px;">
+                                备注
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div id="mb-3" class="pub-block">
+                <div class="heading">
+                    <span class="title">工作交流 &gt;&gt;&gt;</span><span class="more">更多</span>
+                </div>
+                <table class="grid mode-2">
+                    <thead>
+                        <tr>
+                            <th style="width: 340px;">
+                                标题
+                            </th>
+                            <th style="width: 120px;">
+                                发布人
+                            </th>
+                            <th style="width: 100px;">
+                                发布时间
+                            </th>
+                            <th style="width: 100px;">
+                                备注
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div id="mb-4" class="pub-block">
+                <div class="heading">
+                    <span class="title">新闻焦点 &gt;&gt;&gt;</span><span class="more">更多</span>
+                </div>
+                <table class="grid mode-2">
+                    <thead>
+                        <tr>
+                            <th style="width: 340px;">
+                                标题
+                            </th>
+                            <th style="width: 120px;">
+                                发布人
+                            </th>
+                            <th style="width: 100px;">
+                                发布时间
+                            </th>
+                            <th style="width: 100px;">
+                                备注
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="side-blocks">
+            <div id="lastest-tips" class="block">
+                <div class="hd">
+                    最新提示
+                </div>
+                <div class="bd">
+                </div>
+            </div>
+            <div id="monthly-stats" class="block">
+                <div class="hd">
+                    本月统计
+                </div>
+                <div class="bd">
+                </div>
+            </div>
+            <div id="friend-links" class="block">
+                <div class="hd">
+                    友情链接
+                </div>
+                <div class="bd">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

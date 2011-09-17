@@ -49,9 +49,11 @@ namespace LePont.Web
                         {
                             paramParsingSuccess = false;
                             context.Response.StatusCode = HTTPStatus.BAD_REQUEST;
-                            context.Response.StatusDescription = string.Format("Parameter \"{0}\" of invokable method \"{1}\" has an invalid value: \"{2}\". ", methodName, paramName, context.Request[paramName]);
+                            string shortMessage = string.Format("Parameter \"{0}\" of service method \"{1}\" has an invalid value. ", paramName, methodName);
+                            string longMessage = string.Format("Parameter \"{0}\" of service method \"{1}\" has an invalid value: \"{2}\". ", paramName, methodName, context.Request[paramName]);
+                            context.Response.StatusDescription = shortMessage;
                             if (_log != null)
-                                _log.Error(context.Response.StatusDescription, err);
+                                _log.Error(longMessage, err);
                             break;
                         }
                     }
@@ -59,7 +61,9 @@ namespace LePont.Web
                     {
                         paramParsingSuccess = false;
                         context.Response.StatusCode = HTTPStatus.BAD_REQUEST;
-                        context.Response.StatusDescription = string.Format("Requested invokable method \"{0}\" requires parameter \"{1}\", which is not supplied.", methodName, paramName);
+                        context.Response.StatusDescription = string.Format("Requested service method \"{0}\" requires parameter \"{1}\", which is not supplied.", methodName, paramName);
+                        if (_log != null)
+                            _log.Error(context.Response.StatusDescription);
                         break;
                     }
                 }
@@ -99,7 +103,8 @@ namespace LePont.Web
                             {
                                 context.Response.StatusCode = HTTPStatus.RESOURCE_NOT_FOUND;
                                 context.Response.StatusDescription = "Requested document not found.";
-                                context.Response.Flush();
+                                if (_log != null)
+                                    _log.Error(context.Response.StatusDescription);
                             }
                         }
                         else if (invAttr.MimeType == "application/json")
@@ -116,7 +121,7 @@ namespace LePont.Web
                             catch (InvalidOperationException err)
                             {
                                 context.Response.StatusCode = HTTPStatus.SERVER_ERROR;
-                                context.Response.StatusDescription = string.Format("JavaScript serialization error occured on requesting invokable method \"{0}\".", methodName);
+                                context.Response.StatusDescription = string.Format("JavaScript serialization error occured on requesting service method \"{0}\".", methodName);
                                 if (_log != null)
                                     _log.Error(context.Response.StatusDescription, err);
                             }
@@ -150,7 +155,7 @@ namespace LePont.Web
                             catch (InvalidCastException err)
                             {
                                 context.Response.StatusCode = HTTPStatus.SERVER_ERROR;
-                                context.Response.StatusDescription = string.Format("Requested invokable method \"{0}\" is expected to return a byte array.", methodName);
+                                context.Response.StatusDescription = string.Format("Requested service method \"{0}\" is expected to return a byte array.", methodName);
                                 if (_log != null)
                                     _log.Error(context.Response.StatusDescription, err);
                             }
@@ -162,14 +167,15 @@ namespace LePont.Web
                         context.Response.StatusDescription = string.Format("Server error. Method : {0}", methodName);
                         if (_log != null)
                             _log.Error(context.Response.StatusDescription, err);
-
                     }
                 }
             }
             else
             {
                 context.Response.StatusCode = HTTPStatus.BAD_REQUEST;
-                context.Response.StatusDescription = string.Format("Requested invokable method \"{0}\" not defined.", methodName);
+                context.Response.StatusDescription = string.Format("Requested service method \"{0}\" not defined.", methodName);
+                if (_log != null)
+                    _log.Error(context.Response.StatusDescription);
             }
         }
     }

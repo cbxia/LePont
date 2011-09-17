@@ -132,7 +132,7 @@ var Application = function () {
 
             });
         }
-        if (onFailure == null)
+        if (typeof onFailure == "undefined" || onFailure == null)
             onFailure = __promptGenericAJAXError;
         var xhr = $.ajax({
             url: GetServiceUrl(method),
@@ -140,13 +140,13 @@ var Application = function () {
             type: "POST",
             dataType: "json",
             success: onSuccess,
-            fail: onFailure
+            error: onFailure
         });
         return xhr;
     }
 
-    function __promptGenericAJAXError() {
-        window.alert("后台服务调用失败，请联系系统管理员。");
+    function __promptGenericAJAXError(jqXHR, textStatus, errorThrown) {
+        window.alert("后台服务调用失败，请联系系统管理员。错误消息： " + errorThrown);
     }
 
     function BindDropDownList(elementSelector, method, params, idField, nameField, blankItem) {

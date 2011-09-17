@@ -91,7 +91,7 @@
     //    }
 
     function __doSearch() {
-        __dateTo.setDate(__dateTo.getDate() + 1); 
+        __dateTo.setDate(__dateTo.getDate() + 1);
         Application.InvokeService(
             "SearchCases",
             {
@@ -183,7 +183,7 @@
         $("#cm-AddCase").click(function () {
             //Application.LoadModule("CaseEditor", "CaseManager");
             Application.EnsureLoadLayer("CaseEditor").done(function () {
-                Application.Modules["CaseEditor"].open();
+                Application.Modules["CaseEditor"].open(null, __doSearch);
             });
         });
 
@@ -198,7 +198,7 @@
         $("#cm-searchresults").delegate("td a.modi-case", "click", function () {
             var caseObj = $(this).parent().tmplItem().data;
             Application.EnsureLoadLayer("CaseEditor").done(function () {
-                Application.Modules["CaseEditor"].open(caseObj.ID);
+                Application.Modules["CaseEditor"].open(caseObj.ID, __doSearch);
             });
         });
 
@@ -218,5 +218,6 @@
     //// exports
     var interface = module || {};
     interface.init = init;
+    interface.refresh = __doSearch;
     return interface;
 } (Application.Modules["CaseManager"]); 

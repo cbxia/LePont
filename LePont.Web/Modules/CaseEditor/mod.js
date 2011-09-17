@@ -1,14 +1,16 @@
 ﻿Application.Modules["CaseEditor"] = function (module) { // param module is the module object to augment
     var __method;
     var __case;
+    var __callbackOnSave;
 
     function init() {
         __initForm();
         __bindEvents();
     }
 
-    function open(caseId) {
+    function open(caseId, callbackOnSave) {
         __case = null;
+        __callbackOnSave = callbackOnSave;
         __resetForm();
         if (typeof caseId != "undefined" && caseId != null) {
             __getCase(caseId);
@@ -207,6 +209,8 @@
             },
             function (result) {
                 alert("保存案件成功！");
+                if (typeof __callbackOnSave == "function")
+                    __callbackOnSave();
             }
         );
         return xhr;

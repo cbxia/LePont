@@ -4,14 +4,13 @@
         __statuses,
         __dateFrom,
         __dateTo,
-        __pageSize = 4,
+        __pageSize = 10,
         __totalPages,
         __pageIndex;
 
     function init() {
         __initForm();
         __bindEvents();
-        pageSize = 4;
     }
 
     function __initForm() {
@@ -37,12 +36,20 @@
                 $("#cm-search-form").validate().element(this); // forces validation, otherwise, no immediate validation
             }
         });
+
         $("#cm-DateTo").datepicker({
             changeYear: true,
             onSelect: function () {
                 $("#cm-search-form").validate().element(this); // forces validation, otherwise, no immediate validation
             }
         });
+
+        var maintenant = new Date();
+        var oneMonthAgo = new Date();
+        oneMonthAgo.setDate(oneMonthAgo.getDate() - 90);
+
+        $("#cm-DateFrom").datepicker('setDate', oneMonthAgo);
+        $("#cm-DateTo").datepicker('setDate', maintenant);
 
         Application.BindDropDownList(
             "#cm-InternalCaseType",
@@ -84,6 +91,7 @@
     //    }
 
     function __doSearch() {
+        __dateTo.setDate(__dateTo.getDate() + 1); 
         Application.InvokeService(
             "SearchCases",
             {

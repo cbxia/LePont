@@ -77,7 +77,6 @@ var Application = function () {
                         __clearDialogLeftovers();
                         if (typeof Modules[moduleName].init != "undefined") {
                             Modules[moduleName].init(context);
-                            Modules[moduleName].everLoaded = true;
                         }
                     }
                     else

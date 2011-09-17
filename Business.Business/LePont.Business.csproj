@@ -83,7 +83,9 @@
     <EmbeddedResource Include="DataModel\User.hbm.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="DataModel\Role.hbm.xml" />
+    <EmbeddedResource Include="DataModel\Role.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="DataModel\Department.hbm.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>

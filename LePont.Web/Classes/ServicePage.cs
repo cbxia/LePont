@@ -12,14 +12,17 @@ namespace LePont.Web
         private static readonly log4net.ILog _log = log4net.LogManager.GetLogger(typeof(ServicePage));
         public override void ProcessRequest(HttpContext context)
         {
-            if (context.Request["invokemode"] == "service") 
+            if (context.Request["invokemode"] == "service")
             {
                 DispatchInvoke(context);
             }
-            else 
+            else
             {
                 base.ProcessRequest(context);
             }
+            //string a = @"{'ID':9,'Title':'巴黎、伦敦等城市发生群体性恶性上访事件','Locality':'欧洲','Department':{'ID':1},'InternalCaseType':{'ID':'3'},'ExternalCaseType':{'ID':'29'},'Content':'巴黎、伦敦等城市发生群体性恶性上访事件\n一般打砸抢暴徒抢走摄像头若干，价值数百元\n【修改】','MoneyInvolved':'1','PeopleInvolved':'1','Flag1':true,'Flag2':false,'Flag3':false,'Flag4':false,'Flag5':true,'Flag6':false,'Flag7':true,'Flag8':false,'Flag9':null,'Flag10':null,'Status':'1','PartiesRelationType':{'ID':'1'},'MediatorAdvice':'绳之以法','Instructions':'绳之以法','Progress':'绳之以法','Disposal':'绳之以法','Responsable':'奥巴马','ResponsablePhone':'324343','IsConcluded':false,'ConcludeDate':null,'Registrar':{'ID':1},'LastModifyTime':null,'Deactivated':false}";
+            //JavaScriptSerializer jsonSer = new JavaScriptSerializer();
+            //var c = jsonSer.Deserialize(a, typeof(LePont.Business.DisputeCase));
         }
 
         protected virtual void DispatchInvoke(HttpContext context)

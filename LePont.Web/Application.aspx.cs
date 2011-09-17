@@ -173,6 +173,13 @@ namespace LePont.Web
         }
 
         [ServiceMethod]
+        public void ModifyCase(DisputeCase caseObj)
+        {
+            SimpleDataBroker db = new SimpleDataBroker();
+            db.Save<DisputeCase>(caseObj);
+        }
+
+        [ServiceMethod]
         public DisputeCase GetCase(int id)
         {
             CaseBroker db = new CaseBroker();

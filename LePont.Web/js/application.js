@@ -1,4 +1,10 @@
-﻿//////// Application context
+﻿/* TODO: 
+ * [1] Prompting for user confirmation before module switching, if there's unsaved data.
+ *     The active module should be able to observe module loading events.  
+ * [2]
+ */
+
+//////// Application context
 var Application = function () {
     var Modules = {};
     var Layers = {};
@@ -147,12 +153,12 @@ var Application = function () {
     function BindDropDownList(elementSelector, method, params, idField, nameField, blankItem) {
         var idField = idField || "ID";
         var nameField = nameField || "Name";
+        if (typeof blankItem != "undefined" && blankItem != null)
+            $($.format("<option value='%s'>%s</option>", [blankItem[idField], blankItem[nameField]])).appendTo(elementSelector);
         InvokeService(
             method,
             params,
             function (items) {
-                if (typeof blankItem != "undefined" && blankItem != null)
-                    $($.format("<option value='%s'>%s</option>", [blankItem[idField], blankItem[nameField]])).appendTo(elementSelector);
                 $.each(items, function (i, v) {
                     $($.format("<option value='%s'>%s</option>", [v[idField], v[nameField]])).appendTo(elementSelector);
                 })

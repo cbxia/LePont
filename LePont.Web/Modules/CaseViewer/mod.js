@@ -2,7 +2,7 @@
     $("#case-detail").tabs();
 }
 
-Application.Modules["CaseViewer"].show = function (caseId) {
+Application.Modules["CaseViewer"].open = function (caseId) {
     this.bind(caseId);
     $("#case-detail").dialog({
         title: "案件详情",

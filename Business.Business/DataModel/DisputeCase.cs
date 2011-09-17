@@ -18,8 +18,8 @@ namespace LePont.Business
         public virtual CaseType InternalCaseType { get; set; }
         public virtual CaseType ExternalCaseType { get; set; }
         public virtual string Content { get; set; }
-        public virtual decimal MoneyInvolved { get; set; }
-        public virtual short PeopleInvolved { get; set; }
+        public virtual decimal? MoneyInvolved { get; set; }
+        public virtual short? PeopleInvolved { get; set; }
         public virtual bool? Flag1 { get; set; }
         public virtual bool? Flag2 { get; set; }
         public virtual bool? Flag3 { get; set; }

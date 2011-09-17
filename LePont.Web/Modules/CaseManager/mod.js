@@ -175,7 +175,7 @@
         $("#cm-AddCase").click(function () {
             //Application.LoadModule("CaseEditor", "CaseManager");
             Application.EnsureLoadLayer("CaseEditor").done(function () {
-                Application.Modules["CaseEditor"].show();
+                Application.Modules["CaseEditor"].open();
             });
         });
 
@@ -183,14 +183,14 @@
         $("#cm-searchresults").delegate("td a.view-case", "click", function () {
             var caseObj = $(this).parent().tmplItem().data;
             Application.EnsureLoadLayer("CaseViewer").done(function () {
-                Application.Modules["CaseViewer"].show(caseObj.ID);
+                Application.Modules["CaseViewer"].open(caseObj.ID);
             });
         });
 
         $("#cm-searchresults").delegate("td a.modi-case", "click", function () {
             var caseObj = $(this).parent().tmplItem().data;
             Application.EnsureLoadLayer("CaseEditor").done(function () {
-                Application.Modules["CaseEditor"].show(caseObj.ID);
+                Application.Modules["CaseEditor"].open(caseObj.ID);
             });
         });
 

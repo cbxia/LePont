@@ -51,7 +51,7 @@
     $("#mb-1").delegate("td a.open", "click", function () {
         var caseObj = $(this).parent().tmplItem().data;
         Application.EnsureLoadLayer("CaseViewer").done(function () {
-            Application.Modules["CaseViewer"].show(caseObj.ID);
+            Application.Modules["CaseViewer"].open(caseObj.ID);
         });
     });
 

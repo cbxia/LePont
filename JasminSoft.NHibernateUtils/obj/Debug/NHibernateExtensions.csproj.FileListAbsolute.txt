@@ -1,9 +1,0 @@
-G:\Files\Projects\Autospect\NHibernateExtensions\bin\Debug\Fenix.Utils.NHibernateExtensions.dll
-G:\Files\Projects\Autospect\NHibernateExtensions\bin\Debug\Fenix.Utils.NHibernateExtensions.pdb
-G:\Files\Projects\Autospect\NHibernateExtensions\bin\Debug\NHibernate.dll
-G:\Files\Projects\Autospect\NHibernateExtensions\bin\Debug\Iesi.Collections.dll
-G:\Files\Projects\Autospect\NHibernateExtensions\bin\Debug\log4net.dll
-G:\Files\Projects\Autospect\NHibernateExtensions\bin\Debug\Castle.DynamicProxy2.dll
-G:\Files\Projects\Autospect\NHibernateExtensions\obj\Debug\ResolveAssemblyReference.cache
-G:\Files\Projects\Autospect\NHibernateExtensions\obj\Debug\Fenix.Utils.NHibernateExtensions.dll
-G:\Files\Projects\Autospect\NHibernateExtensions\obj\Debug\Fenix.Utils.NHibernateExtensions.pdb

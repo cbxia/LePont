@@ -222,7 +222,7 @@
                 Application.InvokeService(
                     "DeactivateUser",
                     {
-                        userID: user.ID
+                        id: user.ID
                     },
                     function (result) {
                         createUserList(Application["UserManager.CurrentDepartment"]);
@@ -241,7 +241,7 @@
                 Application.InvokeService(
                     "ActivateUser",
                     {
-                        userID: user.ID
+                        id: user.ID
                     },
                     function (result) {
                         createUserList(Application["UserManager.CurrentDepartment"]);

@@ -1,0 +1,12 @@
+﻿#recycle-bin .pager-bar
+{
+    background: none repeat scroll 0 0 #f6f6ff;
+    border: 1px solid #ddddff;
+    margin: 1px;
+    padding: 1px 10px;
+    height: 22px;
+}
+#recycle-bin .pager-bar td
+{
+    padding-right: 20px;
+}

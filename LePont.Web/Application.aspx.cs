@@ -122,28 +122,16 @@ namespace LePont.Web
             db.Save<User>(user);
         }
 
-        private void ToggleActivation<T>(int id, bool activated)
-            where T : DeactivatableEntity
+        [ServiceMethod]
+        public void DeactivateUser(int id)
         {
-            using (SessionContext ctx = new SessionContext())
-            {
-                SimpleDataBroker db = new SimpleDataBroker(ctx);
-                T entity = db.GetById<T>(id);
-                entity.Deactivated = !activated;
-                db.Save(entity);
-            }
+            ToggleActivation<User>(id, false);
         }
 
         [ServiceMethod]
-        public void DeactivateUser(int userID)
+        public void ActivateUser(int id)
         {
-            ToggleActivation<User>(userID, false);
-        }
-
-        [ServiceMethod]
-        public void ActivateUser(int userID)
-        {
-            ToggleActivation<User>(userID, true);
+            ToggleActivation<User>(id, true);
         }
 
         [ServiceMethod]
@@ -162,41 +150,53 @@ namespace LePont.Web
         }
 
         [ServiceMethod]
-        public void AddCase(DisputeCase caseObj)
+        public void AddCase(Dossier caseObj)
         {
             caseObj.Registrar = AppContext.CurrentUser;
             caseObj.Department = AppContext.CurrentUser.Department;
             caseObj.DateTime = DateTime.Now;
             caseObj.Deactivated = false;
             SimpleDataBroker db = new SimpleDataBroker();
-            db.Save<DisputeCase>(caseObj);
+            db.Save<Dossier>(caseObj);
         }
 
         [ServiceMethod]
-        public void ModifyCase(DisputeCase caseObj)
+        public void ModifyCase(Dossier caseObj)
         {
             SimpleDataBroker db = new SimpleDataBroker();
-            db.Save<DisputeCase>(caseObj);
+            db.Save<Dossier>(caseObj);
         }
 
         [ServiceMethod]
-        public DisputeCase GetCase(int id)
+        public void DeactivateCase(int id)
+        {
+            ToggleActivation<Dossier>(id, false);
+        }
+
+        [ServiceMethod]
+        public void ActivateCase(int id)
+        {
+            ToggleActivation<Dossier>(id, true);
+        }
+
+        [ServiceMethod]
+        public Dossier GetCase(int id)
         {
             CaseBroker db = new CaseBroker();
-            DisputeCase obj = db.GetById(id, AppContext.CurrentUser.Department);
+            Dossier obj = db.GetById(id, AppContext.CurrentUser.Department);
             return obj;
         }
 
         [ServiceMethod]
-        public DisputeCase[] BrowseCases(int pageSize, int pageIndex)
+        public Dossier[] BrowseCases(int pageSize, int pageIndex)
         {
             CaseBroker db = new CaseBroker();
-            IList<DisputeCase> cases = db.Browse(AppContext.CurrentUser.Department, pageSize, pageIndex);
+            IList<Dossier> cases = db.Browse(AppContext.CurrentUser.Department, pageSize, pageIndex);
             return cases != null ? cases.ToArray() : null;
         }
 
         [ServiceMethod]
-        public DataPage<DisputeCase> SearchCases(int depId, int caseTypeId, byte[] statuses, DateTime dateFrom, DateTime dateTo, int pageSize, int pageIndex)
+        public DataPage<Dossier> SearchCases(int depId, int caseTypeId, byte[] statuses, DateTime dateFrom, DateTime dateTo, int pageSize, int pageIndex)
         {
             SimpleDataBroker depBroker = new SimpleDataBroker();
             Department dep = depBroker.GetById<Department>(depId);
@@ -204,6 +204,12 @@ namespace LePont.Web
             return db.Search(dep, caseTypeId, statuses, dateFrom, dateTo, pageSize, pageIndex);
         }
 
+        [ServiceMethod]
+        public DataPage<Dossier> GetDeactivatedCases(int pageSize, int pageIndex)
+        {
+            CaseBroker db = new CaseBroker();
+            return db.GetDeactivated(AppContext.CurrentUser.Department, pageSize, pageIndex);
+        }
         [ServiceMethod]
         public PublicationType[] GetPublicationTypes()
         {
@@ -308,6 +314,18 @@ namespace LePont.Web
             file.SendAsAttachment = true;
             file.Cacheability = System.Web.HttpCacheability.Server;
             return file;
+        }
+
+        private void ToggleActivation<T>(int id, bool activated)
+            where T : DeactivatableEntity
+        {
+            using (SessionContext ctx = new SessionContext())
+            {
+                SimpleDataBroker db = new SimpleDataBroker(ctx);
+                T entity = db.GetById<T>(id);
+                entity.Deactivated = !activated;
+                db.Save(entity);
+            }
         }
     }
 }

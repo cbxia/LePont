@@ -136,6 +136,9 @@
     <Content Include="Modules\PublicationViewer\mod.css" />
     <Content Include="Modules\PublicationViewer\mod.htm" />
     <Content Include="Modules\PublicationManager\mod.htm" />
+    <Content Include="Modules\RecycleBin\mod.css" />
+    <Content Include="Modules\RecycleBin\mod.htm" />
+    <Content Include="Modules\RecycleBin\mod.js" />
     <Content Include="Modules\TopNav\mod.css" />
     <Content Include="Modules\TopNav\mod.htm" />
     <Content Include="Modules\TopNav\mod.js" />

@@ -1,0 +1,53 @@
+﻿<!--template-->
+<script id="tmpl-case-list-items" type="text/jquery-template">
+    <tr>
+    <td>${Title}</td>
+    <td>${Department.Name}</td>
+    <td><a class="button recover-case" href="javascript:void(0);">恢复</a></td>
+    </tr>
+</script>
+<!--content-->
+<div id="recycle-bin" class="module-body">
+    <table class="item-list grid mode-2">
+        <thead>
+            <tr>
+                <th style="width: 320px;">
+                    信息标题
+                </th>
+                <th style="width: 180px;">
+                    部门
+                </th>
+                <th style="width: 100px;">
+                    操作
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div class="pager-bar">
+        <table>
+            <tr>
+                <td>
+                    共&nbsp;<span class="total-records"></span>&nbsp;条数据
+                </td>
+                <td>
+                    第&nbsp;<span class="current-page"></span>&nbsp;页
+                </td>
+                <td>
+                    共&nbsp;<span class="total-pages"></span>&nbsp;页
+                </td>
+                <td>
+                    转到第&nbsp;<select class="page-selector" style="width: 50px;">
+                    </select>&nbsp;页
+                </td>
+                <td>
+                    <a class="prev" href="#">上一页</a>
+                </td>
+                <td>
+                    <a class="next" href="#">下一页</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

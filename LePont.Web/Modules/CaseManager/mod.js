@@ -76,20 +76,6 @@
 
     }
 
-    //    function loadRecent = function () {
-    //        Application.InvokeService(
-    //                "BrowseCases",
-    //                {
-    //                    pageSize: function pageSize,
-    //                    pageIndex: function currentPage
-    //                },
-    //                function (result) {
-    //                    if (result != null)
-    //                        renderTemplatedItems(result, "tmpl-case-list-items", "#cm-searchresults tbody");
-    //                }
-    //        );
-    //    }
-
     function __doSearch() {
         __dateTo.setDate(__dateTo.getDate() + 1);
         Application.InvokeService(
@@ -202,12 +188,31 @@
             });
         });
 
+        $("#cm-searchresults").delegate("td a.dele-case", "click", function () {
+            var caseObj = $(this).parent().tmplItem().data;
+            if (confirm("请确认是否删除案件[" + caseObj.Title + "]？")) {
+                Application.InvokeService(
+                    "DeactivateCase",
+                    {
+                        id: caseObj.ID
+                    },
+                    function () {
+                        __doSearch();
+                    }
+                ).done(function () {
+                    alert("删除案件成功！");
+                });
+            }
+        });
+
         $("#cm-searchresults").delegate("td a.add-inst", "click", function () {
             var caseObj = $(this).parent().tmplItem().data;
             Application.EnsureLoadLayer("InstructionEditor").done(function () {
                 Application.Modules["InstructionEditor"].popupAdd(caseObj);
             });
         });
+
+
         $("#cm-searchresults").delegate("td a.view-inst", "click", function () {
             var caseObj = $(this).parent().tmplItem().data;
             Application.EnsureLoadLayer("InstructionViewer").done(function () {

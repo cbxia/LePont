@@ -66,7 +66,7 @@
     <Compile Include="DataModel\Instruction.cs" />
     <Compile Include="DataModel\Message.cs" />
     <Compile Include="DataModel\ForumItem.cs" />
-    <Compile Include="DataModel\DisputeCase.cs" />
+    <Compile Include="DataModel\Dossier.cs" />
     <Compile Include="DataModel\Role.cs" />
     <Compile Include="DataModel\UserSession.cs" />
     <Compile Include="DataModel\User.cs" />
@@ -89,7 +89,7 @@
     <EmbeddedResource Include="DataModel\Department.hbm.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="DataModel\DisputeCase.hbm.xml">
+    <EmbeddedResource Include="DataModel\Dossier.hbm.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="DataModel\ForumItem.hbm.xml">

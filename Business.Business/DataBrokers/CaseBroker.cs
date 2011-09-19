@@ -7,12 +7,12 @@ using NHibernate;
 
 namespace LePont.Business
 {
-    public class CaseBroker : BaseGenericDataBroker<DisputeCase, int>
+    public class CaseBroker : BaseGenericDataBroker<Dossier, int>
     {
-        public DisputeCase GetById(int id, Department dep)
+        public Dossier GetById(int id, Department dep)
         {
-            string queryString = "from DisputeCase where ID = :id and (Department.ID = :dep_id or Department.Code like :code_pattern) ";
-            IList<DisputeCase> resultSet = PerformQueryAction<DisputeCase>(queryString, query =>
+            string queryString = "from Dossier where ID = :id and (Department.ID = :dep_id or Department.Code like :code_pattern) ";
+            IList<Dossier> resultSet = PerformQueryAction<Dossier>(queryString, query =>
             {
                 query
                     .SetInt32("id", id)
@@ -29,10 +29,10 @@ namespace LePont.Business
 
         }
 
-        public DisputeCase[] Browse(Department dep, int pageSize, int pageIndex)
+        public Dossier[] Browse(Department dep, int pageSize, int pageIndex)
         {
-            string queryString = "from DisputeCase where (Department.ID = :dep_id or Department.Code like :code_pattern) and Deactivated = false order by DateTime desc ";
-            IList<DisputeCase> resultSet = PerformQueryAction<DisputeCase>(queryString, query =>
+            string queryString = "from Dossier where (Department.ID = :dep_id or Department.Code like :code_pattern) and Deactivated = false order by DateTime desc ";
+            IList<Dossier> resultSet = PerformQueryAction<Dossier>(queryString, query =>
             {
                 query
                     .SetInt32("dep_id", dep.ID)
@@ -49,12 +49,12 @@ namespace LePont.Business
                 return null;
         }
 
-        public DataPage<DisputeCase> Search(Department dep, int caseTypeId, byte[] statuses, DateTime dateFrom, DateTime dateTo, int pageSize, int pageIndex)
+        public DataPage<Dossier> Search(Department dep, int caseTypeId, byte[] statuses, DateTime dateFrom, DateTime dateTo, int pageSize, int pageIndex)
         {
-            DataPage<DisputeCase> result = new DataPage<DisputeCase>();
+            DataPage<Dossier> result = new DataPage<Dossier>();
             string queryString =
                 @"select count(*)
-                  from DisputeCase 
+                  from Dossier 
                   where (Department.ID = :dep_id or Department.Code like :code_pattern)  
                   and (InternalCaseType.ID = :case_type_id or :case_type_id = 0)
                   and Status in (:statuses) 
@@ -74,13 +74,13 @@ namespace LePont.Business
             result.TotalRecords = count;
 
             queryString =
-                @"from DisputeCase 
+                @"from Dossier 
                   where (Department.ID = :dep_id or Department.Code like :code_pattern)  
                   and (InternalCaseType.ID = :case_type_id or :case_type_id = 0) 
                   and Status in (:statuses) 
                   and DateTime between :date_from and :date_to
                   and Deactivated = false order by DateTime desc ";
-            IList<DisputeCase> resultSet = PerformQueryAction<DisputeCase>(queryString, query =>
+            IList<Dossier> resultSet = PerformQueryAction<Dossier>(queryString, query =>
             {
                 query
                     .SetInt32("dep_id", dep.ID)
@@ -89,6 +89,43 @@ namespace LePont.Business
                     .SetParameterList("statuses", statuses)
                     .SetDateTime("date_from", dateFrom)
                     .SetDateTime("date_to", dateTo)
+                    .SetFirstResult((pageIndex - 1) * pageSize)
+                    .SetMaxResults(pageSize);
+                return query;
+            });
+            if (resultSet != null && resultSet.Count > 0)
+            {
+                result.Data = resultSet.ToArray();
+            }
+            return result;
+        }
+
+        public DataPage<Dossier> GetDeactivated(Department dep, int pageSize, int pageIndex)
+        {
+            DataPage<Dossier> result = new DataPage<Dossier>();
+            string queryString =
+                @"select count(*)
+                  from Dossier 
+                  where (Department.ID = :dep_id or Department.Code like :code_pattern)  
+                  and Deactivated = true";
+            long count = PerformUniqueQueryAction<long>(queryString, query =>
+            {
+                query
+                    .SetInt32("dep_id", dep.ID)
+                    .SetString("code_pattern", string.Format("{0}%", dep.Code));
+                return query;
+            });
+            result.TotalRecords = count;
+
+            queryString =
+                @"from Dossier 
+                  where (Department.ID = :dep_id or Department.Code like :code_pattern)  
+                  and Deactivated = true order by DateTime desc ";
+            IList<Dossier> resultSet = PerformQueryAction<Dossier>(queryString, query =>
+            {
+                query
+                    .SetInt32("dep_id", dep.ID)
+                    .SetString("code_pattern", string.Format("{0}%", dep.Code))
                     .SetFirstResult((pageIndex - 1) * pageSize)
                     .SetMaxResults(pageSize);
                 return query;

@@ -10,7 +10,7 @@ namespace LePont.Business
      * If this class is named "Case", that will cause an HQL parsing error "NHibernate.Antlr.Runtime.NoViableAltException",
      * when a query contains the "where" clause.
      */ 
-    public class DisputeCase : DeactivatableEntity
+    public class Dossier : DeactivatableEntity
     {
         public virtual string Title { get; set; }
         public virtual string Locality { get; set; }

@@ -144,8 +144,8 @@
                     <li><span class="folder bright">信息管理</span>
                         <ul>
                             <li><span class="file bright" module="CaseManager">按类别管理</span></li>
-                            <li><span class="file bright" module="CaseManager">按地区管理</span></li>
-                            <li><span class="file bright">回收站</span></li>
+                            <li><span class="file bright">按地区管理</span></li>
+                            <li><span class="file bright" module="RecycleBin">回收站</span></li>
                         </ul>
                     </li>
                     <li><span class="folder">统计查询</span>

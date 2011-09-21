@@ -1,20 +1,20 @@
-﻿#case-list-view
+﻿#case-manager
 {
     width: 990px;
     position: relative;
 }
-#case-list-view .search-bar-title
+#case-manager .search-bar-title
 {
     position: absolute;
     z-index: 9;
     background-color: #4A7EB7;
-    top: -10px;
+    top: 6px;
     left: 10px;
     padding: 2px 4px;
     color: #fff;
     font: 13px;
 }
-#case-list-view .search-bar
+#case-manager .search-bar
 {
     overflow: hidden;
     padding: 10px;
@@ -24,29 +24,29 @@
     border-bottom: 1px solid #4A7EB7;
     position: relative;
 }
-#case-list-view .search-bar form
+#case-manager .search-bar form
 {
     overflow: hidden;
 }
-#case-list-view .search-bar .command-pane
+#case-manager .search-bar .command-pane
 {
     position: absolute;
     top: 20px;
     left: 620px;
     width: 200px;
 }
-#case-list-view .search-bar .ctrl-group
+#case-manager .search-bar .ctrl-group
 {
     position: relative;
     float: left;
     padding: 2px 4px;
 }
-#case-list-view .search-bar .ctrl-group .ctrl-subgroup
+#case-manager .search-bar .ctrl-group .ctrl-subgroup
 {
     position: relative;
     float: left;
 }
-#case-list-view .search-bar a.dep-pick-trig
+#case-manager .search-bar a.dep-pick-trig
 {
     background: url("/css/images/arrow-down.png");
     display: block;
@@ -56,11 +56,11 @@
     left: 232px;
     top: 4px;
 }
-#case-list-view .search-bar a.dep-pick-trig:hover
+#case-manager .search-bar a.dep-pick-trig:hover
 {
     background: url("/css/images/arrow-down-hi.png");
 }
-#case-list-view .dep-picker
+#case-manager .dep-picker
 {
     position: absolute;
     right: 728px;
@@ -69,7 +69,7 @@
     background-color: #fff;
     width: 180px;
 }
-#case-list-view .pager-bar
+#case-manager .pager-bar
 {
     background: none repeat scroll 0 0 #f6f6ff;
     border: 1px solid #ddddff;
@@ -77,7 +77,7 @@
     padding: 1px 10px;
     height: 22px;
 }
-#case-list-view .pager-bar td
+#case-manager .pager-bar td
 {
     padding-right: 20px;
 }

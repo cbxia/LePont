@@ -15,20 +15,20 @@
 
     function __initForm() {
         createDepartmentTree({
-            elementSelector: "#case-list-view .dep-picker ul",
+            elementSelector: "#case-manager .dep-picker ul",
             onActivate: function (node) {
                 $("#cm-Department").val(node.data.deparment.Name);
                 $("#cm-Department").data("depid", node.data.deparment.ID);
-                $("#case-list-view .dep-picker").hide();
+                $("#case-manager .dep-picker").hide();
             },
             onClick: function (node, event) {
                 if (node.getEventTargetType(event) == "title") {
-                    $("#case-list-view .dep-picker").hide();
+                    $("#case-manager .dep-picker").hide();
                     return true;
                 }
             }
         });
-        $("#case-list-view .dep-picker").hide();
+        $("#case-manager .dep-picker").hide();
 
         $("#cm-DateFrom").datepicker({
             changeYear: true,
@@ -62,8 +62,8 @@
             { ID: 0, Name: "全部类别" }
         );
         //// Set up form validation message container.
-        var errorContainer = $("#case-list-view .validation-tips");
-        var errorLabelContainer = $("#case-list-view .validation-tips ol");
+        var errorContainer = $("#case-manager .validation-tips");
+        var errorLabelContainer = $("#case-manager .validation-tips ol");
         $("#cm-search-form").validate({
             errorContainer: errorContainer,
             errorLabelContainer: errorLabelContainer,
@@ -73,6 +73,8 @@
             {
             }
         });
+        //// Turn anchors into jQuery-UI buttons
+        $("#case-manager .search-bar .command-pane a").button();
 
     }
 
@@ -91,35 +93,49 @@
             },
             function (result) {
                 if (result != null && result.TotalRecords > 0) {
+                    //// Show data
                     renderTemplatedItems(result.Data, "tmpl-case-list-items", "#cm-searchresults tbody");
+                    //// Setup pager
                     __totalPages = Math.ceil(result.TotalRecords / __pageSize);
-                    $("#case-list-view .total-records").html(result.TotalRecords);
-                    $("#case-list-view .total-pages").html(__totalPages);
-                    $("#case-list-view .current-page").html(__pageIndex);
-                    $("#case-list-view .page-selector option").remove();
+                    $("#case-manager .total-records").html(result.TotalRecords);
+                    $("#case-manager .total-pages").html(__totalPages);
+                    $("#case-manager .current-page").html(__pageIndex);
+                    $("#case-manager .page-selector option").remove();
                     for (var i = 1; i <= __totalPages; i++) {
                         if (i == __pageIndex)
-                            $($.format("<option selected='selected' value='%s'>%s</option>", [i, i])).appendTo($("#case-list-view .page-selector"));
+                            $($.format("<option selected='selected' value='%s'>%s</option>", [i, i])).appendTo($("#case-manager .page-selector"));
                         else
-                            $($.format("<option value='%s'>%s</option>", [i, i])).appendTo($("#case-list-view .page-selector"));
+                            $($.format("<option value='%s'>%s</option>", [i, i])).appendTo($("#case-manager .page-selector"));
                     }
+                    //// Setup export
+                    $("#cm-Export").attr("href", 
+                        Application.GetServiceUrl(
+                        "ExportCases",
+                        {
+                            depId: __depId,
+                            caseTypeId: __caseTypeId,
+                            statuses: __Statuses,
+                            dateFrom: __dateFrom,
+                            dateTo: __dateTo
+                        })
+                    );
                 }
                 else {
                     alert("没有查到符合条件的数据！");
                     renderTemplatedItems(result.Data, "tmpl-case-list-items", "#cm-searchresults tbody");
                     __totalPages = 0;
-                    $("#case-list-view .total-records").html("0");
-                    $("#case-list-view .total-pages").html("0");
-                    $("#case-list-view .current-page").html("");
-                    $("#case-list-view .page-selector option").remove();
+                    $("#case-manager .total-records").html("0");
+                    $("#case-manager .total-pages").html("0");
+                    $("#case-manager .current-page").html("");
+                    $("#case-manager .page-selector option").remove();
                 }
             }
         );
     }
 
     function __bindEvents() {
-        $("#cm-Department, #case-list-view .dep-pick-trig").click(function () {
-            $("#case-list-view .dep-picker").show();
+        $("#cm-Department, #case-manager .dep-pick-trig").click(function () {
+            $("#case-manager .dep-picker").show();
         });
         $("#cm-DoSearch").click(function () {
             if ($("#cm-search-form").valid()) { // will trigger form validation
@@ -141,7 +157,11 @@
             }
         });
 
-        $("#case-list-view .pager-bar .prev").click(function () {
+        $("#cm-Export").click(function () {
+
+        });
+
+        $("#case-manager .pager-bar .prev").click(function () {
             if (__pageIndex > 1) {
                 __pageIndex = __pageIndex - 1;
                 __doSearch();
@@ -151,7 +171,7 @@
             }
         });
 
-        $("#case-list-view .pager-bar .next").click(function () {
+        $("#case-manager .pager-bar .next").click(function () {
             if (__pageIndex < __totalPages) {
                 __pageIndex = __pageIndex + 1;
                 __doSearch();
@@ -161,7 +181,7 @@
             }
         });
 
-        $("#case-list-view .page-selector").change(function () {
+        $("#case-manager .page-selector").change(function () {
             __pageIndex = parseInt($(this).val());
             __doSearch();
         });

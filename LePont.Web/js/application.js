@@ -120,8 +120,13 @@ var Application = function () {
     }
 
     //////// Service-related
-    function GetServiceUrl(method) {
+    function GetServiceUrl(method, params) {
         var serviceUrl = $(location).attr('pathname') + "?invokemode=service&method=" + method;
+        if (params != null) {
+            $.each(params, function (index, value) {
+                serviceUrl += "&" + index + "=" + JSON.stringify(value);
+            });
+        }
         return serviceUrl;
     }
 

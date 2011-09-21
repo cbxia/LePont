@@ -88,9 +88,13 @@ namespace LePont.Business
                     .SetInt32("case_type_id", caseTypeId)
                     .SetParameterList("statuses", statuses)
                     .SetDateTime("date_from", dateFrom)
-                    .SetDateTime("date_to", dateTo)
-                    .SetFirstResult((pageIndex - 1) * pageSize)
-                    .SetMaxResults(pageSize);
+                    .SetDateTime("date_to", dateTo);
+                if (pageSize != 0) // else ignore paging
+                {
+                    query
+                        .SetFirstResult((pageIndex - 1) * pageSize)
+                        .SetMaxResults(pageSize);
+                }
                 return query;
             });
             if (resultSet != null && resultSet.Count > 0)
@@ -98,6 +102,11 @@ namespace LePont.Business
                 result.Data = resultSet.ToArray();
             }
             return result;
+        }
+
+        public DataPage<Dossier> Search(Department dep, int caseTypeId, byte[] statuses, DateTime dateFrom, DateTime dateTo)
+        {
+            return Search(dep, caseTypeId, statuses, dateFrom, dateTo, 0, 0);
         }
 
         public DataPage<Dossier> GetDeactivated(Department dep, int pageSize, int pageIndex)

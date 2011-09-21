@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using System.Text;
 using JasminSoft.NHibernateUtils;
 using LePont.Business;
 using DataModel = LePont.Business;
@@ -205,11 +205,33 @@ namespace LePont.Web
         }
 
         [ServiceMethod]
+        public TextFileObject ExportCases(int depId, int caseTypeId, byte[] statuses, DateTime dateFrom, DateTime dateTo)
+        {
+            SimpleDataBroker depBroker = new SimpleDataBroker();
+            Department dep = depBroker.GetById<Department>(depId);
+            CaseBroker db = new CaseBroker();
+            DataPage<Dossier> resultSet = db.Search(dep, caseTypeId, statuses, dateFrom, dateTo);
+            StringBuilder fileData = new StringBuilder();
+            fileData.Append("案件标题,原发单位,调解类别,综治委类别,纠纷简要情况,涉及金额,涉及人数,纠纷双方关系,责任人,责任人电话\r\n");
+            foreach(Dossier dossier in resultSet.Data)
+            {
+                fileData.Append(dossier.Title + "," + dossier.Locality + "," + dossier.InternalCaseType.Name + "," + dossier.ExternalCaseType.Name + "," + dossier.Content + "," + dossier.MoneyInvolved.ToString() + "," + dossier.PeopleInvolved.ToString() + "," + dossier.PartiesRelationType.Name + "," + dossier.Responsable + "," + dossier.ResponsablePhone + "\r\n");
+            }
+            string fileName = string.Format("案件数据-{0}-{1}.csv", dateFrom.ToShortDateString(), dateTo.ToShortDateString());
+            TextFileObject file = new TextFileObject(fileName, true);
+            file.Data = fileData.ToString();
+            file.Encoding = System.Text.Encoding.UTF8;
+            file.Cacheability = System.Web.HttpCacheability.NoCache;
+            return file;
+        }
+
+        [ServiceMethod]
         public DataPage<Dossier> GetDeactivatedCases(int pageSize, int pageIndex)
         {
             CaseBroker db = new CaseBroker();
             return db.GetDeactivated(AppContext.CurrentUser.Department, pageSize, pageIndex);
         }
+
         [ServiceMethod]
         public PublicationType[] GetPublicationTypes()
         {

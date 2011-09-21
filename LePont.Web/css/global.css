@@ -115,6 +115,10 @@ a:hover
     color: #FFF;
     font-size:13px;
 }
+.module
+{
+    overflow:auto;
+}
 .module-title
 {
     background: url("/css/images/module_title.jpg") no-repeat;

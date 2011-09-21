@@ -75,7 +75,7 @@
         });
         //// Turn anchors into jQuery-UI buttons
         $("#case-manager .search-bar .command-pane a").button();
-
+        $("#cm-Export").button({disabled: true});
     }
 
     function __doSearch() {
@@ -119,6 +119,7 @@
                             dateTo: __dateTo
                         })
                     );
+                    $("#cm-Export").button({disabled: false});
                 }
                 else {
                     alert("没有查到符合条件的数据！");
@@ -128,6 +129,7 @@
                     $("#case-manager .total-pages").html("0");
                     $("#case-manager .current-page").html("");
                     $("#case-manager .page-selector option").remove();
+                    $("#cm-Export").button({disabled: true});
                 }
             }
         );

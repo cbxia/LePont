@@ -75,7 +75,7 @@
         });
         //// Turn anchors into jQuery-UI buttons
         $("#case-manager .search-bar .command-pane a").button();
-        $("#cm-Export").button({disabled: true});
+        $("#cm-Export").button({ disabled: true });
     }
 
     function __doSearch() {
@@ -108,7 +108,7 @@
                             $($.format("<option value='%s'>%s</option>", [i, i])).appendTo($("#case-manager .page-selector"));
                     }
                     //// Setup export
-                    $("#cm-Export").attr("href", 
+                    $("#cm-Export").attr("href",
                         Application.GetServiceUrl(
                         "ExportCases",
                         {
@@ -119,7 +119,7 @@
                             dateTo: __dateTo
                         })
                     );
-                    $("#cm-Export").button({disabled: false});
+                    $("#cm-Export").button({ disabled: false });
                 }
                 else {
                     alert("没有查到符合条件的数据！");
@@ -129,7 +129,8 @@
                     $("#case-manager .total-pages").html("0");
                     $("#case-manager .current-page").html("");
                     $("#case-manager .page-selector option").remove();
-                    $("#cm-Export").button({disabled: true});
+                    $("#cm-Export").attr("href", "javascript:void();");
+                    $("#cm-Export").button({ disabled: true });
                 }
             }
         );

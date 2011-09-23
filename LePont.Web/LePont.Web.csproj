@@ -39,9 +39,6 @@
       <HintPath>..\Libs\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="ServiceStack.Text">
-      <HintPath>..\Libs\ServiceStack.Text.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />

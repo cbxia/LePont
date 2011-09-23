@@ -87,7 +87,7 @@ namespace LePont.Web
                                     if (encoding != null)
                                         context.Response.ContentEncoding = encoding;
                                     context.Response.Cache.SetCacheability(cacheability);
-                                    context.Response.AddHeader("Content-Disposition", "attachment;filename=" + ((FileObject)result).FileName);
+                                    context.Response.AddHeader("Content-Disposition", "attachment;filename=\"" + ((FileObject)result).FileName+ "\"");
                                 }
                                 if (result is TextFileObject)
                                 {

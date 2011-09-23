@@ -217,10 +217,14 @@ namespace LePont.Web
             {
                 fileData.Append(dossier.Title + "," + dossier.Locality + "," + dossier.InternalCaseType.Name + "," + dossier.ExternalCaseType.Name + "," + dossier.Content + "," + dossier.MoneyInvolved.ToString() + "," + dossier.PeopleInvolved.ToString() + "," + dossier.PartiesRelationType.Name + "," + dossier.Responsable + "," + dossier.ResponsablePhone + "\r\n");
             }
-            string fileName = string.Format("案件数据-{0}-{1}.csv", dateFrom.ToShortDateString(), dateTo.ToShortDateString());
+            string fileName = string.Format("案件汇总({0} — {1}).csv", dateFrom.ToShortDateString(), dateTo.AddDays(-1).ToShortDateString());
+            if (Context.Request.UserAgent.ToUpper().Contains("MSIE"))
+            {
+                fileName = Server.UrlEncode(fileName).Replace("+", "%20");
+            }
             TextFileObject file = new TextFileObject(fileName, true);
             file.Data = fileData.ToString();
-            file.Encoding = System.Text.Encoding.UTF8;
+            file.Encoding = System.Text.Encoding.GetEncoding("GB2312");
             file.Cacheability = System.Web.HttpCacheability.NoCache;
             return file;
         }

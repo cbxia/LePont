@@ -507,7 +507,7 @@ button.ui-button-icons-only { width: 3.7em; }
  
 /*button text element */
 .ui-button .ui-button-text { display: block; line-height: 1; font-size: 14px; font-weight: normal; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6); }
-.ui-button-text-only .ui-button-text { padding: 0.3em 0.8em 0.2em; }
+.ui-button-text-only .ui-button-text { padding: 0.3em 0.8em; }
 .ui-button-icon-only .ui-button-text, .ui-button-icons-only .ui-button-text { padding: .4em; text-indent: -9999999px; }
 .ui-button-text-icon-primary .ui-button-text, .ui-button-text-icons .ui-button-text { padding: .4em 1em .4em 2.1em; }
 .ui-button-text-icon-secondary .ui-button-text, .ui-button-text-icons .ui-button-text { padding: .4em 2.1em .4em 1em; }
@@ -581,7 +581,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 .ui-dialog .ui-dialog-content { position: relative; border: 0; padding: .5em 1em; background: none; overflow: auto; zoom: 1; }
 .ui-dialog .ui-dialog-buttonpane { text-align: left; border-width: 1px 0 0 0; background-image: none; margin: .5em 0 0 0; padding: .3em 1em .5em .4em; }
 .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset { float: right; }
-.ui-dialog .ui-dialog-buttonpane button { margin: .5em .4em .5em 0; cursor: pointer; padding:0.2em;}
+.ui-dialog .ui-dialog-buttonpane button { margin: .5em .4em .5em 0; cursor: pointer; padding:0.1em;}
 .ui-dialog .ui-resizable-se { width: 14px; height: 14px; right: 3px; bottom: 3px; }
 .ui-draggable .ui-dialog-titlebar { cursor: move; }
 /*

@@ -129,7 +129,7 @@ a:hover
 {
     min-height: 500px;
     overflow: auto;
-    padding: 5px 1px;
+    padding: 5px 2px;
     background: url("/css/images/mod_body_bk.jpg") repeat-x scroll 0 0 transparent;
 }
 .section-title
@@ -139,6 +139,7 @@ a:hover
     top: 11px;
     padding: 4px 17px;
     color: #FFF;
+    width:200px;
 }
 .section-title.mode1
 {

@@ -204,6 +204,12 @@ namespace LePont.Web
             return db.Search(dep, caseTypeId, statuses, dateFrom, dateTo, pageSize, pageIndex);
         }
 
+        private string escapeCsvField(string raw)
+        {
+            // Ref for CSV format: http://www.csvreader.com/csv_format.php
+            return "\"" + raw.Replace("\"", "\"\"") + "\"";
+        }
+
         [ServiceMethod]
         public TextFileObject ExportCases(int depId, int caseTypeId, byte[] statuses, DateTime dateFrom, DateTime dateTo)
         {
@@ -215,7 +221,18 @@ namespace LePont.Web
             fileData.Append("案件标题,原发单位,调解类别,综治委类别,纠纷简要情况,涉及金额,涉及人数,纠纷双方关系,责任人,责任人电话\r\n");
             foreach(Dossier dossier in resultSet.Data)
             {
-                fileData.Append(dossier.Title + "," + dossier.Locality + "," + dossier.InternalCaseType.Name + "," + dossier.ExternalCaseType.Name + "," + dossier.Content + "," + dossier.MoneyInvolved.ToString() + "," + dossier.PeopleInvolved.ToString() + "," + dossier.PartiesRelationType.Name + "," + dossier.Responsable + "," + dossier.ResponsablePhone + "\r\n");
+                fileData.Append(
+                    escapeCsvField(dossier.Title) + "," + 
+                    escapeCsvField(dossier.Locality) + "," + 
+                    escapeCsvField(dossier.InternalCaseType.Name) + "," + 
+                    escapeCsvField(dossier.ExternalCaseType.Name) + "," + 
+                    escapeCsvField(dossier.Content) + "," + 
+                    escapeCsvField(dossier.MoneyInvolved.ToString()) + "," + 
+                    escapeCsvField(dossier.PeopleInvolved.ToString()) + "," + 
+                    escapeCsvField(dossier.PartiesRelationType.Name) + "," + 
+                    escapeCsvField(dossier.Responsable) + "," + 
+                    escapeCsvField(dossier.ResponsablePhone) + 
+                    "\r\n");
             }
             string fileName = string.Format("案件汇总({0} — {1}).csv", dateFrom.ToShortDateString(), dateTo.AddDays(-1).ToShortDateString());
             if (Context.Request.UserAgent.ToUpper().Contains("MSIE"))

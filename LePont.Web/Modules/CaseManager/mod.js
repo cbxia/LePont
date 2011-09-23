@@ -129,7 +129,7 @@
                     $("#case-manager .total-pages").html("0");
                     $("#case-manager .current-page").html("");
                     $("#case-manager .page-selector option").remove();
-                    $("#cm-Export").attr("href", "javascript:void();");
+                    $("#cm-Export").attr("href", "javascript:void(0);");
                     $("#cm-Export").button({ disabled: true });
                 }
             }

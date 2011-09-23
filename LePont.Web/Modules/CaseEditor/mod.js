@@ -85,6 +85,9 @@
         $("#di-Registrar").html(Application.GetCurrentUser().Name);
         var d = new Date();
         $("#di-DateTime").html(formatChineseDate(d));
+        //// Transform buttons
+        $("#submit-entry").button();
+        $("#return-to-list").button();
     }
 
     function __resetForm() {

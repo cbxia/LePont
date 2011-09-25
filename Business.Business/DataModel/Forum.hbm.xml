@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping
+	xmlns="urn:nhibernate-mapping-2.2"
+    namespace="LePont.Business"
+    assembly="LePont.Business"
+    default-cascade="save-update"
+    default-lazy="true" >
+
+    <import class="LePont.Business.ForumBlockSummaryDTO, LePont.Business"/>
+    
+    <class name="ForumBlock" >
+        <id name="ID" unsaved-value="-1">
+            <generator class="native" />
+        </id>
+        <many-to-one name="Administrator" column="admin_id" />
+        <property name="Name" />
+        <many-to-one name="LastPublisher" column="last_publisher_id" />
+        <property name="LastPostTime" />
+        <property name="ListOrder" />
+        <property name="Deactivated" />
+    </class>
+
+    <class name="ForumTopic" >
+        <id name="ID" unsaved-value="-1">
+            <generator class="native" />
+        </id>
+        <many-to-one name="Block" column="block_id" />
+        <property name="Title" />
+        <property name="Content" />
+        <many-to-one name="Creator" column="creator_id" />
+        <property name="CreateTime" />
+        <property name="LastPostTime" />
+        <property name="ListOrder" />
+        <property name="Deactivated" />
+    </class>
+    
+    <class name="ForumPost" >
+        <id name="ID" unsaved-value="-1">
+            <generator class="native" />
+        </id>
+        <many-to-one name="Block" column="block_id" />
+        <many-to-one name="Topic" column="topic_id" />
+        <property name="Content" />
+        <many-to-one name="Publisher" column="publisher_id" />
+        <property name="PublishTime" />
+        <property name="ListOrder" />
+    </class>
+</hibernate-mapping>

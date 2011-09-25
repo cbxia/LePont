@@ -54,6 +54,9 @@
   <ItemGroup>
     <Compile Include="DataBrokers\CaseTypeBroker.cs" />
     <Compile Include="DataBrokers\CaseBroker.cs" />
+    <Compile Include="DataBrokers\ForumTopicBroker.cs" />
+    <Compile Include="DataBrokers\ForumPostBroker.cs" />
+    <Compile Include="DataBrokers\ForumBlockBroker.cs" />
     <Compile Include="DataBrokers\InstructionBroker.cs" />
     <Compile Include="DataBrokers\InstructionLiteBroker.cs" />
     <Compile Include="DataBrokers\PublicationLiteBroker.cs" />
@@ -65,7 +68,7 @@
     <Compile Include="DataModel\Publication.cs" />
     <Compile Include="DataModel\Instruction.cs" />
     <Compile Include="DataModel\Message.cs" />
-    <Compile Include="DataModel\ForumItem.cs" />
+    <Compile Include="DataModel\Forum.cs" />
     <Compile Include="DataModel\Dossier.cs" />
     <Compile Include="DataModel\Role.cs" />
     <Compile Include="DataModel\UserSession.cs" />
@@ -92,7 +95,7 @@
     <EmbeddedResource Include="DataModel\Dossier.hbm.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="DataModel\ForumItem.hbm.xml">
+    <EmbeddedResource Include="DataModel\Forum.hbm.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="DataModel\Instruction.hbm.xml">

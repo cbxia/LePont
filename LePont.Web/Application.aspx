@@ -32,6 +32,9 @@
     <script src="js/modules.js" type="text/javascript"></script>
     <script src="js/utils.js?nocache" type="text/javascript"></script>
     <script src="js/dep-tree.js?nocache" type="text/javascript"></script>
+
+ <%--   <script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script>
+--%>
     <script type="text/javascript">
         $(document).ready(function () {
             //// Centering
@@ -162,7 +165,7 @@
                             <li><span class="file" module="WorkNetwork">调解网络</span></li>
                         </ul>
                     </li>
-                    <li><span class="file" module="BBS">网上交流</span></li>
+                    <li><span class="file" module="Forum">网上交流</span></li>
                 </ul>
             </div>
             <div id="work-area" class="max">

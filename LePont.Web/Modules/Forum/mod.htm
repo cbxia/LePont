@@ -1,0 +1,99 @@
+﻿<!--template-->
+<script id="tmpl-forum-block-items" type="text/jquery-template">
+<tr class="block_id_${BlockID}">
+    <td style="text-align:right;"><a class="switch" href="javascript:void(0);"><img src="/css/images/forum_block_${BlockID}.png"/></a></td>
+    <td style="text-align:left;"><a class="switch" href="javascript:void(0);">${BlockName}</a></td>
+    <td>${TotalTopics}</td>
+    <td>${TotalPostings}</td>
+    <td>${LastPublisher}</td>
+    <td>${formatJsonDate(LastPostTime)}</td>
+    <td>${Administrator}</td>
+</tr>
+</script>
+<script id="tmpl-forum-topic-items" type="text/jquery-template">
+<li class="topic">
+    <div class="icon">
+        <a href="javascript:void(0)"><img src="../../css/images/add_16.png" /></a>
+    </div>
+    <div class="title">
+        <a href="javascript:void(0)">${Title}</a>
+    </div>
+    <div class="datetime">
+        ${formatJsonDate(CreateTime)}
+    </div>
+    <div class="publisher">
+        ${Creator.Name}
+    </div>
+</li>
+</script>
+<script id="tmpl-forum-post-items" type="text/jquery-template">
+</script>
+
+<!--content-->
+<div id="forum" class="module-body">
+    <table class="blocks">
+        <thead>
+            <tr class="title">
+                <th colspan="7">
+                    网 上 交 流
+                </th>
+            </tr>
+            <tr class="headings">
+                <th colspan="2" style="width: 120px;">
+                    板块
+                </th>
+                <th style="width: 100px;">
+                    主题数
+                </th>
+                <th style="width: 100px;">
+                    发帖数
+                </th>
+                <th style="width: 120px;">
+                    最新发帖人
+                </th>
+                <th style="width: 140px;">
+                    最新发帖时间
+                </th>
+                <th style="width: 100px;">
+                    版主
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div class="command-bar">
+        <span class="current-block"></span><a class="new-topic" href="javascript:void(0);">发布主题</a>
+    </div>
+    <ul class="topics">
+    </ul>
+</div>
+<div id="forum-editor-dlg">
+    <form class="forum-editor-form">
+    <table>
+        <tr>
+            <td class="item-label">
+                主题：
+            </td>
+            <td class="item-value">
+                <input id="di-Title" name="di-Topic" class="{validate:{required:true,messages: {required: '必须输入主题'}}}"
+                    style="width: 400px" type="text" />&nbsp;（必填）
+            </td>
+        </tr>
+        <tr>
+            <td class="item-label">
+                内容：
+            </td>
+            <td class="item-value">
+                <textarea id="di-Content" name="di-Content" style="width: 400px; height: 300px" />&nbsp;（必填）
+            </td>
+        </tr>
+    </table>
+    </form>
+    <div class="validation-tips">
+        <p>
+            数据验证失败：</p>
+        <ol>
+        </ol>
+    </div>
+</div>

@@ -29,6 +29,7 @@ namespace LePont.Business
 
         }
 
+        // TODO: For this to be usable, it should return DataPage<Dossier>
         public Dossier[] Browse(Department dep, int pageSize, int pageIndex)
         {
             string queryString = "from Dossier where (Department.ID = :dep_id or Department.Code like :code_pattern) and Deactivated = false order by DateTime desc ";

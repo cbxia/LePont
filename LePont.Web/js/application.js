@@ -134,7 +134,6 @@ var Application = function () {
         if (params != null) {
             $.each(params, function (index, value) {
                 params[index] = JSON.stringify(value);
-
             });
         }
         if (typeof onFailure == "undefined" || onFailure == null)

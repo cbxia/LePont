@@ -195,17 +195,53 @@ create table [instruction]
 	[deactivated] bit null default 0 -- 0 = false, 1 = true
 );
 
-create table [forum_item]
+create table [forum_block]
 (
 	[id] int not null identity(1,1) primary key,
-	[parent_id] int null references [forum_item],
-	[topic] varchar(100) not null,
-	[content] varchar(2000) not null,
-	[department_id] int not null references [department]([id]),
- 	[user_id] int not null references [user]([id]),
-	[date_time] datetime not null,
+	[name] varchar(100) not null,
+ 	[last_publisher_id] int null references [user]([id]),
+ 	[last_post_time] datetime null,
+ 	[admin_id] int not null references [user]([id]),
 	[list_order] smallint null default 0,
 	[deactivated] bit null default 0 -- 0 = false, 1 = true
+);
+
+set IDENTITY_INSERT [forum_block] on;
+
+insert into [forum_block]([id], [name], [admin_id], [list_order])
+values (1, '工作交流', 1, 1);
+
+insert into [forum_block]([id], [name], [admin_id], [list_order])
+values (2, '专网应用', 1, 2);
+
+insert into [forum_block]([id], [name], [admin_id], [list_order])
+values (3, '电脑技术', 1, 3);
+
+set IDENTITY_INSERT [forum_block] off;
+
+create table [forum_topic]
+(
+	[id] int not null identity(1,1) primary key,
+	[block_id] int not null references [forum_block]([id]),
+	[title] varchar(100) not null,
+	[content] varchar(2000) not null,
+ 	[creator_id] int not null references [user]([id]),
+	[create_time] datetime not null,
+	[last_post_time] datetime not null,
+	[list_order] smallint null default 0,
+	[deactivated] bit null default 0 -- 0 = false, 1 = true
+);
+
+create table [forum_post]
+(
+	[id] int not null identity(1,1) primary key,
+	[block_id] not int null references [forum_block]([id]),
+	[topic_id] not int null references [forum_topic]([id]),
+	[content] varchar(2000) not null,
+ 	[publisher_id] int not null references [user]([id]),
+	[publish_time] datetime not null,
+	[last_post_time] datetime not null,
+	[list_order] smallint null default 0,
 );
 
 create table [message]

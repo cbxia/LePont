@@ -119,6 +119,9 @@
     <Content Include="Modules\CaseViewer\mod.js" />
     <Content Include="Modules\CaseViewer\mod.css" />
     <Content Include="Modules\CaseViewer\mod.htm" />
+    <Content Include="Modules\Forum\mod.css" />
+    <Content Include="Modules\Forum\mod.htm" />
+    <Content Include="Modules\Forum\mod.js" />
     <Content Include="Modules\DepartmentManager\mod.js" />
     <Content Include="Modules\DepartmentManager\mod.css" />
     <Content Include="Modules\Home\mod.css" />

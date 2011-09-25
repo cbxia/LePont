@@ -101,9 +101,7 @@ namespace LePont.Web
         [ServiceMethod]
         public PasswordQuestion[] GetPasswordQuestions()
         {
-            SimpleDataBroker db = new SimpleDataBroker();
-            IList<PasswordQuestion> questions = db.GetAllValid<PasswordQuestion>();
-            return questions != null ? questions.ToArray() : null;
+            return getAllValidItems<PasswordQuestion>();
         }
 
         [ServiceMethod]
@@ -144,9 +142,7 @@ namespace LePont.Web
         [ServiceMethod]
         public RelationType[] GetRelationTypes()
         {
-            SimpleDataBroker db = new SimpleDataBroker();
-            IList<RelationType> types = db.GetAllValid<RelationType>();
-            return types != null ? types.ToArray() : null;
+            return getAllValidItems<RelationType>();
         }
 
         [ServiceMethod]
@@ -204,26 +200,6 @@ namespace LePont.Web
             return db.Search(dep, caseTypeId, statuses, dateFrom, dateTo, pageSize, pageIndex);
         }
 
-        private string escapeCsvField(string raw)
-        {
-            // Ref for CSV format: http://www.csvreader.com/csv_format.php
-            return "\"" + raw.Replace("\"", "\"\"") + "\"";
-        }
-
-        private string generateCsvRow(params string[] fields)
-        {
-            string result = null;
-            for(int i = 0; i < fields.Length; i++)
-            {
-                string field = fields[i];
-                if (i < fields.Length - 1)
-                    result += escapeCsvField(field) + ",";
-                else
-                    result += escapeCsvField(field) + "\r\n";
-            }
-            return result;
-        }
-
         [ServiceMethod]
         public TextFileObject ExportCases(int depId, int caseTypeId, byte[] statuses, DateTime dateFrom, DateTime dateTo)
         {
@@ -270,9 +246,7 @@ namespace LePont.Web
         [ServiceMethod]
         public PublicationType[] GetPublicationTypes()
         {
-            SimpleDataBroker db = new SimpleDataBroker();
-            IList<PublicationType> types = db.GetAllValid<PublicationType>();
-            return types != null ? types.ToArray() : null;
+            return getAllValidItems<PublicationType>();
         }
 
         [ServiceMethod]
@@ -373,6 +347,62 @@ namespace LePont.Web
             return file;
         }
 
+        [ServiceMethod]
+        public ForumBlock[] GetForumBlocks()
+        {
+            return getAllValidItems<ForumBlock>();
+        }
+
+        [ServiceMethod]
+        public ForumBlockSummaryDTO[] GetForumBlockSummary()
+        {
+            ForumBlockBroker db = new ForumBlockBroker();
+            return db.GetForumBlockSummary();
+        }
+
+        [ServiceMethod]
+        public DataPage<ForumTopic> GetForumTopics(int blockID, int pageSize, int pageIndex)
+        {
+            ForumTopicBroker db = new ForumTopicBroker();
+            return db.GetTopics(blockID, pageSize, pageIndex);
+        }
+
+        [ServiceMethod]
+        public ForumPost[] GetFollowUPs(int topicID)
+        {
+            ForumPostBroker db = new ForumPostBroker();
+            return db.GetFollowUPs(topicID);
+        }
+
+        [ServiceMethod]
+        public void AddForumTopic(ForumTopic topic)
+        {
+            topic.Creator = AppContext.CurrentUser;
+            topic.CreateTime = DateTime.Now;
+            topic.LastPostTime = topic.CreateTime;
+            topic.Deactivated = false;
+            topic.ListOrder = 0;
+            using (SessionContext ctx = new SessionContext())
+            {
+                SimpleDataBroker db = new SimpleDataBroker(ctx);
+                topic.Block = db.GetById<ForumBlock>(topic.Block.ID);
+                topic.Block.LastPublisher = topic.Creator;
+                topic.Block.LastPostTime = topic.CreateTime;
+                db.Save<ForumTopic>(topic);
+            }
+        }
+
+        #region Helpers
+
+        private T[] getAllValidItems<T>()
+            where T : class
+        {
+            SimpleDataBroker db = new SimpleDataBroker();
+            IList<T> types = db.GetAllValid<T>();
+            return types != null ? types.ToArray() : null;
+        }
+
+
         private void ToggleActivation<T>(int id, bool activated)
             where T : DeactivatableEntity
         {
@@ -384,5 +414,27 @@ namespace LePont.Web
                 db.Save(entity);
             }
         }
+
+        private string escapeCsvField(string raw)
+        {
+            // Ref for CSV format: http://www.csvreader.com/csv_format.php
+            return "\"" + raw.Replace("\"", "\"\"") + "\"";
+        }
+
+        private string generateCsvRow(params string[] fields)
+        {
+            string result = null;
+            for (int i = 0; i < fields.Length; i++)
+            {
+                string field = fields[i];
+                if (i < fields.Length - 1)
+                    result += escapeCsvField(field) + ",";
+                else
+                    result += escapeCsvField(field) + "\r\n";
+            }
+            return result;
+        }
+
+        #endregion
     }
 }

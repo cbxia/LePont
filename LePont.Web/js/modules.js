@@ -11,7 +11,7 @@ Application.Modules["InstructionViewer"] = { path: "Modules/InstructionViewer", 
 Application.Modules["PublicationManager"] = { path: "Modules/PublicationManager" };
 Application.Modules["PublicationViewer"] = { path: "Modules/PublicationViewer", loaded: false };
 Application.Modules["WorkNetwork"] = { path: "Modules/WorkNetwork" };
-Application.Modules["BBS"] = { path: "Modules/BBS" };
+Application.Modules["Forum"] = { path: "Modules/Forum" };
 Application.Modules["RecycleBin"] = { path: "Modules/RecycleBin" };
 
 // Load all module script.

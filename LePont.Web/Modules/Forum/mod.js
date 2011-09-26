@@ -2,6 +2,7 @@
     var __activeBlockID;
     var __pageSize = 30;
     var __currentPageIndex = 1;
+    var __views = { LIST_VIEW: 0, POST_VIEW: 1 };
 
     function init() {
         __initForm();
@@ -27,7 +28,7 @@
     }
 
     function __refreshBlockSummary() {
-        var asyncResult = $.Deferred();
+        var asyncOp = $.Deferred();
         Application.InvokeService(
             "GetForumBlockSummary", null,
             function (result) {
@@ -35,10 +36,10 @@
                     renderTemplatedItems(result, "tmpl-forum-block-items", "#forum .blocks tbody");
                     __switchBlock(result[0]);
                 }
-                asyncResult.resolve();
+                asyncOp.resolve();
             }
         );
-        return asyncResult;
+        return asyncOp;
     }
 
     function __refreshTopicList() {
@@ -52,13 +53,59 @@
                 },
                 function (result) {
                     if (result != null && result.Data != null && result.Data.length > 0) {
-                        renderTemplatedItems(result.Data, "tmpl-forum-topic-items", "#forum ul.topics");
+                        renderTemplatedItems(result.Data, "tmpl-forum-topic-items", "#forum ul.list");
                     }
                     else {
-                        $("#forum ul.topics").empty();
+                        $("#forum ul.list").empty();
                     }
                 }
             );
+        }
+    }
+
+    function __fetchTopicPosts(topic) {
+        var asynOp = $.Deferred();
+        Application.InvokeService(
+            "GetForumFollowUps",
+            {
+                topicID: topic.ID
+            },
+            function (result) {
+                var containerSel = "#forum div.post ul.follow-ups";
+                if (result != null && result.length > 0) {
+                    renderTemplatedItems(result, "tmpl-forum-post-items", containerSel);
+                }
+                else {
+                    $(containerSel).empty();
+                }
+                asynOp.resolve();
+            }
+        );
+        return asynOp;
+    }
+
+    function __switchBlock(block) {
+        $("#forum .blocks tbody tr").removeClass("current");
+        $("#forum .blocks tbody tr.block_id_" + block.BlockID).addClass("current");
+        $("#forum .command-bar span.current-block").html("当前版块： " + block.BlockName);
+        __activeBlockID = block.BlockID;
+        __refreshTopicList();
+    }
+
+    function __switchView(view) {
+        if (view == __views.LIST_VIEW) {
+            $("#forum table.blocks thead tr.headings").show();
+            $("#forum table.blocks tbody tr").show();
+            $("#forum div.command-bar").show();
+            $("#forum ul.list").show();
+            $("#forum div.post").hide();
+        }
+        else {
+            $("#forum table.blocks thead tr.headings").hide();
+            $("#forum table.blocks tbody tr").hide();
+            $("#forum div.command-bar").hide();
+            $("#forum ul.list").hide();
+            $("#forum div.post").show();
         }
     }
 
@@ -111,20 +158,18 @@
         });
     }
 
-    function __switchBlock(block) {
-        $("#forum .blocks tbody tr").removeClass("current");
-        $("#forum .blocks tbody tr.block_id_" + block.BlockID).addClass("current");
-        $("#forum .command-bar span.current-block").html("当前版块： " + block.BlockName);
-        __activeBlockID = block.BlockID;
-        __refreshTopicList();
-    }
-
     function __bindEvents() {
         $("#forum").delegate(".blocks .switch", "click", function () {
             __switchBlock($(this).tmplItem().data);
         });
         $("#forum").delegate(".command-bar .new-topic", "click", function () {
             __showPostEditor();
+        });
+        $("#forum").delegate("li.topic a", "click", function () {
+            var topic = $(this).tmplItem().data;
+            __fetchTopicPosts(topic).done(function () {
+                __switchView(__views.POST_VIEW);
+            })
         });
     }
     //// exports

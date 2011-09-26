@@ -44,7 +44,7 @@ function renderTemplatedItems(data, templateId, containerSelector) {
 }
 
 function ajaxFileUpload(animSelector, fileElementId, handlerUrl) {
-    var asyncResult = $.Deferred();
+    var asyncOp = $.Deferred();
     //starting setting some animation when the ajax starts and completes
     $(animSelector)
 		.ajaxStart(function () {
@@ -68,12 +68,12 @@ function ajaxFileUpload(animSelector, fileElementId, handlerUrl) {
 			            alert(data.msg);
 			        }
 			    }
-			    asyncResult.resolve();
+			    asyncOp.resolve();
 			},
 			error: function (data, status, e) {
 			    alert(e);
 			}
 		}
     )
-    return asyncResult.promise();
+    return asyncOp.promise();
 }

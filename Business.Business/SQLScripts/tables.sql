@@ -225,8 +225,8 @@ create table [forum_topic]
 	[block_id] int not null references [forum_block]([id]),
 	[title] varchar(100) not null,
 	[content] varchar(2000) not null,
- 	[creator_id] int not null references [user]([id]),
-	[create_time] datetime not null,
+ 	[publisher_id] int not null references [user]([id]),
+	[publish_time] datetime not null,
 	[last_post_time] datetime not null,
 	[list_order] smallint null default 0,
 	[deactivated] bit null default 0 -- 0 = false, 1 = true

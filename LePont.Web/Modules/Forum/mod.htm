@@ -19,10 +19,10 @@
         <a href="javascript:void(0)">${Title}</a>
     </div>
     <div class="datetime">
-        ${formatJsonDate(CreateTime)}
+        ${formatJsonDate(PublishTime)}
     </div>
     <div class="publisher">
-        ${Creator.Name}
+        ${Publisher.Name}
     </div>
 </li>
 </script>
@@ -65,8 +65,10 @@
     <div class="command-bar">
         <span class="current-block"></span><a class="new-topic" href="javascript:void(0);">发布主题</a>
     </div>
-    <ul class="topics">
+    <ul class="list">
     </ul>
+    <div class="post">
+    </div>
 </div>
 <div id="forum-editor-dlg">
     <form class="forum-editor-form">

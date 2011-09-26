@@ -90,7 +90,7 @@ var Application = function () {
     }
 
     function EnsureLoadLayer(moduleName, context) {
-        var asyncResult = $.Deferred();
+        var asyncOp = $.Deferred();
         if (moduleName != null) {
             if (typeof Modules[moduleName].loaded == "undefined" || !Modules[moduleName].loaded) {
                 var module_path = Modules[moduleName].path;
@@ -103,20 +103,20 @@ var Application = function () {
                         Modules[moduleName].loaded = true;
                         if (typeof Modules[moduleName].init != "undefined")
                             Modules[moduleName].init(context);
-                        asyncResult.resolve();
+                        asyncOp.resolve();
                     }
                     else {
                         alert("加载模块[" + moduleName + "]失败，请联系系统管理员。");
-                        asyncResult.reject();
+                        asyncOp.reject();
                     }
                 });
             }
             else
-                asyncResult.resolve();
+                asyncOp.resolve();
         }
         else
-            asyncResult.reject();
-        return asyncResult.promise();
+            asyncOp.reject();
+        return asyncOp.promise();
     }
 
     //////// Service-related

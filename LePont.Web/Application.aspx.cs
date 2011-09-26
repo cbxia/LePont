@@ -377,17 +377,17 @@ namespace LePont.Web
         [ServiceMethod]
         public void AddForumTopic(ForumTopic topic)
         {
-            topic.Creator = AppContext.CurrentUser;
-            topic.CreateTime = DateTime.Now;
-            topic.LastPostTime = topic.CreateTime;
+            topic.Publisher = AppContext.CurrentUser;
+            topic.PublishTime = DateTime.Now;
+            topic.LastPostTime = topic.PublishTime;
             topic.Deactivated = false;
             topic.ListOrder = 0;
             using (SessionContext ctx = new SessionContext())
             {
                 SimpleDataBroker db = new SimpleDataBroker(ctx);
                 topic.Block = db.GetById<ForumBlock>(topic.Block.ID);
-                topic.Block.LastPublisher = topic.Creator;
-                topic.Block.LastPostTime = topic.CreateTime;
+                topic.Block.LastPublisher = topic.Publisher;
+                topic.Block.LastPostTime = topic.PublishTime;
                 db.Save<ForumTopic>(topic);
             }
         }

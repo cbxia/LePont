@@ -31,6 +31,7 @@
 }
 #forum .blocks tr.headings
 {
+    color:#269;
     background: url("/css/images/mod_body_bk.jpg") repeat-x;
     height: 28px;
 }

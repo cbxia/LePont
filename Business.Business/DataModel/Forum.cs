@@ -21,8 +21,8 @@ namespace LePont.Business
         public virtual ForumBlock Block { get; set; }
         public virtual string Title { get; set; }
         public virtual string Content { get; set; }
-        public virtual User Creator { get; set; }
-        public virtual DateTime? CreateTime { get; set; }
+        public virtual User Publisher { get; set; }
+        public virtual DateTime? PublishTime { get; set; }
         public virtual DateTime? LastPostTime { get; set; }
         public virtual short? ListOrder { get; set; }
     }
@@ -53,7 +53,7 @@ namespace LePont.Business
             BlockID = blockID;
             BlockName = blockName;
             TotalTopics = totalTopics;
-            TotalPostings = totalPostings;
+            TotalPostings = totalTopics + totalPostings;
             LastPublisher = lastPublisher;
             LastPostTime = lastPostTime;
             Administrator = administrator;

@@ -27,8 +27,8 @@
         <many-to-one name="Block" column="block_id" />
         <property name="Title" />
         <property name="Content" />
-        <many-to-one name="Creator" column="creator_id" />
-        <property name="CreateTime" />
+        <many-to-one name="Publisher" column="publisher_id" />
+        <property name="PublishTime" />
         <property name="LastPostTime" />
         <property name="ListOrder" />
         <property name="Deactivated" />

@@ -6,7 +6,7 @@
 #forum .blocks
 {
     margin-top: 6px;
-    border-collapse:collapse;
+    border-collapse: collapse;
     width: 100%;
     border: 1px solid #24bbd4;
 }
@@ -17,28 +17,28 @@
     border-style: dotted;
     border-color: #24bbd4;
     padding: 0 6px;
-    text-align:center;
+    text-align: center;
 }
 
 #forum .blocks tr.title th
 {
     background: url("/css/images/section_title_3.jpg") repeat-x;
     height: 28px;
-    color:#ffa;
+    color: #ffa;
     padding: 0px 20px;
-    text-align:left;
+    text-align: left;
     border-top: solid 1px #fff;
 }
 #forum .blocks tr.headings
 {
-    color:#269;
+    color: #269;
     background: url("/css/images/mod_body_bk.jpg") repeat-x;
     height: 28px;
 }
 #forum img
 {
-    border-style:none;
-    border-width:0px;
+    border-style: none;
+    border-width: 0px;
 }
 
 #forum .blocks tbody tr.current
@@ -47,9 +47,9 @@
 }
 #forum .command-bar
 {
-    background-color: #eeb;
+    background-color: #F1F3F7;
     padding: 4px 0;
-    margin:4px 0;
+    margin: 4px 0;
 }
 #forum .command-bar span.current-block
 {
@@ -63,16 +63,16 @@
 #forum li.topic
 {
     list-style-type: none;
-    overflow:hidden;
+    overflow: hidden;
     border: 1px solid #eeb;
-    margin: 2px 0; 
+    margin: 2px 0;
 }
 #forum li.topic div
 {
-    float:left;
+    float: left;
     padding: 2px 4px;
-    height:16px;
-} 
+    height: 16px;
+}
 
 #forum li.topic .icon
 {
@@ -100,5 +100,32 @@
 
 #forum-editor-dlg
 {
-    display:none;
+    display: none;
+}
+
+#forum .post .topic
+{
+    overflow: hidden;
+}
+#forum .post .topic .publisher
+{
+    width: 20%;
+    float: left;
+    border-right: solid 1px #aa8;
+    padding: 10px;
+}
+#forum .post .topic .body
+{
+    width: 70%;
+    float: left;
+}
+#forum .post .topic .title
+{
+    background-color: #eeb;
+    padding: 10px;
+}
+#forum .post .topic .content
+{
+    background-color: #eeb;
+    padding: 10px;
 }

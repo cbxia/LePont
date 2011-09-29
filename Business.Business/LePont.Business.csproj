@@ -54,9 +54,7 @@
   <ItemGroup>
     <Compile Include="DataBrokers\CaseTypeBroker.cs" />
     <Compile Include="DataBrokers\CaseBroker.cs" />
-    <Compile Include="DataBrokers\ForumTopicBroker.cs" />
-    <Compile Include="DataBrokers\ForumPostBroker.cs" />
-    <Compile Include="DataBrokers\ForumBlockBroker.cs" />
+    <Compile Include="DataBrokers\ForumBroker.cs" />
     <Compile Include="DataBrokers\InstructionBroker.cs" />
     <Compile Include="DataBrokers\InstructionLiteBroker.cs" />
     <Compile Include="DataBrokers\PublicationLiteBroker.cs" />
@@ -74,6 +72,7 @@
     <Compile Include="DataModel\UserSession.cs" />
     <Compile Include="DataModel\User.cs" />
     <Compile Include="DataModel\Department.cs" />
+    <Compile Include="DTOs\Forum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

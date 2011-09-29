@@ -36,7 +36,8 @@ function renderTemplatedItems(data, templateId, containerSelector) {
     try
     {
         $(containerSelector).empty();
-        $("#" + templateId).tmpl(data).appendTo($(containerSelector));
+        if (typeof data != "undefined" && data != null)
+            $("#" + templateId).tmpl(data).appendTo($(containerSelector));
     }
     catch(err)
     {

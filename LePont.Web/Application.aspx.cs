@@ -5,7 +5,7 @@ using System.Text;
 using JasminSoft.NHibernateUtils;
 using LePont.Business;
 using DataModel = LePont.Business;
-
+using LePont.DTOs;
 ///////////Things below are bad guys, I don't have anything to do with them!!!
 //using System.Web;
 //using System.Web.UI;
@@ -34,7 +34,7 @@ namespace LePont.Web
                         UserBroker userBroker = new UserBroker();
                         _appContext.CurrentUser = userBroker.GetByLoginId(Context.User.Identity.Name);
                     }
-                    SimpleDataBroker roleBroker = new SimpleDataBroker();
+                    DataBroker roleBroker = new DataBroker();
                     _appContext.AllRoles = roleBroker.GetAll<Role>().ToArray();
 
                 }
@@ -51,7 +51,7 @@ namespace LePont.Web
         [ServiceMethod]
         public Department GetDepartment(int id)
         {
-            SimpleDataBroker db = new SimpleDataBroker();
+            DataBroker db = new DataBroker();
             Department obj = db.GetById<Department>(id);
             return obj;
         }
@@ -69,7 +69,7 @@ namespace LePont.Web
         {
             using (SessionContext ctx = new SessionContext())
             {
-                SimpleDataBroker db = new SimpleDataBroker(ctx);
+                DataBroker db = new DataBroker(ctx);
                 Department dep = db.GetById<Department>(id);
                 dep.Code = code;
                 dep.Name = name;
@@ -83,7 +83,7 @@ namespace LePont.Web
         {
             using (SessionContext ctx = new SessionContext())
             {
-                SimpleDataBroker db = new SimpleDataBroker(ctx);
+                DataBroker db = new DataBroker(ctx);
                 Department parent = db.GetById<Department>(parentId);
                 Department dep = new Department { Superior = parent, Code = code, Name = name, Level = ++parent.Level, ListOrder = listOrder };
                 db.Save<Department>(dep);
@@ -107,7 +107,7 @@ namespace LePont.Web
         [ServiceMethod]
         public void AddUser(User user)
         {
-            SimpleDataBroker db = new SimpleDataBroker();
+            DataBroker db = new DataBroker();
             user.Deactivated = false;
             user.CreateTime = DateTime.Now;
             db.Save<User>(user);
@@ -116,7 +116,7 @@ namespace LePont.Web
         [ServiceMethod]
         public void ModifyUser(User user)
         {
-            SimpleDataBroker db = new SimpleDataBroker();
+            DataBroker db = new DataBroker();
             db.Save<User>(user);
         }
 
@@ -152,14 +152,14 @@ namespace LePont.Web
             caseObj.Department = AppContext.CurrentUser.Department;
             caseObj.DateTime = DateTime.Now;
             caseObj.Deactivated = false;
-            SimpleDataBroker db = new SimpleDataBroker();
+            DataBroker db = new DataBroker();
             db.Save<Dossier>(caseObj);
         }
 
         [ServiceMethod]
         public void ModifyCase(Dossier caseObj)
         {
-            SimpleDataBroker db = new SimpleDataBroker();
+            DataBroker db = new DataBroker();
             db.Save<Dossier>(caseObj);
         }
 
@@ -194,7 +194,7 @@ namespace LePont.Web
         [ServiceMethod]
         public DataPage<Dossier> SearchCases(int depId, int caseTypeId, byte[] statuses, DateTime dateFrom, DateTime dateTo, int pageSize, int pageIndex)
         {
-            SimpleDataBroker depBroker = new SimpleDataBroker();
+            DataBroker depBroker = new DataBroker();
             Department dep = depBroker.GetById<Department>(depId);
             CaseBroker db = new CaseBroker();
             return db.Search(dep, caseTypeId, statuses, dateFrom, dateTo, pageSize, pageIndex);
@@ -203,7 +203,7 @@ namespace LePont.Web
         [ServiceMethod]
         public TextFileObject ExportCases(int depId, int caseTypeId, byte[] statuses, DateTime dateFrom, DateTime dateTo)
         {
-            SimpleDataBroker depBroker = new SimpleDataBroker();
+            DataBroker depBroker = new DataBroker();
             Department dep = depBroker.GetById<Department>(depId);
             CaseBroker db = new CaseBroker();
             DataPage<Dossier> resultSet = db.Search(dep, caseTypeId, statuses, dateFrom, dateTo);
@@ -264,7 +264,7 @@ namespace LePont.Web
                 publication.AttachmentFileData = file.Data;
                 Context.Session.Remove(fileKey);
             }
-            SimpleDataBroker db = new SimpleDataBroker();
+            DataBroker db = new DataBroker();
             db.Save<Publication>(publication);
         }
 
@@ -314,7 +314,7 @@ namespace LePont.Web
                 instruction.AttachmentFileData = file.Data;
                 Context.Session.Remove(fileKey);
             }
-            SimpleDataBroker db = new SimpleDataBroker();
+            DataBroker db = new DataBroker();
             db.Save<Instruction>(instruction);
         }
 
@@ -354,50 +354,69 @@ namespace LePont.Web
         }
 
         [ServiceMethod]
-        public ForumBlockSummaryDTO[] GetForumBlockSummary()
+        public ForumBlockDTO[] GetForumBlockSummary()
         {
-            ForumBlockBroker db = new ForumBlockBroker();
+            ForumBroker db = new ForumBroker();
             return db.GetForumBlockSummary();
         }
 
         [ServiceMethod]
-        public DataPage<ForumTopic> GetForumTopics(int blockID, int pageSize, int pageIndex)
+        public DataPage<ForumTopicDTO> GetForumTopics(int blockID, int pageSize, int pageIndex)
         {
-            ForumTopicBroker db = new ForumTopicBroker();
+            ForumBroker db = new ForumBroker();
             return db.GetTopics(blockID, pageSize, pageIndex);
         }
 
         [ServiceMethod]
-        public ForumPost[] GetFollowUPs(int topicID)
+        public ForumFollowUpDTO[] GetForumFollowUps(int topicID)
         {
-            ForumPostBroker db = new ForumPostBroker();
-            return db.GetFollowUPs(topicID);
+            ForumBroker db = new ForumBroker();
+            return db.GetFollowUps(topicID);
         }
 
         [ServiceMethod]
-        public void AddForumTopic(ForumTopic topic)
+        public void AddForumTopic(ForumTopic post)
         {
-            topic.Publisher = AppContext.CurrentUser;
-            topic.PublishTime = DateTime.Now;
-            topic.LastPostTime = topic.PublishTime;
-            topic.Deactivated = false;
-            topic.ListOrder = 0;
+            post.Publisher = AppContext.CurrentUser;
+            post.PublishTime = DateTime.Now;
+            post.LastPublisher = post.Publisher;
+            post.LastPublishTime = post.PublishTime;
+            post.ListOrder = 0;
             using (SessionContext ctx = new SessionContext())
             {
-                SimpleDataBroker db = new SimpleDataBroker(ctx);
-                topic.Block = db.GetById<ForumBlock>(topic.Block.ID);
-                topic.Block.LastPublisher = topic.Publisher;
-                topic.Block.LastPostTime = topic.PublishTime;
-                db.Save<ForumTopic>(topic);
+                DataBroker db = new DataBroker(ctx);
+                /*The Block property is not fully populated at client-side, so we need to populate it from DB*/
+                post.Block = db.GetById<ForumBlock>(post.Block.ID);
+                post.Block.LastPublisher = post.Publisher;
+                post.Block.LastPublishTime = post.PublishTime;
+                db.Save<ForumTopic>(post);
             }
         }
 
+        [ServiceMethod]
+        public void AddForumFollowUp(ForumFollowUp post)
+        {
+            post.Publisher = AppContext.CurrentUser;
+            post.PublishTime = DateTime.Now;
+            post.ListOrder = 0;
+            using (SessionContext ctx = new SessionContext())
+            {
+                DataBroker db = new DataBroker(ctx);
+                post.Topic = db.GetById<ForumTopic>(post.Topic.ID);
+                post.Topic.LastPublisher = post.Publisher;
+                post.Topic.LastPublishTime = post.PublishTime;
+                post.Block = db.GetById<ForumBlock>(post.Block.ID);
+                post.Block.LastPublisher = post.Publisher;
+                post.Block.LastPublishTime = post.PublishTime;
+                db.Save<ForumFollowUp>(post);
+            }
+        }
         #region Helpers
 
         private T[] getAllValidItems<T>()
             where T : class
         {
-            SimpleDataBroker db = new SimpleDataBroker();
+            DataBroker db = new DataBroker();
             IList<T> types = db.GetAllValid<T>();
             return types != null ? types.ToArray() : null;
         }
@@ -408,7 +427,7 @@ namespace LePont.Web
         {
             using (SessionContext ctx = new SessionContext())
             {
-                SimpleDataBroker db = new SimpleDataBroker(ctx);
+                DataBroker db = new DataBroker(ctx);
                 T entity = db.GetById<T>(id);
                 entity.Deactivated = !activated;
                 db.Save(entity);

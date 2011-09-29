@@ -6,12 +6,12 @@ using System.Web.Script.Serialization;
 
 namespace LePont.Business
 {
-    public class Entity
+    public abstract class Entity
     {
         public virtual int ID { get; set; }
     }
 
-    public class DeactivatableEntity : Entity
+    public abstract class DeactivatableEntity : Entity
     {
         public virtual bool? Deactivated { get; set; }
     }

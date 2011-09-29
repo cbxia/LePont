@@ -1,16 +1,16 @@
 ﻿<!--template-->
-<script id="tmpl-forum-block-items" type="text/jquery-template">
+<script id="tmpl-forum-block-item" type="text/jquery-template">
 <tr class="block_id_${BlockID}">
     <td style="text-align:right;"><a class="switch" href="javascript:void(0);"><img src="/css/images/forum_block_${BlockID}.png"/></a></td>
     <td style="text-align:left;"><a class="switch" href="javascript:void(0);">${BlockName}</a></td>
     <td>${TotalTopics}</td>
     <td>${TotalPostings}</td>
     <td>${LastPublisher}</td>
-    <td>${formatJsonDate(LastPostTime)}</td>
+    <td>${formatJsonDate(LastPublishTime)}</td>
     <td>${Administrator}</td>
 </tr>
 </script>
-<script id="tmpl-forum-topic-items" type="text/jquery-template">
+<script id="tmpl-forum-topic-item" type="text/jquery-template">
 <li class="topic">
     <div class="icon">
         <a href="javascript:void(0)"><img src="../../css/images/add_16.png" /></a>
@@ -22,13 +22,23 @@
         ${formatJsonDate(PublishTime)}
     </div>
     <div class="publisher">
-        ${Publisher.Name}
+        ${PublisherName}
     </div>
 </li>
 </script>
-<script id="tmpl-forum-post-items" type="text/jquery-template">
+<script id="tmpl-forum-topic-detail" type="text/jquery-template">
+    <div class="publisher">
+        <div><img src="../../css/images/user.png" /></div>            
+        <div>发帖用户：${PublisherName}</div>
+        <div>发帖日期：${formatJsonDate(PublishTime)}</div>
+    </div>
+    <div class="body">
+        <div class="title">${Title}</div>
+        <div class="content">${Content}</div>
+    </div>
 </script>
-
+<script id="tmpl-forum-followup-item" type="text/jquery-template">
+</script>
 <!--content-->
 <div id="forum" class="module-body">
     <table class="blocks">
@@ -68,6 +78,10 @@
     <ul class="list">
     </ul>
     <div class="post">
+        <div class="topic">
+        </div>
+        <div class="follow-ups">
+        </div>
     </div>
 </div>
 <div id="forum-editor-dlg">

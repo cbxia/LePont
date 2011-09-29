@@ -8,6 +8,7 @@
         __initForm();
         __bindEvents();
         __refreshBlockSummary();
+        __switchView(__views.LIST_VIEW);
     }
 
     function __initForm() {
@@ -33,7 +34,7 @@
             "GetForumBlockSummary", null,
             function (result) {
                 if (result != null && result.length > 0) {
-                    renderTemplatedItems(result, "tmpl-forum-block-items", "#forum .blocks tbody");
+                    renderTemplatedItems(result, "tmpl-forum-block-item", "#forum .blocks tbody");
                     __switchBlock(result[0]);
                 }
                 asyncOp.resolve();
@@ -53,7 +54,7 @@
                 },
                 function (result) {
                     if (result != null && result.Data != null && result.Data.length > 0) {
-                        renderTemplatedItems(result.Data, "tmpl-forum-topic-items", "#forum ul.list");
+                        renderTemplatedItems(result.Data, "tmpl-forum-topic-item", "#forum ul.list");
                     }
                     else {
                         $("#forum ul.list").empty();
@@ -63,7 +64,7 @@
         }
     }
 
-    function __fetchTopicPosts(topic) {
+    function __fetchFollowUps(topic) {
         var asynOp = $.Deferred();
         Application.InvokeService(
             "GetForumFollowUps",
@@ -71,13 +72,7 @@
                 topicID: topic.ID
             },
             function (result) {
-                var containerSel = "#forum div.post ul.follow-ups";
-                if (result != null && result.length > 0) {
-                    renderTemplatedItems(result, "tmpl-forum-post-items", containerSel);
-                }
-                else {
-                    $(containerSel).empty();
-                }
+                renderTemplatedItems(result, "tmpl-forum-followup-item", "#forum div.post div.follow-ups");
                 asynOp.resolve();
             }
         );
@@ -121,7 +116,7 @@
         Application.InvokeService(
             "AddForumTopic",
             {
-                topic: topic
+                post: topic
             }
         );
         return xhr;
@@ -167,7 +162,8 @@
         });
         $("#forum").delegate("li.topic a", "click", function () {
             var topic = $(this).tmplItem().data;
-            __fetchTopicPosts(topic).done(function () {
+            renderTemplatedItems(topic, "tmpl-forum-topic-detail", "#forum div.post div.topic");
+            __fetchFollowUps(topic).done(function () {
                 __switchView(__views.POST_VIEW);
             })
         });

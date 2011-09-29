@@ -28,7 +28,7 @@ namespace LePont.Web
                     session.IP = Request.UserHostAddress;
                     session.LogonDateTime = DateTime.Now;
                     session.User = user;
-                    SimpleDataBroker broker_session = new SimpleDataBroker(ctx);
+                    DataBroker broker_session = new DataBroker(ctx);
                     session = broker_session.Save<DataModel.UserSession>(session);
                     result = true;
                     Session["CurrentUser"] = user;

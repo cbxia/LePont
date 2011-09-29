@@ -200,7 +200,7 @@ create table [forum_block]
 	[id] int not null identity(1,1) primary key,
 	[name] varchar(100) not null,
  	[last_publisher_id] int null references [user]([id]),
- 	[last_post_time] datetime null,
+ 	[last_publish_time] datetime null,
  	[admin_id] int not null references [user]([id]),
 	[list_order] smallint null default 0,
 	[deactivated] bit null default 0 -- 0 = false, 1 = true
@@ -219,29 +219,33 @@ values (3, 'µÁƒ‘ºº ı', 1, 3);
 
 set IDENTITY_INSERT [forum_block] off;
 
-create table [forum_topic]
-(
-	[id] int not null identity(1,1) primary key,
-	[block_id] int not null references [forum_block]([id]),
-	[title] varchar(100) not null,
-	[content] varchar(2000) not null,
- 	[publisher_id] int not null references [user]([id]),
-	[publish_time] datetime not null,
-	[last_post_time] datetime not null,
-	[list_order] smallint null default 0,
-	[deactivated] bit null default 0 -- 0 = false, 1 = true
-);
-
+-- abstract
 create table [forum_post]
 (
 	[id] int not null identity(1,1) primary key,
-	[block_id] not int null references [forum_block]([id]),
-	[topic_id] not int null references [forum_topic]([id]),
+	[block_id] int not null references [forum_block]([id]),
 	[content] varchar(2000) not null,
  	[publisher_id] int not null references [user]([id]),
 	[publish_time] datetime not null,
-	[last_post_time] datetime not null,
 	[list_order] smallint null default 0,
+    [attachment_file_name] varchar(100),
+    [attachment_file_data] varbinary(max)
+);
+
+-- derived from [forum_post]
+create table [forum_topic]
+(
+	[id] int not null primary key references [forum_post]([id]),
+	[title] varchar(100) not null,
+	[last_publisher_id] int null references [user]([id]),
+	[last_publish_time] datetime not null
+)
+
+-- derived from [forum_post]
+create table [forum_follow_up]
+(
+	[id] int not null primary key references [forum_post]([id]),
+	[topic_id] int not null references [forum_topic]([id])
 );
 
 create table [message]

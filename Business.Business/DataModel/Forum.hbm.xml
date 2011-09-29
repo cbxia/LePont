@@ -6,8 +6,10 @@
     default-cascade="save-update"
     default-lazy="true" >
 
-    <import class="LePont.Business.ForumBlockSummaryDTO, LePont.Business"/>
-    
+    <import class="LePont.DTOs.ForumBlockDTO, LePont.Business"/>
+    <import class="LePont.DTOs.ForumTopicDTO, LePont.Business"/>
+    <import class="LePont.DTOs.ForumFollowUpDTO, LePont.Business"/>
+
     <class name="ForumBlock" >
         <id name="ID" unsaved-value="-1">
             <generator class="native" />
@@ -15,34 +17,29 @@
         <many-to-one name="Administrator" column="admin_id" />
         <property name="Name" />
         <many-to-one name="LastPublisher" column="last_publisher_id" />
-        <property name="LastPostTime" />
+        <property name="LastPublishTime" />
         <property name="ListOrder" />
         <property name="Deactivated" />
     </class>
 
-    <class name="ForumTopic" >
-        <id name="ID" unsaved-value="-1">
-            <generator class="native" />
-        </id>
-        <many-to-one name="Block" column="block_id" />
-        <property name="Title" />
-        <property name="Content" />
-        <many-to-one name="Publisher" column="publisher_id" />
-        <property name="PublishTime" />
-        <property name="LastPostTime" />
-        <property name="ListOrder" />
-        <property name="Deactivated" />
-    </class>
-    
     <class name="ForumPost" >
         <id name="ID" unsaved-value="-1">
             <generator class="native" />
         </id>
         <many-to-one name="Block" column="block_id" />
-        <many-to-one name="Topic" column="topic_id" />
         <property name="Content" />
         <many-to-one name="Publisher" column="publisher_id" />
         <property name="PublishTime" />
         <property name="ListOrder" />
+        <joined-subclass name="ForumTopic">
+            <key column="id" />
+            <property name="Title" />
+            <many-to-one name="LastPublisher" column="last_publisher_id" />
+            <property name="LastPublishTime" />
+        </joined-subclass>
+        <joined-subclass name="ForumFollowUp">
+            <key column="id" />
+            <many-to-one name="Topic" column="topic_id" />
+        </joined-subclass>        
     </class>
 </hibernate-mapping>

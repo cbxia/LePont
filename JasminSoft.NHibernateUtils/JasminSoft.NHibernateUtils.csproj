@@ -81,7 +81,7 @@
   <ItemGroup>
     <Compile Include="DataBrokers\BaseDataBroker.cs" />
     <Compile Include="DataBrokers\BaseGenericDataBroker.cs" />
-    <Compile Include="DataBrokers\SimpleDataBroker.cs" />
+    <Compile Include="DataBrokers\DataBroker.cs" />
     <Compile Include="DbObjectsNamingStrategy.cs" />
     <Compile Include="SessionContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -242,7 +242,7 @@ create table [forum_topic]
 )
 
 -- derived from [forum_post]
-create table [forum_follow_up]
+create table [forum_response]
 (
 	[id] int not null primary key references [forum_post]([id]),
 	[topic_id] int not null references [forum_topic]([id])

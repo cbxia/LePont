@@ -1,5 +1,6 @@
 ﻿Application.Modules["Forum"] = function (module) { // param module is the module object to augment
     var __activeBlockID;
+    var __activeTopicID;
     var __pageSize = 30;
     var __currentPageIndex = 1;
     var __views = { LIST_VIEW: 0, POST_VIEW: 1 };
@@ -22,10 +23,16 @@
             wrapper: "li",
             meta: "validate"
         });
-        // CKEditor
+        // CKEditors
         if (CKEDITOR.instances["di-Content"])
             delete CKEDITOR.instances["di-Content"];
         $("#di-Content").ckeditor({ width: 600 });
+
+        if (CKEDITOR.instances["di-Response"])
+            delete CKEDITOR.instances["di-Response"];
+        $("#di-Response").ckeditor({ width: 700, height: 120 });
+        // Buttons
+        $("#forum .button").button();
     }
 
     function __refreshBlockSummary() {
@@ -64,15 +71,15 @@
         }
     }
 
-    function __fetchFollowUps(topic) {
+    function __fetchResponses(topic) {
         var asynOp = $.Deferred();
         Application.InvokeService(
-            "GetForumFollowUps",
+            "GetForumResponses",
             {
                 topicID: topic.ID
             },
             function (result) {
-                renderTemplatedItems(result, "tmpl-forum-followup-item", "#forum div.post div.follow-ups");
+                renderTemplatedItems(result, "tmpl-forum-followup-item", "#forum div.posts div.responses");
                 asynOp.resolve();
             }
         );
@@ -93,14 +100,14 @@
             $("#forum table.blocks tbody tr").show();
             $("#forum div.command-bar").show();
             $("#forum ul.list").show();
-            $("#forum div.post").hide();
+            $("#forum div.posts").hide();
         }
         else {
             $("#forum table.blocks thead tr.headings").hide();
             $("#forum table.blocks tbody tr").hide();
             $("#forum div.command-bar").hide();
             $("#forum ul.list").hide();
-            $("#forum div.post").show();
+            $("#forum div.posts").show();
         }
     }
 
@@ -122,7 +129,18 @@
         return xhr;
     }
 
-    function __showPostEditor() {
+    function __addResponse(response) {
+        var xhr =
+        Application.InvokeService(
+            "AddForumResponse",
+            {
+                post: response
+            }
+        );
+        return xhr;
+    }
+
+    function __showTopicEditor() {
         clearForm("#forum-editor-dlg .forum-editor-form");
         $("#forum-editor-dlg").dialog({
             title: "发帖",
@@ -158,12 +176,27 @@
             __switchBlock($(this).tmplItem().data);
         });
         $("#forum").delegate(".command-bar .new-topic", "click", function () {
-            __showPostEditor();
+            __showTopicEditor();
+        });
+        $("#forum").delegate(".posts .response-edit .return-to-list", "click", function () {
+            __switchView(__views.LIST_VIEW);
+        });
+        $("#forum").delegate(".posts .response-edit .commit", "click", function () {
+            var response = {};
+            response.Block = { ID: __activeBlockID };
+            response.Topic = { ID: __activeTopicID };
+            response.Content = escape($("#di-Response").val());
+            __addResponse(response).done(function () {
+                __fetchResponses(response.Topic);
+                $("#di-Response").val("");
+                alert("回帖成功！");
+            });
         });
         $("#forum").delegate("li.topic a", "click", function () {
             var topic = $(this).tmplItem().data;
-            renderTemplatedItems(topic, "tmpl-forum-topic-detail", "#forum div.post div.topic");
-            __fetchFollowUps(topic).done(function () {
+            __activeTopicID = topic.ID;
+            renderTemplatedItems(topic, "tmpl-forum-topic-detail", "#forum div.posts div.topic");
+            __fetchResponses(topic).done(function () {
                 __switchView(__views.POST_VIEW);
             })
         });

@@ -34,10 +34,20 @@
     </div>
     <div class="body">
         <div class="title">${Title}</div>
-        <div class="content">${Content}</div>
+        <div class="content">{{html unescape(Content)}}</div>
     </div>
 </script>
 <script id="tmpl-forum-followup-item" type="text/jquery-template">
+    <div class="post">
+        <div class="publisher">
+            <div><img src="../../css/images/user.png" /></div>            
+            <div>回帖用户：${PublisherName}</div>
+            <div>回帖日期：${formatJsonDate(PublishTime)}</div>
+        </div>
+        <div class="body">
+            <div class="content">{{html unescape(Content)}}</div>
+        </div>
+    </div>
 </script>
 <!--content-->
 <div id="forum" class="module-body">
@@ -77,39 +87,51 @@
     </div>
     <ul class="list">
     </ul>
-    <div class="post">
-        <div class="topic">
+    <div class="posts">
+        <div class="topic post">
         </div>
-        <div class="follow-ups">
+        <div class="responses">
+        </div>
+        <div class="response-edit">
+            <div>
+                <a class="button return-to-list" href="javascript:void(0);">返回列表</a>
+            </div>
+            <div>
+                回复本帖：</div>
+            <div>
+                <textarea id="di-Response" rows="3" cols="100" style="width: 560px; height: 50px" />
+            </div>
+            <div>
+                <a class="button commit" href="javascript:void(0);">提交回复</a>
+            </div>
         </div>
     </div>
-</div>
-<div id="forum-editor-dlg">
-    <form class="forum-editor-form">
-    <table>
-        <tr>
-            <td class="item-label">
-                主题：
-            </td>
-            <td class="item-value">
-                <input id="di-Title" name="di-Topic" class="{validate:{required:true,messages: {required: '必须输入主题'}}}"
-                    style="width: 400px" type="text" />&nbsp;（必填）
-            </td>
-        </tr>
-        <tr>
-            <td class="item-label">
-                内容：
-            </td>
-            <td class="item-value">
-                <textarea id="di-Content" name="di-Content" style="width: 400px; height: 300px" />&nbsp;（必填）
-            </td>
-        </tr>
-    </table>
-    </form>
-    <div class="validation-tips">
-        <p>
-            数据验证失败：</p>
-        <ol>
-        </ol>
+    <div id="forum-editor-dlg">
+        <form class="forum-editor-form">
+        <table>
+            <tr>
+                <td class="item-label">
+                    主题：
+                </td>
+                <td class="item-value">
+                    <input id="di-Title" name="di-Topic" class="{validate:{required:true,messages:
+{required: '必须输入主题'}}}" style="width: 400px" type="text" />&nbsp;（必填）
+                </td>
+            </tr>
+            <tr>
+                <td class="item-label">
+                    内容：
+                </td>
+                <td class="item-value">
+                    <textarea id="di-Content" name="di-Content" style="width: 400px; height: 300px" />&nbsp;（必填）
+                </td>
+            </tr>
+        </table>
+        </form>
+        <div class="validation-tips">
+            <p>
+                数据验证失败：</p>
+            <ol>
+            </ol>
+        </div>
     </div>
-</div>

@@ -32,7 +32,7 @@ namespace LePont.Business
         public virtual DateTime? LastPublishTime { get; set; }
     }
 
-    public class ForumFollowUp : ForumPost
+    public class ForumResponse : ForumPost
     {
         public virtual ForumTopic Topic { get; set; }
     }

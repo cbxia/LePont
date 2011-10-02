@@ -368,7 +368,7 @@ namespace LePont.Web
         }
 
         [ServiceMethod]
-        public ForumFollowUpDTO[] GetForumFollowUps(int topicID)
+        public ForumResponseDTO[] GetForumResponses(int topicID)
         {
             ForumBroker db = new ForumBroker();
             return db.GetFollowUps(topicID);
@@ -394,7 +394,7 @@ namespace LePont.Web
         }
 
         [ServiceMethod]
-        public void AddForumFollowUp(ForumFollowUp post)
+        public void AddForumResponse(ForumResponse post)
         {
             post.Publisher = AppContext.CurrentUser;
             post.PublishTime = DateTime.Now;
@@ -408,7 +408,7 @@ namespace LePont.Web
                 post.Block = db.GetById<ForumBlock>(post.Block.ID);
                 post.Block.LastPublisher = post.Publisher;
                 post.Block.LastPublishTime = post.PublishTime;
-                db.Save<ForumFollowUp>(post);
+                db.Save<ForumResponse>(post);
             }
         }
         #region Helpers

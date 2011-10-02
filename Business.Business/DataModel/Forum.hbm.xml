@@ -8,7 +8,7 @@
 
     <import class="LePont.DTOs.ForumBlockDTO, LePont.Business"/>
     <import class="LePont.DTOs.ForumTopicDTO, LePont.Business"/>
-    <import class="LePont.DTOs.ForumFollowUpDTO, LePont.Business"/>
+    <import class="LePont.DTOs.ForumResponseDTO, LePont.Business"/>
 
     <class name="ForumBlock" >
         <id name="ID" unsaved-value="-1">
@@ -37,7 +37,7 @@
             <many-to-one name="LastPublisher" column="last_publisher_id" />
             <property name="LastPublishTime" />
         </joined-subclass>
-        <joined-subclass name="ForumFollowUp">
+        <joined-subclass name="ForumResponse">
             <key column="id" />
             <many-to-one name="Topic" column="topic_id" />
         </joined-subclass>        

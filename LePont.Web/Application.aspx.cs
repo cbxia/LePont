@@ -394,6 +394,20 @@ namespace LePont.Web
         }
 
         [ServiceMethod]
+        public void DeleteForumTopic(int postId)
+        {
+            DataBroker db = new DataBroker();
+            db.Delete<ForumTopic>(postId);
+        }
+
+        [ServiceMethod]
+        public void DeleteForumResponse(int postId)
+        {
+            DataBroker db = new DataBroker();
+            db.Delete<ForumResponse>(postId);
+        }
+
+        [ServiceMethod]
         public void AddForumResponse(ForumResponse post)
         {
             post.Publisher = AppContext.CurrentUser;

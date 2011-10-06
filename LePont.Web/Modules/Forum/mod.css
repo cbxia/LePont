@@ -137,6 +137,11 @@
     border-left: solid 1px #E9E9E9;
     min-height: 80px;
 }
+#forum .posts .post .op
+{
+    padding: 10px;
+    border-left: solid 1px #E9E9E9;
+}
 #forum .posts .response-edit
 {
     padding: 10px;

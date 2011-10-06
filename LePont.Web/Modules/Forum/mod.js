@@ -71,15 +71,16 @@
         }
     }
 
-    function __fetchResponses(topic) {
+    function __refreshResponses(topicID) {
         var asynOp = $.Deferred();
         Application.InvokeService(
             "GetForumResponses",
             {
-                topicID: topic.ID
+                topicID: topicID
             },
             function (result) {
                 renderTemplatedItems(result, "tmpl-forum-followup-item", "#forum div.posts div.responses");
+                $("#forum div.posts div.responses .button").button();
                 asynOp.resolve();
             }
         );
@@ -129,6 +130,17 @@
         return xhr;
     }
 
+    function __deleteTopic(topicId) {
+        var xhr =
+        Application.InvokeService(
+            "DeleteForumTopic",
+            {
+                postId: topicId
+            }
+        );
+        return xhr;
+    }
+
     function __addResponse(response) {
         var xhr =
         Application.InvokeService(
@@ -140,6 +152,16 @@
         return xhr;
     }
 
+    function __deleteResponse(responseId) {
+        var xhr =
+        Application.InvokeService(
+            "DeleteForumResponse",
+            {
+                postId: responseId
+            }
+        );
+        return xhr;
+    }
     function __showTopicEditor() {
         clearForm("#forum-editor-dlg .forum-editor-form");
         $("#forum-editor-dlg").dialog({
@@ -181,22 +203,42 @@
         $("#forum").delegate(".posts .response-edit .return-to-list", "click", function () {
             __switchView(__views.LIST_VIEW);
         });
+        $("#forum").delegate(".posts .response-edit .delete-topic", "click", function () {
+            if (confirm("请确认是否删除当前主题？")) {
+                __deleteTopic(__activeTopicID);
+                __refreshTopicList();
+                __switchView(__views.LIST_VIEW);
+                alert("删除成功！");
+            }
+        });
+        $("#forum").delegate(".posts .responses .delete-response", "click", function () {
+            if (confirm("请确认是否删除当前回帖？")) {
+                var responseId = $(this).tmplItem().data.ID;
+                __deleteResponse(responseId);
+                __refreshResponses(__activeTopicID);
+                alert("删除成功！");
+            }
+        });
         $("#forum").delegate(".posts .response-edit .commit", "click", function () {
-            var response = {};
-            response.Block = { ID: __activeBlockID };
-            response.Topic = { ID: __activeTopicID };
-            response.Content = escape($("#di-Response").val());
-            __addResponse(response).done(function () {
-                __fetchResponses(response.Topic);
-                $("#di-Response").val("");
-                alert("回帖成功！");
-            });
+            if ($("#di-Response").val().length > 0) {
+                var response = {};
+                response.Block = { ID: __activeBlockID };
+                response.Topic = { ID: __activeTopicID };
+                response.Content = escape($("#di-Response").val());
+                __addResponse(response).done(function () {
+                    __refreshResponses(response.Topic.ID);
+                    $("#di-Response").val("");
+                    alert("回帖成功！");
+                });
+            }
+            else
+                alert("请输入回帖内容！");
         });
         $("#forum").delegate("li.topic a", "click", function () {
             var topic = $(this).tmplItem().data;
             __activeTopicID = topic.ID;
             renderTemplatedItems(topic, "tmpl-forum-topic-detail", "#forum div.posts div.topic");
-            __fetchResponses(topic).done(function () {
+            __refreshResponses(topic.ID).done(function () {
                 __switchView(__views.POST_VIEW);
             })
         });

@@ -30,6 +30,7 @@ namespace LePont.Business
         public virtual string Title { get; set; }
         public virtual User LastPublisher { get; set; }
         public virtual DateTime? LastPublishTime { get; set; }
+        public virtual IList<ForumResponse> Responses { get; set; }
     }
 
     public class ForumResponse : ForumPost

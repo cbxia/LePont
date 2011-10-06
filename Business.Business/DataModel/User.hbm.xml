@@ -29,7 +29,7 @@
         <property name="ListOrder" />
         <property name="Deactivated" />
         <many-to-one name="Department" column="department_id" />
-        <bag name="Roles" table="user_x_role" lazy="false">
+        <bag name="Roles" table="user_x_role" lazy="false" cascade="all">
             <key column="user_id" />
             <many-to-many class="Role" column="role_id" />
         </bag>

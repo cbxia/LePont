@@ -21,7 +21,6 @@
         <property name="ListOrder" />
         <property name="Deactivated" />
     </class>
-
     <class name="ForumPost" >
         <id name="ID" unsaved-value="-1">
             <generator class="native" />
@@ -36,6 +35,10 @@
             <property name="Title" />
             <many-to-one name="LastPublisher" column="last_publisher_id" />
             <property name="LastPublishTime" />
+            <bag name="Responses" lazy="true" inverse="true" cascade="all">
+                <key column="topic_id" />
+                <one-to-many class="ForumResponse" />
+            </bag>
         </joined-subclass>
         <joined-subclass name="ForumResponse">
             <key column="id" />

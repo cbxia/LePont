@@ -47,7 +47,7 @@ namespace LePont.Business
                 inner join p.Block as b
                 inner join p.Publisher as u
                 where p.Topic.ID = :topic_id  
-                order by p.PublishTime desc";
+                order by p.PublishTime";
             IList<ForumResponseDTO> resultSet = PerformQueryAction<ForumResponseDTO>(queryString, query =>
             {
                 query

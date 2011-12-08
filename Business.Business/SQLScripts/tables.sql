@@ -38,6 +38,7 @@ create table [user]
 	[department_id] int null references [department]([id]),
 	[phone] varchar(20) null,
 	[email] varchar(100) null,
+	[last_logon_time] smalldatetime null,
 	[create_time] smalldatetime not null,
 	[list_order] smallint null default 0,
 	[deactivated] bit null default 0 -- 0 = false, 1 = true
@@ -259,6 +260,7 @@ create table [message]
     [attachment_file_data] varbinary(max),
     [send_date_time] smalldatetime not null,
     [receive_date_time] smalldatetime not null,
+	[is_read] bit null default 0, -- 0 = false, 1 = true
 	[deactivated] bit null default 0 -- 0 = false, 1 = true
 );
 

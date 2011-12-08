@@ -30,6 +30,8 @@ namespace LePont.Web
                     session.User = user;
                     DataBroker broker_session = new DataBroker(ctx);
                     session = broker_session.Save<DataModel.UserSession>(session);
+                    user.LastLogonTime = DateTime.Now;
+                    broker_user.Save(user);
                     result = true;
                     Session["CurrentUser"] = user;
                     Session["CurrentSession"] = session;

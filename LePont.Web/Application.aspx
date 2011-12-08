@@ -153,8 +153,8 @@
                     </li>
                     <li><span class="folder">统计查询</span>
                         <ul>
-                            <li><span class="file">信息统计</span></li>
-                            <li><span class="file">登录统计</span></li>
+                            <li><span class="file" module="CaseStat">信息统计</span></li>
+                            <li><span class="file" module="LogonStat">登录统计</span></li>
                         </ul>
                     </li>
                     <li><span class="folder">系统管理</span>
@@ -166,6 +166,7 @@
                         </ul>
                     </li>
                     <li><span class="file" module="Forum">网上交流</span></li>
+                    <li><span class="file" module="Mail">电子邮件</span></li>
                 </ul>
             </div>
             <div id="work-area" class="max">

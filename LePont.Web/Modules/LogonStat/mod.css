@@ -1,0 +1,78 @@
+﻿#logon-stat
+{
+    width: 988px;
+    position: relative;
+}
+#logon-stat .condition-bar-title
+{
+    position: absolute;
+    z-index: 9;
+    background-color: #4A7EB7;
+    top: 6px;
+    left: 10px;
+    padding: 2px 4px;
+    color: #fff;
+    font: 13px;
+}
+#logon-stat .condition-bar
+{
+    overflow: hidden;
+    padding: 10px;
+    margin: 11px 0 6px 0;
+    background: #F6F6FF;
+    border-top: 1px solid #4A7EB7;
+    border-bottom: 1px solid #4A7EB7;
+    position: relative;
+}
+#logon-stat .condition-bar form
+{
+    overflow: hidden;
+}
+#logon-stat .condition-bar .command-pane
+{
+    position: absolute;
+    top: 12px;
+    left: 620px;
+}
+#logon-stat .condition-bar .ctrl-group
+{
+    position: relative;
+    float: left;
+    padding: 2px 4px;
+}
+#logon-stat .condition-bar .ctrl-group .ctrl-subgroup
+{
+    position: relative;
+    float: left;
+}
+#logon-stat .condition-bar a.dep-pick-trig
+{
+    background: url("/css/images/arrow-down.png");
+    display: block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 232px;
+    top: 4px;
+}
+#logon-stat .condition-bar a.dep-pick-trig:hover
+{
+    background: url("/css/images/arrow-down-hi.png");
+}
+#logon-stat .dep-picker
+{
+    position: absolute;
+    right: 728px;
+    top: 50px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    width: 180px;
+}
+#logon-stat .pager-bar
+{
+    background: none repeat scroll 0 0 #f6f6ff;
+    border: 1px solid #ddddff;
+    margin: 1px;
+    padding: 1px 10px;
+    height: 22px;
+}

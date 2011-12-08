@@ -25,6 +25,7 @@
         <property name="PasswordAnswer" />
         <property name="Phone" />
         <property name="Email" />
+        <property name="LastLogonTime" />
         <property name="CreateTime"/>
         <property name="ListOrder" />
         <property name="Deactivated" />

@@ -54,6 +54,8 @@
   <ItemGroup>
     <Compile Include="DataBrokers\CaseTypeBroker.cs" />
     <Compile Include="DataBrokers\CaseBroker.cs" />
+    <Compile Include="DataBrokers\MessageBroker.cs" />
+    <Compile Include="DataBrokers\ReportBroker.cs" />
     <Compile Include="DataBrokers\ForumBroker.cs" />
     <Compile Include="DataBrokers\InstructionBroker.cs" />
     <Compile Include="DataBrokers\InstructionLiteBroker.cs" />
@@ -72,7 +74,11 @@
     <Compile Include="DataModel\UserSession.cs" />
     <Compile Include="DataModel\User.cs" />
     <Compile Include="DataModel\Department.cs" />
-    <Compile Include="DTOs\Forum.cs" />
+    <Compile Include="DTOs\MessageDTO.cs" />
+    <Compile Include="DTOs\ForumResponseDTO.cs" />
+    <Compile Include="DTOs\ForumBlockDTO.cs" />
+    <Compile Include="DTOs\LogonStatDTO.cs" />
+    <Compile Include="DTOs\ForumTopicDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -107,6 +113,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="DataModel\UserSession.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DTOs\DTOIMports.hbm.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <Content Include="SQLScripts\tables.sql" />

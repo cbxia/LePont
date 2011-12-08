@@ -13,6 +13,7 @@ Application.Modules["PublicationViewer"] = { path: "Modules/PublicationViewer", 
 Application.Modules["WorkNetwork"] = { path: "Modules/WorkNetwork" };
 Application.Modules["Forum"] = { path: "Modules/Forum" };
 Application.Modules["RecycleBin"] = { path: "Modules/RecycleBin" };
+Application.Modules["LogonStat"] = { path: "Modules/LogonStat" };
 
 // Load all module script.
 $(document).ready(function () {

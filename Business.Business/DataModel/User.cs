@@ -17,6 +17,7 @@ namespace LePont.Business
         public virtual IList<Role> Roles { get; set; }
         public virtual string Phone { get; set; }
         public virtual string Email { get; set; }
+        public virtual DateTime? LastLogonTime { get; set; }
         public virtual DateTime? CreateTime { get; set; }
         public virtual short? ListOrder { get; set; }
     }

@@ -119,6 +119,12 @@
     <Content Include="Modules\CaseViewer\mod.js" />
     <Content Include="Modules\CaseViewer\mod.css" />
     <Content Include="Modules\CaseViewer\mod.htm" />
+    <Content Include="Modules\_Template\mod.css" />
+    <Content Include="Modules\_Template\mod.htm" />
+    <Content Include="Modules\_Template\mod.js" />
+    <Content Include="Modules\Mail\mod.css" />
+    <Content Include="Modules\Mail\mod.htm" />
+    <Content Include="Modules\Mail\mod.js" />
     <Content Include="Modules\Forum\mod.css" />
     <Content Include="Modules\Forum\mod.htm" />
     <Content Include="Modules\Forum\mod.js" />
@@ -139,6 +145,9 @@
     <Content Include="Modules\PublicationViewer\mod.css" />
     <Content Include="Modules\PublicationViewer\mod.htm" />
     <Content Include="Modules\PublicationManager\mod.htm" />
+    <Content Include="Modules\LogonStat\mod.css" />
+    <Content Include="Modules\LogonStat\mod.htm" />
+    <Content Include="Modules\LogonStat\mod.js" />
     <Content Include="Modules\RecycleBin\mod.css" />
     <Content Include="Modules\RecycleBin\mod.htm" />
     <Content Include="Modules\RecycleBin\mod.js" />

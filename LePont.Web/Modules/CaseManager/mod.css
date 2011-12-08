@@ -3,7 +3,7 @@
     width: 988px;
     position: relative;
 }
-#case-manager .search-bar-title
+#case-manager .condition-bar-title
 {
     position: absolute;
     z-index: 9;
@@ -14,7 +14,7 @@
     color: #fff;
     font: 13px;
 }
-#case-manager .search-bar
+#case-manager .condition-bar
 {
     overflow: hidden;
     padding: 10px;
@@ -24,28 +24,28 @@
     border-bottom: 1px solid #4A7EB7;
     position: relative;
 }
-#case-manager .search-bar form
+#case-manager .condition-bar form
 {
     overflow: hidden;
 }
-#case-manager .search-bar .command-pane
+#case-manager .condition-bar .command-pane
 {
     position: absolute;
     top: 20px;
     left: 620px;
 }
-#case-manager .search-bar .ctrl-group
+#case-manager .condition-bar .ctrl-group
 {
     position: relative;
     float: left;
     padding: 2px 4px;
 }
-#case-manager .search-bar .ctrl-group .ctrl-subgroup
+#case-manager .condition-bar .ctrl-group .ctrl-subgroup
 {
     position: relative;
     float: left;
 }
-#case-manager .search-bar a.dep-pick-trig
+#case-manager .condition-bar a.dep-pick-trig
 {
     background: url("/css/images/arrow-down.png");
     display: block;
@@ -55,7 +55,7 @@
     left: 232px;
     top: 4px;
 }
-#case-manager .search-bar a.dep-pick-trig:hover
+#case-manager .condition-bar a.dep-pick-trig:hover
 {
     background: url("/css/images/arrow-down-hi.png");
 }

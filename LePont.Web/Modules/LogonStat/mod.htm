@@ -1,0 +1,77 @@
+﻿<!--template-->
+<script id="tmpl-logon-stat-items" type="text/jquery-template">
+    <tr>
+    <td>${Name}</td>
+    <td>${LoginId}</td>
+    <td>${LogonDateTime}</td>
+    <td>${IP}</td>
+    <td>${LoginCount}</td>
+    <td>${CaseCount}</td>
+    </tr>
+</script>
+<!--content-->
+<div id="logon-stat" class="module-body">
+    <div class="condition-bar">
+        <form id="ls-search-form">
+        <div class="ctrl-group" style="width: 260px;">
+            <div>
+                选择部门：
+                <input id="ls-Department" name="ls-Department" type="text" class="{validate:{required:true,messages: {required: '必须指定部门'}}}"
+                    style="height: 16px; width: 150px; padding-right: 20px;" /><a class="dep-pick-trig"
+                        href="javascript:void(0);"></a>
+            </div>
+        </div>
+        <div class="ctrl-group" style="width: 160px;">
+            <div>
+                开始日期：<input id="ls-DateFrom" name="ls-DateFrom" type="text" class="{validate:{required:true,messages: {required: '必须指定开始日期'}}}"
+                    style="width: 80px;" />
+            </div>
+        </div>
+        <div class="ctrl-group" style="width: 160px;">
+            <div style="margin-top: 2px;">
+                结束日期：<input id="ls-DateTo" name="ls-DateTo" type="text" class="{validate:{required:true,messages: {required: '必须指定结束日期'}}}"
+                    style="width: 80px;" />
+            </div>
+        </div>
+        </form>
+        <div class="command-pane">
+            <a id="ls-DoSearch" href="javascript:void(0);">查询</a>
+        </div>
+        <div class="validation-tips">
+            <p>
+                输入验证失败：</p>
+            <ol>
+            </ol>
+        </div>
+    </div>
+    <div class="dep-picker">
+        <ul class="filetree treeview">
+        </ul>
+    </div>
+    <table class="result grid mode-2">
+        <thead>
+            <tr>
+                <th style="width: 100px;">
+                    真实姓名
+                </th>
+                <th style="width: 140px;">
+                    登录用户名
+                </th>
+                <th style="width: 180px;">
+                    最近登录时间
+                </th>
+                <th style="width: 140px;">
+                    登录IP地址
+                </th>
+                <th style="width: 120px;">
+                    登录次数
+                </th>
+                <th style="width: 140px;">
+                    发表案件总数
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>

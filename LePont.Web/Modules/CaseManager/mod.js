@@ -74,7 +74,7 @@
             }
         });
         //// Turn anchors into jQuery-UI buttons
-        $("#case-manager .search-bar .command-pane a").button();
+        $("#case-manager .condition-bar .command-pane a").button();
         $("#cm-Export").button({ disabled: true });
     }
 

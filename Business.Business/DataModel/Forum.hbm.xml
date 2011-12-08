@@ -6,10 +6,6 @@
     default-cascade="save-update"
     default-lazy="true" >
 
-    <import class="LePont.DTOs.ForumBlockDTO, LePont.Business"/>
-    <import class="LePont.DTOs.ForumTopicDTO, LePont.Business"/>
-    <import class="LePont.DTOs.ForumResponseDTO, LePont.Business"/>
-
     <class name="ForumBlock" >
         <id name="ID" unsaved-value="-1">
             <generator class="native" />

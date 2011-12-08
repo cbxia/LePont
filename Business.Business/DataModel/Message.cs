@@ -18,5 +18,6 @@ namespace LePont.Business
         public virtual byte[] AttachmentFileData { get; set; }
         public virtual DateTime? SendDateTime { get; set; }
         public virtual DateTime? ReceiveDateTime { get; set; }
+        public virtual bool IsRead { get; set; }
     }
 }

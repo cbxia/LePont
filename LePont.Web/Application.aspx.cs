@@ -425,6 +425,27 @@ namespace LePont.Web
                 db.Save<ForumResponse>(post);
             }
         }
+
+        [ServiceMethod]
+        public LogonStatDTO[] GetLogonStat(int depId, DateTime dateFrom, DateTime dateTo)
+        {
+            DataBroker depBroker = new DataBroker();
+            Department dep = depBroker.GetById<Department>(depId);
+
+            ReportBroker db = new ReportBroker();
+            return db.GetLogonStat(dep, dateFrom, dateTo);
+        }
+
+        [ServiceMethod]
+        public LogonStatDTO[] GetLogonStat(int depId, DateTime dateFrom, DateTime dateTo)
+        {
+            DataBroker depBroker = new DataBroker();
+            Department dep = depBroker.GetById<Department>(depId);
+
+            ReportBroker db = new ReportBroker();
+            return db.GetLogonStat(dep, dateFrom, dateTo);
+        }
+
         #region Helpers
 
         private T[] getAllValidItems<T>()

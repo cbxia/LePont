@@ -34,6 +34,22 @@ namespace LePont.Business
                 return null;
         }
 
+        public User GetByEmailAddress(string address)
+        {
+            string queryString = "from User as instance where instance.Email = :address and Deactivated = false ";
+            IList<User> resultSet = PerformQueryAction<User>(queryString, query =>
+            {
+                query = query.SetString("address", address);
+                return query;
+            });
+            if (resultSet != null && resultSet.Count > 0)
+            {
+                return resultSet[0];
+            }
+            else
+                return null;
+        }
+
         public IList<User> GetByDepartment(string depId)
         {
             string queryString = "from User as instance where instance.Department.ID = :depId";

@@ -259,8 +259,7 @@ create table [message]
     [attachment_file_name] varchar(100),
     [attachment_file_data] varbinary(max),
     [send_date_time] smalldatetime not null,
-    [receive_date_time] smalldatetime not null,
-	[is_read] bit null default 0, -- 0 = false, 1 = true
+    [read_date_time] smalldatetime null,
 	[deactivated] bit null default 0 -- 0 = false, 1 = true
 );
 

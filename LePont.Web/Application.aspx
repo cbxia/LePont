@@ -166,7 +166,7 @@
                         </ul>
                     </li>
                     <li><span class="file" module="Forum">网上交流</span></li>
-                    <li><span class="file" module="Mail">电子邮件</span></li>
+                    <li><span class="file" module="MailBox">电子邮件</span></li>
                 </ul>
             </div>
             <div id="work-area" class="max">

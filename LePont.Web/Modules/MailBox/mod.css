@@ -1,0 +1,9 @@
+﻿#mailbox .item-label
+{
+    text-align:right;
+    width: 90px;
+}
+#mailbox .command-bar
+{
+    text-align:center;
+}

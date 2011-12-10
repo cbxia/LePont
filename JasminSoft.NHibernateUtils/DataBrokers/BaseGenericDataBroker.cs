@@ -29,15 +29,15 @@ namespace JasminSoft.NHibernateUtils
 
         public T GetById(KeyType id, bool acquireLock)
         {
-            DataAction<T> action = delegate(ISession session)
+            // playing with the lambda syntax :-)
+            return PerformDataAction<T>(session => 
             {
                 if (acquireLock)
                     return session.Get<T>(id, LockMode.Upgrade);
                 else
                     return session.Get<T>(id);
 
-            };
-            return PerformDataAction<T>(action);
+            });
         }
 
         public virtual IList<T> GetAll()

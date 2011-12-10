@@ -130,26 +130,26 @@ var Application = function () {
         return serviceUrl;
     }
 
-    function InvokeService(method, params, onSuccess, onFailure) {
+    function InvokeService(method, params, onSuccess, onError) {
         if (params != null) {
             $.each(params, function (index, value) {
                 params[index] = JSON.stringify(value);
             });
         }
-        if (typeof onFailure == "undefined" || onFailure == null)
-            onFailure = __promptGenericAJAXError;
+        if (typeof onError == "undefined" || onError == null)
+            onError = __genericAjaxErrorHandler;
         var xhr = $.ajax({
             url: GetServiceUrl(method),
             data: params,
             type: "POST",
             dataType: "json",
             success: onSuccess,
-            error: onFailure
+            error: onError
         });
         return xhr;
     }
 
-    function __promptGenericAJAXError(jqXHR, textStatus, errorThrown) {
+    function __genericAjaxErrorHandler(jqXHR, textStatus, errorThrown) {
         window.alert("后台服务调用失败，请联系系统管理员。错误消息： " + errorThrown);
     }
 

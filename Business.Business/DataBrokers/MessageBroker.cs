@@ -12,9 +12,13 @@ namespace LePont.Business
     {
         public Message ReadMessage(int messageID)
         {
-            Message result = GetById(messageID);
-
-            return result;
+            return PerformDataAction<Message>(session =>
+            {
+                Message result = session.Get<Message>(messageID);
+                result.ReadDateTime = DateTime.Now;
+                session.Update(result);
+                return result;
+            });
         }
 
         public DataPage<MessageDTO> GetInbox(User user, int pageSize, int pageIndex)

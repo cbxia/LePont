@@ -13,7 +13,6 @@
     }
 
     function __initForm() {
-        $("#forum .command-bar a").button();
         //// Set up form validation message container.
         var errorContainer = $("#forum-editor-dlg div.validation-tips");
         var errorLabelContainer = $("#forum-editor-dlg div.validation-tips ol");
@@ -32,6 +31,7 @@
             delete CKEDITOR.instances["di-Response"];
         $("#di-Response").ckeditor({ width: 700, height: 120 });
         // Buttons
+        $("#forum .command-bar a").button();
         $("#forum .button").button();
     }
 

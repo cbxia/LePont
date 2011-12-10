@@ -17,6 +17,8 @@ namespace LePont.Web
 {
     public partial class Application : ServicePage
     {
+        private static readonly log4net.ILog _log = log4net.LogManager.GetLogger(typeof(ServicePage));
+
         private ApplicationContext _appContext;
         public ApplicationContext AppContext
         {
@@ -437,13 +439,52 @@ namespace LePont.Web
         }
 
         [ServiceMethod]
-        public LogonStatDTO[] GetLogonStat(int depId, DateTime dateFrom, DateTime dateTo)
+        public Message ReadMessage(int messageID)
         {
-            DataBroker depBroker = new DataBroker();
-            Department dep = depBroker.GetById<Department>(depId);
+            MessageBroker db = new MessageBroker();
+            return db.ReadMessage(messageID);
+        }
 
-            ReportBroker db = new ReportBroker();
-            return db.GetLogonStat(dep, dateFrom, dateTo);
+        [ServiceMethod] 
+        public void SendMessage(Message message, string recipient)
+        {
+            UserBroker ub = new UserBroker();
+            User receiver = ub.GetByEmailAddress(recipient);
+            if (receiver == null)
+            {
+                receiver = ub.GetByLoginId(recipient);
+            }
+            if (receiver == null)
+            {
+                string error = string.Format("邮件发送失败，原因是没有找到收件人\"{0}\"", recipient);
+                if (_log != null)
+                    _log.Error(error);
+                throw new InvalidOperationException(error); // See how this message could be caught by client side code.
+            }
+            else
+            {
+                message.Receiver = receiver;
+                message.Sender = AppContext.CurrentUser;
+                message.SendDateTime = DateTime.Now;
+                message.Deactivated = false;
+                string fileKey = "di-Attachment-Mail";
+                dynamic file = Context.Session[fileKey];
+                if (file != null)
+                {
+                    message.AttachmentFileName = file.FileName;
+                    message.AttachmentFileData = file.Data;
+                    Context.Session.Remove(fileKey);
+                }
+                MessageBroker mb = new MessageBroker();
+                mb.Save(message);
+            }
+        }
+
+        [ServiceMethod]
+        public DataPage<MessageDTO> GetInbox(User user, int pageSize, int pageIndex)
+        {
+            MessageBroker db = new MessageBroker();
+            return db.GetInbox(AppContext.CurrentUser, pageSize, pageIndex);
         }
 
         #region Helpers

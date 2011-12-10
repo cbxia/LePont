@@ -1,0 +1,79 @@
+﻿<!--template-->
+<script id="tmpl" type="text/jquery-template">
+</script>
+<!--content-->
+<div id="mailbox" class="module-body">
+    <div id="mailbox-tabview">
+        <ul>
+            <li><a href="#mailbox-tabview-inbox">收件箱</a></li>
+            <li><a href="#mailbox-tabview-compose">写邮件</a></li>
+            <li><a href="#mailbox-tabview-outbox">发件箱</a></li>
+            <li><a href="#mailbox-tabview-recylebin">垃圾箱</a></li>
+        </ul>
+        <div id="mailbox-tabview-inbox">
+            inbox
+        </div>
+        <div id="mailbox-tabview-compose">
+            <form id="mail-editor-form">
+            <table>
+                <tr>
+                    <td class="item-label">
+                        收件人地址：
+                    </td>
+                    <td class="item-value">
+                        <input id="di-Recipient" name="di-Recipient" class="{validate:{required:true,messages:{required: '必须输入收件人地址'}}}"
+                            style="width: 400px" type="text" />&nbsp;（必填）
+                    </td>
+                </tr>
+                <tr>
+                    <td class="item-label">
+                        主题：
+                    </td>
+                    <td class="item-value">
+                        <input id="di-Subject" name="di-Subject" class="{validate:{required:true,messages:{required: '必须输入主题'}}}"
+                            style="width: 400px" type="text" />&nbsp;（必填）
+                    </td>
+                </tr>
+                <tr>
+                    <td class="item-label">
+                        内容：
+                    </td>
+                    <td class="item-value">
+                        <textarea id="di-Content" name="di-Content" style="width: 400px; height: 300px" />&nbsp;（必填）
+                    </td>
+                </tr>
+            </table>
+            </form>
+            <form id="mail-attach-form">
+            <table>
+                <tr>
+                    <td class="item-label">
+                        附件：
+                    </td>
+                    <td class="item-value">
+                        <input type="file" name="di-Attachment-Mail" id="di-Attachment-Pub" />
+                        <span class="file-uploading-anim">正在上传附件
+                            <img src="../css/images/ajax-anim.gif" /></span>
+                    </td>
+                </tr>
+            </table>
+            </form>
+            <div class="validation-tips">
+                <p>
+                    数据验证失败：</p>
+                <ol>
+                </ol>
+            </div>
+            <div class="command-bar">
+                <a class="button send" href="javascript:void(0);">发送</a> <a class="button clear"
+                    href="javascript:void(0);">清除</a>
+            </div>
+        </div>
+        <div id="mailbox-tabview-outbox">
+            outbox
+        </div>
+        <div id="mailbox-tabview-recylebin">
+            trash can
+        </div>
+    </div>
+</div>

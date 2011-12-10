@@ -48,33 +48,37 @@ function ajaxFileUpload(animSelector, fileElementId, handlerUrl) {
     var asyncOp = $.Deferred();
     //starting setting some animation when the ajax starts and completes
     $(animSelector)
-		.ajaxStart(function () {
-		    $(this).show();
-		})
-		.ajaxComplete(function () {
-		    $(this).hide();
-		});
+	.ajaxStart(function () {
+		$(this).show();
+	})
+	.ajaxComplete(function () {
+		$(this).hide();
+	});
 
-    $.ajaxFileUpload(
-		{
-			url: handlerUrl == null ? "UploadHandler.ashx" : handlerUrl,
-			secureuri: false,
-			fileElementId: fileElementId,
-			dataType: 'json',
-			success: function (data, status) {
-			    if (typeof (data.error) != 'undefined') {
-			        if (data.error != '') {
-			            alert(data.error);
-			        } else {
-			            alert(data.msg);
-			        }
-			    }
-			    asyncOp.resolve();
-			},
-			error: function (data, status, e) {
-			    alert(e);
-			}
-		}
-    )
+	if ($("#" + fileElementId).val().length > 0) {
+		$.ajaxFileUpload(
+		    {
+		        url: handlerUrl == null ? "UploadHandler.ashx" : handlerUrl,
+		        secureuri: false,
+		        fileElementId: fileElementId,
+		        dataType: 'json',
+		        success: function (data, status) {
+		            if (typeof (data.error) != 'undefined') {
+		                if (data.error != '') {
+		                    alert(data.error);
+		                } else {
+		                    alert(data.msg);
+		                }
+		            }
+		            asyncOp.resolve();
+		        },
+		        error: function (data, status, e) {
+		            alert(e);
+		        }
+		    }
+        )
+	}
+	else // no file choosen
+	    asyncOp.resolve();
     return asyncOp.promise();
 }

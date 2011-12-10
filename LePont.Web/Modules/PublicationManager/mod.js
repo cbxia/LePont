@@ -65,8 +65,7 @@ function showEditor() {
                             clearForm("#publication-editor-form");
                             button.dialog("close");
                         });
-                    }
-                        );
+                    });
                 }
                 //else // Prompting like this seems to be superfluous and annoying, given the on-site validation tips.
                 //    alert("输入数据未通过表单验证。");

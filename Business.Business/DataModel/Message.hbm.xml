@@ -17,8 +17,7 @@
         <property name="AttachmentFileName" />
         <property name="AttachmentFileData" />
         <property name="SendDateTime" />
-        <property name="ReceiveDateTime" />
-        <property name="IsRead" />
+        <property name="ReadDateTime" />
         <property name="Deactivated" />
     </class>
 </hibernate-mapping>

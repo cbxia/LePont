@@ -122,9 +122,9 @@
     <Content Include="Modules\_Template\mod.css" />
     <Content Include="Modules\_Template\mod.htm" />
     <Content Include="Modules\_Template\mod.js" />
-    <Content Include="Modules\Mail\mod.css" />
-    <Content Include="Modules\Mail\mod.htm" />
-    <Content Include="Modules\Mail\mod.js" />
+    <Content Include="Modules\MailBox\mod.css" />
+    <Content Include="Modules\MailBox\mod.htm" />
+    <Content Include="Modules\MailBox\mod.js" />
     <Content Include="Modules\Forum\mod.css" />
     <Content Include="Modules\Forum\mod.htm" />
     <Content Include="Modules\Forum\mod.js" />

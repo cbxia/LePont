@@ -1,17 +1,67 @@
 ﻿<!--template-->
-<script id="tmpl" type="text/jquery-template">
+<script id="tmpl_inbox_items" type="text/jquery-template">
+{{if IsRead}} 
+<tr class="is-read">
+{{else}} 
+<tr class="not-read">
+{{/if}}
+    <td><input type="checkbox" class="row-select" /></td>
+    <td{{if HasAttachment}} class="glyph-has-attach"{{/if}}></td>
+    <td><a href="javascript:void(0);">${SenderName}</a></td>
+    <td class="glyph-if-new"></td>
+    <td><a href="javascript:void(0);">${Subject}</a></td>
+    <td>${formatJsonDate(SendDateTime)}</td>
+</tr>
+</script>
+<script id="tmpl_outbox_items" type="text/jquery-template">
+<tr class={{if IsRead}}"is-read"{{else}}"not-read"{{/if}}>
+    <td><input type="checkbox" class="row-select" /></td>
+    <td{{if HasAttachment}} class="glyph-has-attach"{{/if}}></td>
+    <td><a href="javascript:void(0);">${ReceiverName}</a></td>
+    <td class="glyph-if-new"></td>
+    <td><a href="javascript:void(0);">${Subject}</a></td>
+    <td>${formatJsonDate(SendDateTime)}</td>
+    <td>{{if IsRead}}${formatJsonDate(ReadDateTime)}{{/if}}</td>
+</tr>
 </script>
 <!--content-->
 <div id="mailbox" class="module-body">
+    <div class="module-title">
+        站 内 邮 件
+    </div>
+    <div class="module-title-shade">
+    </div>
     <div id="mailbox-tabview">
         <ul>
             <li><a href="#mailbox-tabview-inbox">收件箱</a></li>
             <li><a href="#mailbox-tabview-compose">写邮件</a></li>
             <li><a href="#mailbox-tabview-outbox">发件箱</a></li>
-            <li><a href="#mailbox-tabview-recylebin">垃圾箱</a></li>
+            <li><a href="#mailbox-tabview-trashcan">垃圾箱</a></li>
         </ul>
         <div id="mailbox-tabview-inbox">
-            inbox
+            <table class="mail-list">
+                <thead>
+                    <tr>
+                        <th style="width: 20px">
+                        </th>
+                        <th style="width: 8px">
+                        </th>
+                        <th style="width: 200px">
+                            发件人
+                        </th>
+                        <th style="width: 22px">
+                        </th>
+                        <th style="width: 400px">
+                            标题
+                        </th>
+                        <th style="width: 120px">
+                            发件日期
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
         </div>
         <div id="mailbox-tabview-compose">
             <form id="mail-editor-form">
@@ -70,10 +120,57 @@
             </div>
         </div>
         <div id="mailbox-tabview-outbox">
-            outbox
+            <table class="mail-list">
+                <thead>
+                    <tr>
+                        <th style="width: 20px">
+                        </th>
+                        <th style="width: 8px">
+                        </th>
+                        <th style="width: 160px">
+                            收件人
+                        </th>
+                        <th style="width: 22px">
+                        </th>
+                        <th style="width: 300px">
+                            标题
+                        </th>
+                        <th style="width: 120px">
+                            发件日期
+                        </th>
+                        <th style="width: 120px">
+                            查收日期
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
         </div>
-        <div id="mailbox-tabview-recylebin">
-            trash can
+        <div id="mailbox-tabview-trashcan">
+            <table class="mail-list">
+                <thead>
+                    <tr>
+                        <th style="width: 20px">
+                        </th>
+                        <th style="width: 8px">
+                        </th>
+                        <th style="width: 200px">
+                            发件人
+                        </th>
+                        <th style="width: 22px">
+                        </th>
+                        <th style="width: 400px">
+                            标题
+                        </th>
+                        <th style="width: 120px">
+                            发件日期
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

@@ -1,9 +1,66 @@
-﻿#mailbox .item-label
+﻿#mailbox .module-title
 {
-    text-align:right;
+    background: url("/css/images/section_title_3.jpg") repeat-x;
+    height: 16px;
+    color: #ffa;
+    padding: 6px 20px;
+    margin-top:6px;
+    text-align: left;
+    border-top: solid 1px #fff;
+    font-weight:bold;
+}
+
+#mailbox .module-title-shade
+{
+    background: url("/css/images/mod_body_bk.jpg") repeat-x scroll 0 0 transparent;
+    color: #226699;
+    height: 16px;
+}
+
+#mailbox .item-label
+{
+    text-align: right;
     width: 90px;
 }
 #mailbox .command-bar
 {
-    text-align:center;
+    text-align: center;
+}
+#mailbox .glyph-has-attach
+{
+    background-image: url("/css/images/mailbox_strip.png");
+    background-repeat: no-repeat;
+    background-position: -233px 1px;
+}
+#mailbox .is-read .glyph-if-new
+{
+    background-image: url("/css/images/mailbox_strip.png");
+    background-repeat: no-repeat;
+    background-position: -804px 0;
+}
+#mailbox .not-read td
+{
+    font-weight:bold;
+}
+#mailbox .not-read .glyph-if-new
+{
+    background-image: url("/css/images/mailbox_strip.png");
+    background-repeat: no-repeat;
+    background-position: -936px 0;
+}
+#mailbox .mail-list th, #mailbox .mail-list td
+{
+    border-width: 1px 0 1px 0;
+    border-color: #bbbbdd;
+    border-style: solid;
+}
+#mailbox .mail-list th
+{
+    background-color: #eeffff;
+    height:25px;
+    text-align:left;
+}
+#mailbox .mail-list
+{
+    border-collapse: collapse;
 }

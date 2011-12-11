@@ -71,6 +71,7 @@
     <Content Include="css\images\folder.gif" />
     <Content Include="css\images\homepage_icon.gif" />
     <Content Include="css\images\login_bg.jpg" />
+    <Content Include="css\images\mailbox_strip.png" />
     <Content Include="css\images\minus.gif" />
     <Content Include="css\images\module_title.jpg" />
     <Content Include="css\images\module_title_2.jpg" />

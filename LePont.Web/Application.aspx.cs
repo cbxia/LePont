@@ -481,10 +481,24 @@ namespace LePont.Web
         }
 
         [ServiceMethod]
-        public DataPage<MessageDTO> GetInbox(User user, int pageSize, int pageIndex)
+        public DataPage<MessageDTO> GetInbox(int pageSize, int pageIndex)
         {
             MessageBroker db = new MessageBroker();
             return db.GetInbox(AppContext.CurrentUser, pageSize, pageIndex);
+        }
+
+        [ServiceMethod]
+        public DataPage<MessageDTO> GetOutbox(int pageSize, int pageIndex)
+        {
+            MessageBroker db = new MessageBroker();
+            return db.GetOutbox(AppContext.CurrentUser, pageSize, pageIndex);
+        }
+
+        [ServiceMethod]
+        public DataPage<MessageDTO> GetTrashcan(int pageSize, int pageIndex)
+        {
+            MessageBroker db = new MessageBroker();
+            return db.GetTrashcan(AppContext.CurrentUser, pageSize, pageIndex);
         }
 
         #region Helpers

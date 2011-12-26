@@ -10,15 +10,41 @@ namespace LePont.Business
 {
     public class MessageBroker : BaseGenericDataBroker<Message, int>
     {
-        public Message ReadMessage(int messageID)
+        /*
+         * Lessons learned:
+         * [1] Never, ever leak your domain model to the client layer in a true distributed application! Always stick to
+         * strict loose coupling.
+         * [2] There should be a distinct service layer, with distinct service data models. Even there could be significant
+         * duplication in properties in domain models and service models, it is NO good architectual practice trying to reuse 
+         * properties across layers. The above means the DTOs and DataPages here should better be moved to a separate service layer.
+         */
+
+        public MessageDTO GetMessage(int messageID, bool markAsRead)
         {
-            return PerformDataAction<Message>(session =>
+            MessageDTO result = null;
+            try
             {
-                Message result = session.Get<Message>(messageID);
-                result.ReadDateTime = DateTime.Now;
-                session.Update(result);
-                return result;
-            });
+                EnsureSharedSession();
+                Message message = GetById(messageID);
+                if (markAsRead)
+                {
+                    message.ReadDateTime = DateTime.Now;
+                    SaveAttached(message);
+                }
+                result = new MessageDTO(
+                    message.ID,
+                    message.Sender.Name,
+                    message.Receiver.Name,
+                    message.Subject,
+                    message.SendDateTime,
+                    message.ReadDateTime,
+                    message.AttachmentFileName);
+            }
+            finally
+            {
+                EndEnsureSharedSession();
+            }
+            return result;
         }
 
         public DataPage<MessageDTO> GetInbox(User user, int pageSize, int pageIndex)

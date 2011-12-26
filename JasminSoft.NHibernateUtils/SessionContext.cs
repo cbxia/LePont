@@ -11,6 +11,7 @@ namespace JasminSoft.NHibernateUtils
     /// The SessionContext class serves two purposes: 
     /// [1] Creates and holds a static reference to a ready-for-use session factory.
     /// [2] Each instance of it is associated with one and only one ISession instance.
+    /// [3] One SessionContext object can be shared by multiple DataBrokers in a unit of work.
     /// </summary>
     public class SessionContext : IDisposable
     {
@@ -21,12 +22,16 @@ namespace JasminSoft.NHibernateUtils
 
         public ISession Session
         {
-            get { return _session; }
+            get
+            {
+                if (_session == null)
+                    _session = OpenSession();
+                return _session;
+            }
         }
 
         public SessionContext()
         {
-            _session = OpenSession();
         }
 
         public static ISessionFactory SessionFactory

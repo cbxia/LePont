@@ -61,11 +61,20 @@ namespace JasminSoft.NHibernateUtils
             return PerformDataAction<T>(action);
         }
 
+        public void SaveAttached(T entity)
+        {
+            DataAction action = delegate(ISession session)
+            {
+                session.SaveOrUpdate(entity);
+            };
+            PerformDataAction(action);
+        }
+
         public void Delete(T entity)
         {
             DataAction action = delegate(ISession session)
             {
-                _session.Delete(entity);
+                session.Delete(entity);
             };
             PerformDataAction(action);
         }

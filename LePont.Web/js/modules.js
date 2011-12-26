@@ -14,7 +14,8 @@ Application.Modules["WorkNetwork"] = { path: "Modules/WorkNetwork" };
 Application.Modules["Forum"] = { path: "Modules/Forum" };
 Application.Modules["RecycleBin"] = { path: "Modules/RecycleBin" };
 Application.Modules["LogonStat"] = { path: "Modules/LogonStat" };
-Application.Modules["MailBox"] = { path: "Modules/MailBox" };
+Application.Modules["MailBox"] = { path: "Modules/MailBox/Manager" };
+Application.Modules["MailViewer"] = { path: "Modules/MailBox/Viewer" };
 
 // Load all module script.
 $(document).ready(function () {

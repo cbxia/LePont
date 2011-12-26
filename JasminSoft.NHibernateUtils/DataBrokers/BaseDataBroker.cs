@@ -18,14 +18,14 @@ namespace JasminSoft.NHibernateUtils
     /// responsibility to take care of and close this SessionContext.
     /// 
     /// </summary>
-    public abstract class BaseDataBroker : IDisposable
+    public abstract class BaseDataBroker
     {
         #region Fields
 
         protected static readonly log4net.ILog _log = log4net.LogManager.GetLogger(typeof(BaseDataBroker));
         protected const string NHIBERNATE_FAIL_LOGGING_MESSAGE = "Failed accessing data via NHibernate.";
-        protected SessionContext _sessionContext;
-        protected ISession _session;
+        private SessionContext _sessionContext;
+        private int _internalSharableSessionRefCount = 0;
 
         #endregion
 
@@ -40,20 +40,9 @@ namespace JasminSoft.NHibernateUtils
             set
             {
                 _sessionContext = value;
-                _session = _sessionContext.Session;
             }
         }
 
-        public ISession Session
-        {
-            get
-            {
-                if (_sessionContext != null)
-                    return _sessionContext.Session;
-                else
-                    return null;
-            }
-        }
 
         #endregion
 
@@ -68,7 +57,6 @@ namespace JasminSoft.NHibernateUtils
             if (sessionContext != null)
             {
                 _sessionContext = sessionContext;
-                _session = _sessionContext.Session;
             }
         }
 
@@ -77,7 +65,7 @@ namespace JasminSoft.NHibernateUtils
         #region Implementation helpers
 
         //TODO: Replace the custom delegates below with built-in generic delegates defined in System namespace.
-        
+
         protected delegate void DataAction(ISession session); // Action<ISession> 
         protected delegate ResultType DataAction<ResultType>(ISession session); // Func<ISession, TResult>
         protected delegate IQuery QueryDecorator(IQuery query); // Func<IQuery, IQuery>
@@ -92,18 +80,17 @@ namespace JasminSoft.NHibernateUtils
             ////////////////////
             try
             {
-                if (_session == null)
+                if (_sessionContext == null || _sessionContext.Session == null)
                 {
                     // Use impromptu session.
                     using (SessionContext ctx = new SessionContext())
                     {
-                        ISession session = ctx.Session;
-                        action(session);
+                        action(ctx.Session);
                     }
                 }
                 else
                 {
-                    action(_session);
+                    action(_sessionContext.Session);
                 }
 
             }
@@ -121,18 +108,17 @@ namespace JasminSoft.NHibernateUtils
             ResultType result = default(ResultType);
             try
             {
-                if (_session == null)
+                if (_sessionContext == null || _sessionContext.Session == null)
                 {
                     // Use impromptu session.
                     using (SessionContext ctx = new SessionContext())
                     {
-                        ISession session = ctx.Session;
-                        result = action(session);
+                        result = action(ctx.Session);
                     }
                 }
                 else
                 {
-                    result = action(_session);
+                    result = action(_sessionContext.Session);
                 }
 
             }
@@ -146,18 +132,25 @@ namespace JasminSoft.NHibernateUtils
             return result;
         }
 
+
         protected IList<ItemType> PerformQueryAction<ItemType>(string queryString, QueryDecorator queryDecorator)
         {
-            IList<ItemType> result = null;
+            return PerformDataAction<IList<ItemType>>(session =>
+            {
+                IQuery query = session.CreateQuery(queryString);
+                if (queryDecorator != null)
+                    query = queryDecorator(query);
+                return query.List<ItemType>();
+            });
+            /*
             try
             {
-                if (_session == null)
+                if (_sessionContext == null)
                 {
                     // Use impromptu session.
                     using (SessionContext ctx = new SessionContext())
                     {
-                        ISession session = ctx.Session;
-                        IQuery query = session.CreateQuery(queryString);
+                        IQuery query = ctx.Session.CreateQuery(queryString);
                         if (queryDecorator != null)
                             query = queryDecorator(query);
                         result = query.List<ItemType>();
@@ -165,7 +158,7 @@ namespace JasminSoft.NHibernateUtils
                 }
                 else
                 {
-                    IQuery query = _session.CreateQuery(queryString);
+                    IQuery query = _sessionContext.Session.CreateQuery(queryString);
                     if (queryDecorator != null)
                         query = queryDecorator(query);
                     result = query.List<ItemType>();
@@ -179,48 +172,9 @@ namespace JasminSoft.NHibernateUtils
                 ////////////////////
                 throw ex;
             }
+            
             return result;
-        }
-
-        protected ResultType PerformUniqueQueryAction<ResultType>(string queryString)
-        {
-            return PerformUniqueQueryAction<ResultType>(queryString, null);
-        }
-
-        protected ResultType PerformUniqueQueryAction<ResultType>(string queryString, QueryDecorator queryDecorator)
-        {
-            ResultType result = default(ResultType);
-            try
-            {
-                if (_session == null)
-                {
-                    // Use impromptu session.
-                    using (SessionContext ctx = new SessionContext())
-                    {
-                        ISession session = ctx.Session;
-                        IQuery query = session.CreateQuery(queryString);
-                        if (queryDecorator != null)
-                            query = queryDecorator(query);
-                        result = query.UniqueResult<ResultType>();
-                    }
-                }
-                else
-                {
-                    IQuery query = _session.CreateQuery(queryString);
-                    if (queryDecorator != null)
-                        query = queryDecorator(query);
-                    result = query.UniqueResult<ResultType>();
-                }
-
-            }
-            catch (Exception ex)
-            {
-                ////////////////////
-                _log.Error(NHIBERNATE_FAIL_LOGGING_MESSAGE, ex);
-                ////////////////////
-                throw ex;
-            }
-            return result;
+            */
         }
 
         protected IList<ItemType> PerformQueryAction<ItemType>(string queryString)
@@ -228,83 +182,47 @@ namespace JasminSoft.NHibernateUtils
             return PerformQueryAction<ItemType>(queryString, null);
         }
 
-        #endregion
-
-        #region Session management methods
-
-        public void FlushSession()
+        // TODO: Rewrite this method in terms of PerformDataAction<T>
+        protected ResultType PerformUniqueQueryAction<ResultType>(string queryString, QueryDecorator queryDecorator)
         {
-            try
+            return PerformDataAction<ResultType>(session =>
             {
-                if (_session != null)
+                IQuery query = session.CreateQuery(queryString);
+                if (queryDecorator != null)
+                    query = queryDecorator(query);
+                return query.UniqueResult<ResultType>();
+            });
+        }
+
+        protected ResultType PerformUniqueQueryAction<ResultType>(string queryString)
+        {
+            return PerformUniqueQueryAction<ResultType>(queryString, null);
+        }
+
+        // EnsureSharedSession and EndEnsureSharedSession must always be called in pair.
+
+        protected void EnsureSharedSession()
+        {
+            if (_sessionContext == null || _sessionContext.Session == null)
+            {
+                _sessionContext = new SessionContext();
+                _internalSharableSessionRefCount++;
+            }
+        }
+
+        protected void EndEnsureSharedSession()
+        {
+            if (_internalSharableSessionRefCount > 0)
+            {
+                _internalSharableSessionRefCount--;
+                if (_internalSharableSessionRefCount == 0 && _sessionContext != null)
                 {
-                    _session.Flush();
-                    ////////////////////
-                    _log.Debug("Session flushed.");
-                    ////////////////////
+                    _sessionContext.Dispose();
+                    _sessionContext = null;
                 }
             }
-            catch (Exception ex)
-            {
-                ////////////////////
-                _log.Error("Error occured while executing BaseDataBroker.FlushSession().", ex);
-                ////////////////////
-                throw ex;
-            }
         }
-
-        public void ClearSession()
-        {
-            try
-            {
-                if (_session != null)
-                {
-                    _session.Clear();
-                    ////////////////////
-                    _log.Debug("Session cleared.");
-                    ////////////////////
-                }
-            }
-            catch (Exception ex)
-            {
-                ////////////////////
-                _log.Error("Error occured while executing BaseDataBroker.ClearSession().", ex);
-                ////////////////////
-                throw ex;
-            }
-        }
-
-        public void CloseSession()
-        {
-            try
-            {
-                if (_session != null)
-                {
-                    _session.Close();
-                    _session.Dispose();
-                    _session = null;
-                    ////////////////////
-                    _log.Debug("Session closed.");
-                    ////////////////////
-                }
-            }
-            catch (Exception ex)
-            {
-                ////////////////////
-                _log.Error("Error occured while executing BaseDataBroker.CloseSession().", ex);
-                ////////////////////
-                throw ex;
-            }
-        }
-
-        #endregion
-
-        #region IDispose
-
-        public void Dispose()
-        {
-            CloseSession();
-        }
+ 
 
         #endregion
     }

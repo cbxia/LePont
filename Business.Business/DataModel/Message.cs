@@ -13,7 +13,6 @@ namespace LePont.Business
         public virtual string Subject { get; set; }
         public virtual string Content { get; set; }
         public virtual string AttachmentFileName { get; set; }
-        [ScriptIgnore]
         public virtual byte[] AttachmentFileData { get; set; }
         public virtual DateTime? SendDateTime { get; set; }
         public virtual DateTime? ReadDateTime { get; set; }

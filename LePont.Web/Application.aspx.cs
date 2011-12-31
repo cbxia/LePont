@@ -439,17 +439,10 @@ namespace LePont.Web
         }
 
         [ServiceMethod]
-        public MessageDTO ReadMessage(int id)
+        public MessageDTO GetMessage(int id, bool markAsRead)
         {
             MessageBroker db = new MessageBroker();
-            return db.GetMessage(id, true);
-        }
-
-        [ServiceMethod]
-        public MessageDTO GetMessage(int id)
-        {
-            MessageBroker db = new MessageBroker();
-            return db.GetMessage(id, false);
+            return db.GetMessage(id, markAsRead);
         }
 
         [ServiceMethod] 
@@ -487,21 +480,14 @@ namespace LePont.Web
             }
         }
 
-        //[ServiceMethod]
-        //public MessageDTO GetMessage(int MessageID)
-        //{
-        //    MessageBroker db = new MessageBroker();
-        //    return db.GetMessage(MessageID);
-        //}
-
         [ServiceMethod]
-        public BinaryFileObject GetMessagenAttachment(int MessageID)
+        public BinaryFileObject GetMessageAttachment(int MessageID)
         {
             BinaryFileObject file = new BinaryFileObject();
-            PublicationBroker db = new PublicationBroker();
-            Publication pub = db.GetById(MessageID, AppContext.CurrentUser.Department);
-            file.FileName = pub.AttachmentFileName;
-            file.Data = pub.AttachmentFileData;
+            MessageBroker db = new MessageBroker();
+            Message message = db.GetById(MessageID);
+            file.FileName = message.AttachmentFileName;
+            file.Data = message.AttachmentFileData;
             file.SendAsAttachment = true;
             file.Cacheability = System.Web.HttpCacheability.Server;
             return file;

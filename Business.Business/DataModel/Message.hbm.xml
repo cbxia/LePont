@@ -13,9 +13,9 @@
         <many-to-one name="Sender" column="sender_id" />
         <many-to-one name="Receiver" column="receiver_id" />
         <property name="Subject" />
-        <property name="Content" lazy="true"  />
+        <property name="Content" />
         <property name="AttachmentFileName" />
-        <property name="AttachmentFileData" lazy="true" />
+        <property name="AttachmentFileData" />
         <property name="SendDateTime" />
         <property name="ReadDateTime" />
         <property name="Deactivated" />

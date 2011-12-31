@@ -12,6 +12,7 @@ namespace LePont.DTOs
         public string SenderName { get; set; }
         public string ReceiverName { get; set; }
         public string Subject { get; set; }
+        public string Content { get; set; }
         public DateTime? SendDateTime { get; set; }
         public DateTime? ReadDateTime { get; set; }
         public string AttachmentFileName { get; set; }
@@ -28,6 +29,13 @@ namespace LePont.DTOs
             this.SendDateTime = sendDateTime;
             this.ReadDateTime = readDateTime;
             this.AttachmentFileName = attachmentFileName;
+        }
+
+        public MessageDTO(int id, string senderName, string receiverName, string subject, string content,
+            DateTime? sendDateTime, DateTime? readDateTime, string attachmentFileName) 
+            : this(id,senderName,receiverName, subject, sendDateTime, readDateTime, attachmentFileName)
+        {
+            this.Content = content;
         }
     }
 }

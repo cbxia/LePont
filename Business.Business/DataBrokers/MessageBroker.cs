@@ -26,7 +26,7 @@ namespace LePont.Business
             {
                 AcquireSharedSession();
                 Message message = GetById(messageID);
-                if (markAsRead)
+                if (markAsRead && message.ReadDateTime == null)
                 {
                     message.ReadDateTime = DateTime.Now;
                     SaveAttached(message);
@@ -36,6 +36,7 @@ namespace LePont.Business
                     message.Sender.Name,
                     message.Receiver.Name,
                     message.Subject,
+                    message.Content,
                     message.SendDateTime,
                     message.ReadDateTime,
                     message.AttachmentFileName);

@@ -24,7 +24,7 @@ namespace LePont.Business
             MessageDTO result = null;
             try
             {
-                EnsureSharedSession();
+                AcquireSharedSession();
                 Message message = GetById(messageID);
                 if (markAsRead)
                 {
@@ -42,7 +42,7 @@ namespace LePont.Business
             }
             finally
             {
-                EndEnsureSharedSession();
+                ReleaseSharedSession();
             }
             return result;
         }

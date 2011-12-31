@@ -25,24 +25,7 @@ namespace JasminSoft.NHibernateUtils
         protected static readonly log4net.ILog _log = log4net.LogManager.GetLogger(typeof(BaseDataBroker));
         protected const string NHIBERNATE_FAIL_LOGGING_MESSAGE = "Failed accessing data via NHibernate.";
         private SessionContext _sessionContext;
-        private int _internalSharableSessionRefCount = 0;
-
-        #endregion
-
-        #region Properties
-
-        public SessionContext SessionContext
-        {
-            get
-            {
-                return _sessionContext;
-            }
-            set
-            {
-                _sessionContext = value;
-            }
-        }
-
+        private int _sessionContextRefCount = 0;
 
         #endregion
 
@@ -199,30 +182,35 @@ namespace JasminSoft.NHibernateUtils
             return PerformUniqueQueryAction<ResultType>(queryString, null);
         }
 
-        // EnsureSharedSession and EndEnsureSharedSession must always be called in pair.
-
-        protected void EnsureSharedSession()
+        // AcquireSharedSession and ReleaseSharedSession must always be called in pair.
+        protected void AcquireSharedSession()
         {
             if (_sessionContext == null || _sessionContext.Session == null)
             {
                 _sessionContext = new SessionContext();
-                _internalSharableSessionRefCount++;
+                _sessionContextRefCount++;
             }
+            else if (_sessionContextRefCount > 0) // internal shared session is in use.
+            {
+                _sessionContextRefCount++;
+            }
+            //else : external shared session in use, do nothing
         }
 
-        protected void EndEnsureSharedSession()
+        protected void ReleaseSharedSession()
         {
-            if (_internalSharableSessionRefCount > 0)
+            if (_sessionContextRefCount > 0)
             {
-                _internalSharableSessionRefCount--;
-                if (_internalSharableSessionRefCount == 0 && _sessionContext != null)
+                _sessionContextRefCount--;
+                if (_sessionContextRefCount == 0 && _sessionContext != null)
                 {
                     _sessionContext.Dispose();
                     _sessionContext = null;
                 }
             }
+            //else : external shared session in use, do nothing
         }
- 
+
 
         #endregion
     }

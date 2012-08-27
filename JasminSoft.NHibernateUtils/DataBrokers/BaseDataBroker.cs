@@ -165,7 +165,6 @@ namespace JasminSoft.NHibernateUtils
             return PerformQueryAction<ItemType>(queryString, null);
         }
 
-        // TODO: Rewrite this method in terms of PerformDataAction<T>
         protected ResultType PerformUniqueQueryAction<ResultType>(string queryString, QueryDecorator queryDecorator)
         {
             return PerformDataAction<ResultType>(session =>
@@ -180,6 +179,17 @@ namespace JasminSoft.NHibernateUtils
         protected ResultType PerformUniqueQueryAction<ResultType>(string queryString)
         {
             return PerformUniqueQueryAction<ResultType>(queryString, null);
+        }
+
+        protected IList<ItemType> PerformNamedQueryAction<ItemType>(string queryName, QueryDecorator queryDecorator)
+        {
+            return PerformDataAction<IList<ItemType>>(session =>
+            {
+                IQuery query = session.GetNamedQuery(queryName);
+                if (queryDecorator != null)
+                    query = queryDecorator(query);
+                return query.List<ItemType>();
+            });
         }
 
         // AcquireSharedSession and ReleaseSharedSession must always be called in pair.

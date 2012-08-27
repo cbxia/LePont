@@ -10,10 +10,11 @@ namespace LePont.Business
 {
     public class ReportBroker : BaseDataBroker
     {
+        // How NHibernate use stored procedures: 
+        // http://nhforge.org/blogs/nhibernate/archive/2008/11/23/populating-entities-from-stored-procedures-with-nhibernate.aspx
+
         public LogonStatDTO[] GetLogonStat(Department dep, DateTime dateFrom, DateTime dateTo)
         {
-            // How NHibernate use stored procedures: 
-            // http://nhforge.org/blogs/nhibernate/archive/2008/11/23/populating-entities-from-stored-procedures-with-nhibernate.aspx
             string queryString = @"
                 select new LogonStatDTO(
                     u.LoginId, 
@@ -37,6 +38,23 @@ namespace LePont.Business
                     .SetString("code_pattern", string.Format("{0}%", dep.Code))
                     .SetDateTime("date_from", dateFrom)
                     .SetDateTime("date_to", dateTo);
+                return query;
+            });
+            if (resultSet != null && resultSet.Count > 0)
+            {
+                return resultSet.ToArray();
+            }
+            else
+                return null;
+        }
+
+        public ReportItem[] GenerateReport_1(DateTime dateFrom, DateTime dateTo)
+        {
+            IList<ReportItem> resultSet = PerformNamedQueryAction<ReportItem>("report-1", query =>
+            {
+                query
+                .SetDateTime("date_from", dateFrom)
+                .SetDateTime("date_to", dateTo);
                 return query;
             });
             if (resultSet != null && resultSet.Count > 0)

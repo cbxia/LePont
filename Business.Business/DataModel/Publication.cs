@@ -26,6 +26,7 @@ namespace LePont.Business
     }
 
     // For list-loading only
+    // [Note] If class Publication inherits from PublicationLite, with the same mapping document, SetMaxResults will not work properly (returning 0 results).
     public class PublicationLite : DeactivatableEntity
     {
         public virtual string Title { get; set; }
@@ -36,6 +37,10 @@ namespace LePont.Business
         public virtual DateTime? DateTime { get; set; }
         public virtual short? ListOrder { get; set; }
     }
-
-    // [Note] If class Publication inherits from PublicationLite, with the same mapping document, SetMaxResults will not work properly (returning 0 results).
+    /* Important architectural notes!!
+     * When instances of PublicationLite are serialized to client side, they're already not 
+     * really "lite"! entire graphs of User, Department, PublicationType objects are included,
+     * rendering the data package cumbersome with useless undesired data.
+     * This shows how wrong it is to naïvely expose the business model to the client side.
+     */
 }

@@ -7,6 +7,17 @@ body
     margin: 0 0 2px 0;
     padding: 0;
 }
+ul,ol
+{
+    margin: 0;
+    padding: 5px;
+}
+li 
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 a
 {
     text-decoration: none;
@@ -70,7 +81,7 @@ a:hover
 #nav-area
 {
     float: left;
-    width: 150px;
+    width: 168px;
     padding-left:10px;
 }
 #nav-area.hidden
@@ -95,7 +106,7 @@ a:hover
 #work-area
 {
     float: left;
-    width: 828px;
+    width: 810px;
     background-color: #f9f9f9;
     border-left: 4px solid #0D5385;
     padding-bottom: 4px;
@@ -177,7 +188,7 @@ p.validation-tips
 {
     border-collapse: collapse;
     background-color: #FFF;
-    margin 1px;
+    margin: 1px;
 }
 .grid.mode-1 th
 {
@@ -284,7 +295,7 @@ p.validation-tips
 #menu-grip
 {
     position:absolute;
-    left:158px;
+    left:175px;
     top:99px;
     height:18px;
     width:50px;
@@ -299,7 +310,7 @@ p.validation-tips
 }
 #menu-grip.opened
 {
-    left: 158px;
+    left: 175px;
     background: url("/css/images/arrow-left.png") no-repeat;
 }
 #menu-grip.opened.hover

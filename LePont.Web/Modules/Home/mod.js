@@ -3,21 +3,23 @@
         Application.LoadModule("CaseManager");
     })
     $("#mb-2").delegate(".more", "click", function () {
-        Application.LoadModule("PublicationManager", 5);
+        Application.LoadModule("PublicationManager", 4);
     })
     $("#mb-3").delegate(".more", "click", function () {
         Application.LoadModule("PublicationManager", 1);
     })
     $("#mb-4").delegate(".more", "click", function () {
-        Application.LoadModule("PublicationManager", 6);
+        Application.LoadModule("PublicationManager", 5);
     })
 
-    reloadCaseList();
-    reloadPublicationList(1, "#mb-3 tbody");
-    reloadPublicationList(5, "#mb-2 tbody");
-    reloadPublicationList(6, "#mb-4 tbody");
+    loadCaseList();
+    loadPublicationList(1, "#mb-3 tbody");
+    loadPublicationList(4, "#mb-2 tbody");
+    loadPublicationList(5, "#mb-4 tbody");
+    loadLatestTopics();
+    loadMonthlyStats();
     //// Get Cases
-    function reloadCaseList() {
+    function loadCaseList() {
         Application.InvokeService(
             "BrowseCases",
             {
@@ -32,19 +34,42 @@
     }
 
     //// Get Lists
-    function reloadPublicationList(typeId, containerSelector) {
+    function loadPublicationList(typeId, containerSelector) {
         Application.InvokeService(
-                "BrowserPublications",
-                {
-                    typeId: typeId,
-                    pageSize: 5,
-                    pageIndex: 1
-                },
-                function (result) {
-                    if (result != null)
-                        renderTemplatedItems(result, "tmpl-pub-list-items", containerSelector);
-                }
-            );
+            "BrowserPublications",
+            {
+                typeId: typeId,
+                pageSize: 5,
+                pageIndex: 1
+            },
+            function (result) {
+                if (result != null)
+                    renderTemplatedItems(result, "tmpl-pub-list-items", containerSelector);
+            }
+        );
+    }
+
+    function loadLatestTopics() {
+        Application.InvokeService(
+            "GetLatestPublications",
+            {
+                totalResults: 5
+            },
+            function (result) {
+                if (result != null)
+                    renderTemplatedItems({ Items: result }, "tmpl-latest-topics-items", "#latest-topics ol");
+            }
+        );
+    }
+
+    function loadMonthlyStats() {
+        Application.InvokeService(
+            "GetMonthlyUsageStats",null,
+            function (result) {
+                if (result != null)
+                    renderTemplatedItems(result, "tmpl-monthly-stats-items", "#monthly-stats tbody");
+            }
+        );
     }
 
     //// Events
@@ -63,6 +88,13 @@
     });
 
     $(".pub-block").delegate("td a.open", "click", function () {
+        var publication = $(this).parent().tmplItem().data;
+        Application.EnsureLoadLayer("PublicationViewer").done(function () {
+            Application.Modules["PublicationViewer"].show(publication.ID);
+        });
+    });
+
+    $("#latest-topics").delegate("li a", "click", function () {
         var publication = $(this).parent().tmplItem().data;
         Application.EnsureLoadLayer("PublicationViewer").done(function () {
             Application.Modules["PublicationViewer"].show(publication.ID);

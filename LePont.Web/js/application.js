@@ -47,6 +47,13 @@ var Application = function () {
         $("body>.clearable-dlg").remove();
     }
 
+    function IsModuleLoaded(moduleName , containerSelector) {
+        if (containerSelector == null || typeof containerSelector == "undefined")
+            containerSelector = PRIMARY_MODULE_SELECTOR;
+        return (typeof $(containerSelector).data("moduleName") != "undefined" &&
+             $(containerSelector).data("moduleName") == moduleName);
+    }
+
     /********************** IMPORTANT **************************************************
     * Any code in the module script files (mod.js) that is dependant on module HMTL
     * must be executed after module HTML is loaded completely. An example is the
@@ -58,9 +65,9 @@ var Application = function () {
     function LoadModule(moduleName, context, containerSelector) {
         var successful = false;
         if (moduleName != null) {
-            if (containerSelector == null)
+            if (containerSelector == null || typeof containerSelector == "undefined")
                 containerSelector = PRIMARY_MODULE_SELECTOR;
-            if (typeof $(containerSelector).data("moduleName") == "undefined" || $(containerSelector).data("moduleName") != moduleName) {
+            if (!IsModuleLoaded(moduleName , containerSelector)) {
                 var module_path = Modules[moduleName].path;
                 // Unload css of existing module.
                 var current_css_path = $(containerSelector).data("cssPath");
@@ -218,6 +225,7 @@ var Application = function () {
         PRIMARY_MODULE_SELECTOR: PRIMARY_MODULE_SELECTOR,
         //// methods
         Load: Load,
+        IsModuleLoaded: IsModuleLoaded,
         LoadModule: LoadModule,
         LoadScript: LoadScript,
         EnsureLoadLayer: EnsureLoadLayer,
@@ -226,4 +234,4 @@ var Application = function () {
         IsUserInRole: IsUserInRole,
         BindDropDownList: BindDropDownList
     }
-} ();
+}();

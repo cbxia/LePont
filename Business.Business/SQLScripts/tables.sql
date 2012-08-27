@@ -133,7 +133,7 @@ create table [relation_type]
 	[list_order] smallint null default 0,
 	[deactivated] bit null default 0 -- 0 = false, 1 = true
 );
-
+6
 set IDENTITY_INSERT [relation_type] on;
 
 insert into [relation_type] ([id], [name])
@@ -282,23 +282,19 @@ values(2,'工作通知', 0);
 
 insert into [publication_type]
 ([id],[name],[deactivated])
-values(3,'网上交流', 0);
+values(3,'政法综治', 0);
 
 insert into [publication_type]
 ([id],[name],[deactivated])
-values(4,'政法综治', 0);
+values(4,'法律法规', 0);
 
 insert into [publication_type]
 ([id],[name],[deactivated])
-values(5,'法律法规', 0);
+values(5,'新闻焦点', 0);
 
 insert into [publication_type]
 ([id],[name],[deactivated])
-values(6,'新闻焦点', 0);
-
-insert into [publication_type]
-([id],[name],[deactivated])
-values(7,'外埠动态', 0);
+values(6,'外埠动态', 0);
 
 set IDENTITY_INSERT [publication_type] off;
 

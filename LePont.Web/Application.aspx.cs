@@ -302,6 +302,23 @@ namespace LePont.Web
         }
 
         [ServiceMethod]
+        public PublicationLite[] GetLatestPublications(int totalResults)
+        {
+            PublicationLiteBroker db = new PublicationLiteBroker();
+            IList<PublicationLite> pubs = db.GetLatestPublications(totalResults);
+            return pubs != null ? pubs.ToArray() : null;
+        }
+
+        [ServiceMethod]
+        public UsageStatsItem[] GetMonthlyUsageStats()
+        {
+            DateTime DateFrom = DateTime.Today.AddDays(-(DateTime.Today.Day - 1));
+            DateTime DateTo = DateFrom.AddMonths(1);
+            UsageStatsBroker db = new UsageStatsBroker();
+            IList<UsageStatsItem> items = db.GetUsageStat(DateFrom, DateTo);
+            return items != null ? items.ToArray() : null;
+        }
+        [ServiceMethod]
         public void AddInstruction(Instruction instruction)
         {
             instruction.Issuer = AppContext.CurrentUser;
@@ -512,6 +529,14 @@ namespace LePont.Web
         {
             MessageBroker db = new MessageBroker();
             return db.GetTrashcan(AppContext.CurrentUser, pageSize, pageIndex);
+        }
+
+
+        [ServiceMethod]
+        public ReportItem[] GenerateReport_1(DateTime dateFrom, DateTime dateTo)
+        {
+            ReportBroker db = new ReportBroker();
+            return db.GenerateReport_1(dateFrom, dateTo);
         }
 
         #region Helpers

@@ -27,5 +27,22 @@ namespace LePont.Business
             else
                 return null;
         }
+
+        public PublicationLite[] GetLatestPublications(int totalResults)
+        {
+            string queryString = "from PublicationLite where Deactivated = false order by DateTime desc ";
+            IList<PublicationLite> resultSet = PerformQueryAction<PublicationLite>(queryString, query =>
+            {
+                query
+                    .SetMaxResults(totalResults);
+                return query;
+            });
+            if (resultSet != null && resultSet.Count > 0)
+            {
+                return resultSet.ToArray();
+            }
+            else
+                return null;
+        }
     }
 }

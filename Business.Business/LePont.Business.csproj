@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="DataBrokers\CaseTypeBroker.cs" />
     <Compile Include="DataBrokers\CaseBroker.cs" />
+    <Compile Include="DataBrokers\UsageStatsBroker.cs" />
     <Compile Include="DataBrokers\MessageBroker.cs" />
     <Compile Include="DataBrokers\ReportBroker.cs" />
     <Compile Include="DataBrokers\ForumBroker.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="DataBrokers\UserBroker.cs" />
     <Compile Include="DataModel\Bases.cs" />
     <Compile Include="DataBrokers\DataPage.cs" />
+    <Compile Include="DataModel\UsageStatsItem.cs" />
     <Compile Include="DataModel\Publication.cs" />
     <Compile Include="DataModel\Instruction.cs" />
     <Compile Include="DataModel\Message.cs" />
@@ -74,6 +76,7 @@
     <Compile Include="DataModel\UserSession.cs" />
     <Compile Include="DataModel\User.cs" />
     <Compile Include="DataModel\Department.cs" />
+    <Compile Include="DataModel\ReportItem.cs" />
     <Compile Include="DTOs\MessageDTO.cs" />
     <Compile Include="DTOs\ForumResponseDTO.cs" />
     <Compile Include="DTOs\ForumBlockDTO.cs" />
@@ -118,6 +121,13 @@
     <EmbeddedResource Include="DTOs\DTOIMports.hbm.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="DataModel\ReportItem.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataModel\UsageStatsItem.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="SQLScripts\procs.sql" />
     <Content Include="SQLScripts\tables.sql" />
   </ItemGroup>
   <ItemGroup />

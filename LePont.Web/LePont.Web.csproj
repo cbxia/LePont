@@ -123,6 +123,14 @@
     <Content Include="Modules\MailBox\Viewer\mod.css" />
     <Content Include="Modules\MailBox\Viewer\mod.htm" />
     <Content Include="Modules\MailBox\Viewer\mod.js" />
+    <Content Include="Modules\Reports\1\HTMLPage1.htm" />
+    <Content Include="Modules\Reports\1\mod.css" />
+    <Content Include="Modules\Reports\1\mod.htm" />
+    <Content Include="Modules\Reports\1\mod.js" />
+    <Content Include="Modules\Reports\2\HTMLPage1.htm" />
+    <Content Include="Modules\Reports\2\mod.css" />
+    <Content Include="Modules\Reports\2\mod.htm" />
+    <Content Include="Modules\Reports\2\mod.js" />
     <Content Include="Modules\_Template\mod.css" />
     <Content Include="Modules\_Template\mod.htm" />
     <Content Include="Modules\_Template\mod.js" />

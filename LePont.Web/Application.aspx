@@ -32,9 +32,8 @@
     <script src="js/modules.js" type="text/javascript"></script>
     <script src="js/utils.js?nocache" type="text/javascript"></script>
     <script src="js/dep-tree.js?nocache" type="text/javascript"></script>
-
- <%--   <script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script>
---%>
+    <%--   <script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script>
+    --%>
     <script type="text/javascript">
         $(document).ready(function () {
             //// Centering
@@ -124,8 +123,8 @@
 
     </script>
     <%--Firebug lite--%>
-<%--    <script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script>
---%></head>
+    <%--    <script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script>
+    --%></head>
 <body>
     <div id="page">
         <div id="header">
@@ -155,6 +154,12 @@
                         <ul>
                             <li><span class="file" module="CaseStat">信息统计</span></li>
                             <li><span class="file" module="LogonStat">登录统计</span></li>
+                        </ul>
+                    </li>
+                    <li><span class="folder">报表制作</span>
+                        <ul>
+                            <li><span class="file" module="Report1">调解委员会报表</span></li>
+                            <li><span class="file" module="Report2">排查调处情况报表</span></li>
                         </ul>
                     </li>
                     <li><span class="folder">系统管理</span>

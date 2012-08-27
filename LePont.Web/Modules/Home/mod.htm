@@ -7,6 +7,18 @@
     <td></td>
     </tr>
 </script>
+<script id="tmpl-latest-topics-items" type="text/jquery-template">
+    {{each Items}}
+    <li><a href="javascript:void(0);">${$index + 1}. ${Title}</a></li>
+    {{/each}}
+</script>
+<script id="tmpl-monthly-stats-items" type="text/jquery-template">
+    <tr>
+    <td>${Department}</td>
+    <td>${TotalLogons}</td>
+    <td>${TotalCases}</td>
+    </tr>
+</script>
 <script id="tmpl-case-list-items" type="text/jquery-template">
     <tr>
     <td><a class="open" href="javascript:void(0);">${Title}</a></td>
@@ -133,19 +145,34 @@
             </div>
         </div>
         <div class="side-blocks">
-            <div id="lastest-tips" class="block">
+            <div id="latest-topics" class="block">
                 <div class="hd">
                     最新提示
                 </div>
-                <div class="bd">
-                </div>
+                <ol>
+                </ol>
             </div>
             <div id="monthly-stats" class="block">
                 <div class="hd">
                     本月统计
                 </div>
-                <div class="bd">
-                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 40px;">
+                                单位
+                            </th>
+                            <th>
+                                登录次数
+                            </th>
+                            <th>
+                                发布信息
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
             </div>
             <div id="friend-links" class="block">
                 <div class="hd">

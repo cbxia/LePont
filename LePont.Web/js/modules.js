@@ -16,6 +16,10 @@ Application.Modules["RecycleBin"] = { path: "Modules/RecycleBin" };
 Application.Modules["LogonStat"] = { path: "Modules/LogonStat" };
 Application.Modules["MailBox"] = { path: "Modules/MailBox/Manager" };
 Application.Modules["MailViewer"] = { path: "Modules/MailBox/Viewer" };
+Application.Modules["Report1"] = { path: "Modules/Reports/1" };
+Application.Modules["Report2"] = { path: "Modules/Reports/2" };
+
+
 
 // Load all module script.
 $(document).ready(function () {

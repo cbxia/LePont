@@ -18,6 +18,7 @@
     loadPublicationList(5, "#mb-4 tbody");
     loadLatestTopics();
     loadMonthlyStats();
+    loadFriendlyLinks();
     //// Get Cases
     function loadCaseList() {
         Application.InvokeService(
@@ -68,6 +69,16 @@
             function (result) {
                 if (result != null)
                     renderTemplatedItems(result, "tmpl-monthly-stats-items", "#monthly-stats tbody");
+            }
+        );
+    }
+
+    function loadFriendlyLinks() {
+        Application.InvokeService(
+            "GetFriendlyLinks", null,
+            function (result) {
+                if (result != null)
+                    renderTemplatedItems(result, "tmpl-friendly-links-items", "#friendly-links ul");
             }
         );
     }

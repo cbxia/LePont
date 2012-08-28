@@ -54,6 +54,11 @@
     padding: 2px;
     text-align: center;
 }
-#blocks .side-blocks .bd
+#blocks .side-blocks table
 {
+    border-collapse: collapse;
+}
+#blocks .side-blocks td,#blocks .side-blocks th, #blocks .side-blocks li
+{
+    border-bottom: 1px dotted #99b;
 }

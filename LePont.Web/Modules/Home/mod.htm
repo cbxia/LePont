@@ -15,9 +15,12 @@
 <script id="tmpl-monthly-stats-items" type="text/jquery-template">
     <tr>
     <td>${Department}</td>
-    <td>${TotalLogons}</td>
-    <td>${TotalCases}</td>
+    <td style="text-align: right;padding-right:10px;">${TotalLogons}</td>
+    <td style="text-align: right;padding-right:10px;">${TotalCases}</td>
     </tr>
+</script>
+<script id="tmpl-friendly-links-items" type="text/jquery-template">
+    <li><a href="${Url}" target="_blank">${Name}</a></li>
 </script>
 <script id="tmpl-case-list-items" type="text/jquery-template">
     <tr>
@@ -174,12 +177,12 @@
                     </tbody>
                 </table>
             </div>
-            <div id="friend-links" class="block">
+            <div id="friendly-links" class="block">
                 <div class="hd">
                     友情链接
                 </div>
-                <div class="bd">
-                </div>
+                <ul>
+                </ul>
             </div>
         </div>
     </div>

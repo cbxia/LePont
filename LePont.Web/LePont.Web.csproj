@@ -102,6 +102,7 @@
     <Content Include="css\images\searchBar_bg.gif" />
     <Content Include="css\images\search_ok.gif" />
     <Content Include="css\global.css" />
+    <Content Include="FriendlyLinks.xml" />
     <Content Include="Global.asax" />
     <Content Include="Application.aspx" />
     <Content Include="js\application.js" />

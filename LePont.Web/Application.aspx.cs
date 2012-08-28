@@ -318,6 +318,15 @@ namespace LePont.Web
             IList<UsageStatsItem> items = db.GetUsageStat(DateFrom, DateTo);
             return items != null ? items.ToArray() : null;
         }
+
+        [ServiceMethod]
+        public FriendlyLink[] GetFriendlyLinks()
+        {
+            FriendlyLinksBroker db = new FriendlyLinksBroker();
+            FriendlyLink[] items = db.GetFriendlyLinks();
+            return items;
+        }
+
         [ServiceMethod]
         public void AddInstruction(Instruction instruction)
         {

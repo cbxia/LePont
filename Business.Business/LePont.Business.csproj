@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="DataBrokers\CaseTypeBroker.cs" />
     <Compile Include="DataBrokers\CaseBroker.cs" />
+    <Compile Include="DataBrokers\FriendlyLinksBroker.cs" />
     <Compile Include="DataBrokers\UsageStatsBroker.cs" />
     <Compile Include="DataBrokers\MessageBroker.cs" />
     <Compile Include="DataBrokers\ReportBroker.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="DataBrokers\UserBroker.cs" />
     <Compile Include="DataModel\Bases.cs" />
     <Compile Include="DataBrokers\DataPage.cs" />
+    <Compile Include="DataModel\FriendlyLink.cs" />
     <Compile Include="DataModel\UsageStatsItem.cs" />
     <Compile Include="DataModel\Publication.cs" />
     <Compile Include="DataModel\Instruction.cs" />

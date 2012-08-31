@@ -9,7 +9,7 @@
 </script>
 <script id="tmpl-latest-topics-items" type="text/jquery-template">
     {{each Items}}
-    <li><a href="javascript:void(0);">${$index + 1}. ${Title}</a></li>
+    <li><a href="javascript:void(0);" data=${ID}>${$index + 1}. ${Title}</a></li>
     {{/each}}
 </script>
 <script id="tmpl-monthly-stats-items" type="text/jquery-template">

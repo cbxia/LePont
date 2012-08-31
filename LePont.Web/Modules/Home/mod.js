@@ -65,7 +65,7 @@
 
     function loadMonthlyStats() {
         Application.InvokeService(
-            "GetMonthlyUsageStats",null,
+            "GetMonthlyUsageStats", null,
             function (result) {
                 if (result != null)
                     renderTemplatedItems(result, "tmpl-monthly-stats-items", "#monthly-stats tbody");
@@ -106,9 +106,11 @@
     });
 
     $("#latest-topics").delegate("li a", "click", function () {
-        var publication = $(this).parent().tmplItem().data;
+        // The following call will return the whole collection:
+        // $(this).parent().tmplItem().data 
+        var id = $(this).attr("data");
         Application.EnsureLoadLayer("PublicationViewer").done(function () {
-            Application.Modules["PublicationViewer"].show(publication.ID);
+            Application.Modules["PublicationViewer"].show(id);
         });
     });
 
